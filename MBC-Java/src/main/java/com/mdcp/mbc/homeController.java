@@ -11,8 +11,7 @@ public class homeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home()
 	{
-		
-		
+//sumit 
 	 return "home";
 	}
 	
