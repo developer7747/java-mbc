@@ -6,6 +6,44 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
+      
+      
+      <script src="resources/admin/plugins/jQuery/jquery-2.2.3.min.js"></script>     
+       <script type="text/ecmascript" src="http://www.workflow.dhsmedicalbilling.com/Content/JQGrid/grid.locale-en.js"></script>
+    <script type="text/ecmascript" src="http://www.workflow.dhsmedicalbilling.com/Content/JQGrid/jquery.jqGrid.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.workflow.dhsmedicalbilling.com/Content/JQGrid/ui.jqgrid-bootstrap.css"/>
+     
+     
+      
+      <div style="margin-left:20px">
+    <table id="multiple37"></table> <div id="pmultiple37" ></div>
+</div>
+    <script type="text/javascript"> 
+        $(document).ready(function () {
+			
+            $("#multiple37").jqGrid({
+                url: 'http://localhost:8080/MBC-Java/hi',
+                	//	url: 'http://localhost:8080/MBC-Java/persons',
+                		
+                mtype: "GET",
+				styleUI : 'Bootstrap',
+                datatype: "json",
+                colModel: [
+                    { label: 'name', name: 'id', key: true, width: 75 },
+                    { label: 'country', name: 'country', width: 150 },
+                    { label: 'Order Date', name: 'name', width: 150 },
+                   
+                ],
+				viewrecords: true,
+                height: 250,
+                rowNum: 20,
+                pager: "#pmultiple37"
+            });
+        });
+ 
+   </script>
+      
+      
       <h1>
         Dashboard
         <small>Control panel</small>
