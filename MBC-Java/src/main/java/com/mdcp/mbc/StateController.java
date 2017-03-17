@@ -20,19 +20,19 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mdcp.mbc.model.State;
 import com.mdcp.mbc.service.StateService;
 
-@Controller(value = "/states")
+@Controller
 public class StateController {
 	
 	private StateService stateService;
 	
 	@Autowired(required=true)
 	@Qualifier(value="stateService")
-	public void setPersonService(StateService ps){
+	public void setStateService(StateService ps){
 		this.stateService = ps;
 	}
 	
 	@RequestMapping(value = "/states", method = RequestMethod.GET)
-	public String listPersons(Model model) {
+	public String listStates(Model model) {
 		model.addAttribute("state", new State());
 		model.addAttribute("listStates", this.stateService.listStates());
 		return "state";
