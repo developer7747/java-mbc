@@ -32,14 +32,14 @@ public class StateController {
 	}
 	
 	@RequestMapping(value = "/states", method = RequestMethod.GET)
-	public String listStates(Model model) {
+	public String listPersons(Model model) {
 		model.addAttribute("state", new State());
 		model.addAttribute("listStates", this.stateService.listStates());
 		return "state";
 	}
 	////////////////////////////////
 	
-	@RequestMapping("studentttt")
+	@RequestMapping("student12")
 	 public @ResponseBody
 	 Object getStudentList() {
 		Object jsonData;
@@ -48,7 +48,7 @@ public class StateController {
 	return this.stateService.listStates();
 	 }
 	
-	@RequestMapping(value = "/higgg", method = RequestMethod.GET)
+	@RequestMapping(value = "/hi11", method = RequestMethod.GET)
 	public @ResponseBody
 	Map<String, Object> getAll(String userName, HttpServletRequest request) {
 	Map<String, Object> result = new HashMap<String, Object>();

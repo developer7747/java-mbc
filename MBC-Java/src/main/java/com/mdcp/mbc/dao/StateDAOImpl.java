@@ -39,7 +39,7 @@ public class StateDAOImpl implements StateDAO {
 	@Override
 	public List<State> listStates() {
 		Session session = this.sessionFactory.getCurrentSession();
-		List<State> statesList = session.createQuery("from Person").list();
+		List<State> statesList = session.createQuery("from State").list();
 		for(State p : statesList){
 			logger.info("Person List::"+p);
 		}
