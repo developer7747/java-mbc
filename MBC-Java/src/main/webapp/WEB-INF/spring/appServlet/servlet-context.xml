@@ -67,6 +67,14 @@
 	</beans:bean>
 	
 	
+	<beans:bean id="stateDAO" class="com.mdcp.mbc.dao.StateDAOImpl">
+		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+	<beans:bean id="stateService" class="com.mdcp.mbc.service.StateServiceImpl">
+		<beans:property name="stateDAO" ref="stateDAO"></beans:property>
+	</beans:bean>
+	
+	
 	<tx:annotation-driven transaction-manager="transactionManager"/>
 	
 	<beans:bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">

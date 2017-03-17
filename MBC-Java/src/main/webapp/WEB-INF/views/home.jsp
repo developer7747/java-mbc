@@ -30,75 +30,28 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title">User Information</h4>
         </div>
-        <form id="UserForm" class="form-horizontal style-form" method="post" action="~/User/AddUser">
+        <form id="person" action="person/add" method="post">
         <div class="modal-body">
-                <input type="hidden" id="user_id" name="user_id" value="0"/>
-            <div class="form-group">
-                <div class="col-sm-4">
-                    First Name
-                </div>
-                <div class="col-sm-8">
-                    <input class="form-control" type="text" id="user_f_name" name="user_f_name" value=""/>
-                </div>
-            </div>
-
+               
             
-
+            
             <div class="form-group">
                 <div class="col-sm-4">
-                    Password
+                    name
                 </div>
                 <div class="col-sm-8">
-                    <input class="form-control" type="text" id="user_login_password" name="user_login_password" value=""/>
+                    <input class="form-control" type="text" id="name" name="name" value=""/>
                 </div>
             </div>
-
-            <div class="form-group">
+            
+             <div class="form-group">
                 <div class="col-sm-4">
-                   Phone
+                    country
                 </div>
                 <div class="col-sm-8">
-                    <input class="form-control" type="text" id="user_phone" name="user_phone" value=""/>
+                    <input class="form-control" type="text" id="country" name="country" value=""/>
                 </div>
-            </div>
-
-
-            <div class="form-group">
-                <div class="col-sm-4">
-                    Role
-                </div>
-                <div class="col-sm-8">
-                    <select class="form-control" id="user_role" name="user_role">
-
-                    </select>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-4">
-                    userType
-                </div>
-                <div class="col-sm-8">
-                    <select class="form-control" id="userType" name="userType">
-                        <option value="">--Select--</option>
-                        <option class="SView" value="SuperAdmin">SuperAdmin</option>
-                        <option value="Manager">Manager</option>
-                        <option value="TL">TL</option>
-                        <option value="Agent">Agent</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-4">
-                    IsActive
-                </div>
-                <div class="col-sm-8">
-                    <select class="form-control" id="isActive" name="isActive">
-                        <option value="">--Select--</option>
-                        <option class="SView" value="0">InActive</option>
-                        <option value="1">Active</option>
-                    </select>
-                </div>
-            </div>
+            </div>          
             
 
         </div>
@@ -129,9 +82,8 @@
                 datatype: "json",
                 colModel: [
                     { label: 'name', name: 'id', key: true, width: 75 },
-                    { label: 'country', name: 'country', width: 150 },
-                    { label: 'Order Date', name: 'name', width: 150 },
-                   
+                    { label: 'name', name: 'name', width: 150 },
+                    { label: 'country', name: 'country', width: 150 }, 
                 ],
 				viewrecords: true,
                 height: 250,

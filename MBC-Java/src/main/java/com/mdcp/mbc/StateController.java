@@ -17,38 +17,38 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mdcp.mbc.model.Person;
-import com.mdcp.mbc.service.PersonService;
+import com.mdcp.mbc.model.State;
+import com.mdcp.mbc.service.StateService;
 
-@Controller
-public class PersonController {
+@Controller(value = "/states")
+public class StateController {
 	
-	private PersonService personService;
+	private StateService stateService;
 	
 	@Autowired(required=true)
-	@Qualifier(value="personService")
-	public void setPersonService(PersonService ps){
-		this.personService = ps;
+	@Qualifier(value="stateService")
+	public void setPersonService(StateService ps){
+		this.stateService = ps;
 	}
 	
-	@RequestMapping(value = "/persons", method = RequestMethod.GET)
+	@RequestMapping(value = "/states", method = RequestMethod.GET)
 	public String listPersons(Model model) {
-		model.addAttribute("person", new Person());
-		model.addAttribute("listPersons", this.personService.listPersons());
-		return "person";
+		model.addAttribute("state", new State());
+		model.addAttribute("listStates", this.stateService.listStates());
+		return "state";
 	}
 	////////////////////////////////
 	
-	@RequestMapping("student")
+	@RequestMapping("studentttt")
 	 public @ResponseBody
 	 Object getStudentList() {
 		Object jsonData;
 		Object response = new Object();
 		//response.(this.personService.listPersons());
-	return this.personService.listPersons();
+	return this.stateService.listStates();
 	 }
 	
-	@RequestMapping(value = "/hi", method = RequestMethod.GET)
+	@RequestMapping(value = "/higgg", method = RequestMethod.GET)
 	public @ResponseBody
 	Map<String, Object> getAll(String userName, HttpServletRequest request) {
 	Map<String, Object> result = new HashMap<String, Object>();
@@ -59,7 +59,7 @@ public class PersonController {
 	
 	// Use the spring BeanUtils tool, copy attribute to u.
 	// BeanUtils.copyProperties(this, user);
-	List<Person> list = this.personService.listPersons();
+	List<State> list = this.stateService.listStates();
 	int total = list.size();
 	if(list==null||list.size()==0){
 	result.put("records", 10);//
@@ -77,34 +77,34 @@ public class PersonController {
 	
 	//////////////////////////////
 	
-	//For add and update person both
-	@RequestMapping(value= "/person/add", method = RequestMethod.POST)
-	public String addPerson(@ModelAttribute("person") Person p){
-		
-		if(p.getId() == 0){
-			//new person, add it
-			this.personService.addPerson(p);
-		}else{
-			//existing person, call update
-			this.personService.updatePerson(p);
-		}
-		
-		return "redirect:/persons";
-		
-	}
-	
-	@RequestMapping("/remove/{id}")
-    public String removePerson(@PathVariable("id") int id){
-		
-        this.personService.removePerson(id);
-        return "redirect:/persons";
-    }
- 
-    @RequestMapping("/edit/{id}")
-    public String editPerson(@PathVariable("id") int id, Model model){
-        model.addAttribute("person", this.personService.getPersonById(id));
-        model.addAttribute("listPersons", this.personService.listPersons());
-        return "person";
-    }
+//	//For add and update person both
+//	@RequestMapping(value= "/person/add", method = RequestMethod.POST)
+//	public String addPerson(@ModelAttribute("person") Person p){
+//		
+//		if(p.getId() == 0){
+//			//new person, add it
+//			this.personService.addPerson(p);
+//		}else{
+//			//existing person, call update
+//			this.personService.updatePerson(p);
+//		}
+//		
+//		return "redirect:/persons";
+//		
+//	}
+//	
+//	@RequestMapping("/remove/{id}")
+//    public String removePerson(@PathVariable("id") int id){
+//		
+//        this.personService.removePerson(id);
+//        return "redirect:/persons";
+//    }
+// 
+//    @RequestMapping("/edit/{id}")
+//    public String editPerson(@PathVariable("id") int id, Model model){
+//        model.addAttribute("person", this.personService.getPersonById(id));
+//        model.addAttribute("listPersons", this.personService.listPersons());
+//        return "person";
+//    }
 	
 }
