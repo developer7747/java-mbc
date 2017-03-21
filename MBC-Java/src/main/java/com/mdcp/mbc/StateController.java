@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -48,7 +49,7 @@ public class StateController {
 	return this.stateService.listStates();
 	 }
 	
-	@RequestMapping(value = "/hi11", method = RequestMethod.GET)
+	@RequestMapping(value = "/state/getState", method = RequestMethod.GET)
 	public @ResponseBody
 	Map<String, Object> getAll(String userName, HttpServletRequest request) {
 	Map<String, Object> result = new HashMap<String, Object>();
@@ -77,34 +78,37 @@ public class StateController {
 	
 	//////////////////////////////
 	
-//	//For add and update person both
-//	@RequestMapping(value= "/person/add", method = RequestMethod.POST)
-//	public String addPerson(@ModelAttribute("person") Person p){
-//		
-//		if(p.getId() == 0){
-//			//new person, add it
-//			this.personService.addPerson(p);
-//		}else{
-//			//existing person, call update
-//			this.personService.updatePerson(p);
-//		}
-//		
-//		return "redirect:/persons";
-//		
-//	}
-//	
-//	@RequestMapping("/remove/{id}")
-//    public String removePerson(@PathVariable("id") int id){
-//		
-//        this.personService.removePerson(id);
-//        return "redirect:/persons";
-//    }
-// 
-//    @RequestMapping("/edit/{id}")
-//    public String editPerson(@PathVariable("id") int id, Model model){
-//        model.addAttribute("person", this.personService.getPersonById(id));
-//        model.addAttribute("listPersons", this.personService.listPersons());
-//        return "person";
-//    }
+	//For add and update person both
+	
+	@RequestMapping(value= "/state/add", method = RequestMethod.POST)
+	public @ResponseBody State addState(@RequestBody State p){
+		
+		if(p.getId() == 0){
+			//new person, add it
+			this.stateService.addState(p);
+			return p;
+		}else{
+			//existing person, call update
+			this.stateService.updateState(p);
+			return p;
+		}
+		
+		//return "redirect:/states";
+		
+	}
+	
+	@RequestMapping("/state/remove/{id}")
+    public String removeState(@PathVariable("id") int id){
+		
+        this.stateService.removeState(id);
+        return "redirect:/states";
+    }
+ 
+    @RequestMapping("state/edit/{id}")
+    public String editPerson(@PathVariable("id") int id, Model model){
+        model.addAttribute("person", this.stateService.getStateById(id));
+        model.addAttribute("listPersons", this.stateService.listStates());
+        return "state";
+    }
 	
 }

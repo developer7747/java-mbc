@@ -30,8 +30,10 @@ public class State {
 	@Column(name="longDescription", nullable = true,columnDefinition = "text")
 	private String longDescription;
 	
-	@Column(name="isActive", nullable = true,columnDefinition = "boolean")
-	private boolean  isActive;
+
+	
+	@Column(name="activeornot132", nullable = true,columnDefinition = "varchar(50)")
+	private String  activeornot132;
 	
 	
 	@Column(name="uploadImage", nullable = true,columnDefinition = "text")
@@ -76,6 +78,14 @@ public class State {
 		this.shortDescription = shortDescription;
 	}
 
+	public String getactiveornot132() {
+		return activeornot132;
+	}
+
+	public void setactiveornot132(String activeornot132) {
+		this.activeornot132 = activeornot132;
+	}
+	
 	public String getLongDescription() {
 		return longDescription;
 	}
@@ -84,13 +94,7 @@ public class State {
 		this.longDescription = longDescription;
 	}
 
-	public boolean isActive() {
-		return isActive;
-	}
-
-	public void setActive(boolean isActive) {
-		this.isActive = isActive;
-	}
+	
 
 	public String getUploadImage() {
 		return uploadImage;

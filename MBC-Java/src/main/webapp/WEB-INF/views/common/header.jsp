@@ -20,6 +20,8 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="resources/admin/dist/css/skins/_all-skins.min.css">
+  <script src="resources/admin/plugins/jQuery/jquery-2.2.3.min.js"></script>
+   <script src="http://cdn.ckeditor.com/4.6.2/standard-all/ckeditor.js"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">

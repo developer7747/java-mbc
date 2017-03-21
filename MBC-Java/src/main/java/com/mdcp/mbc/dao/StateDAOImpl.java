@@ -25,14 +25,14 @@ public class StateDAOImpl implements StateDAO {
 	public void addState(State p) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.persist(p);
-		logger.info("Person saved successfully, Person Details="+p);
+		logger.info("State saved successfully, State Details="+p);
 	}
 
 	@Override
 	public void updateState(State p) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.update(p);
-		logger.info("Person updated successfully, Person Details="+p);
+		logger.info("State updated successfully, State Details="+p);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -41,7 +41,7 @@ public class StateDAOImpl implements StateDAO {
 		Session session = this.sessionFactory.getCurrentSession();
 		List<State> statesList = session.createQuery("from State").list();
 		for(State p : statesList){
-			logger.info("Person List::"+p);
+			logger.info("State List::"+p);
 		}
 		return statesList;
 	}
@@ -50,7 +50,7 @@ public class StateDAOImpl implements StateDAO {
 	public State getStateById(int id) {
 		Session session = this.sessionFactory.getCurrentSession();		
 		State p = (State) session.load(State.class, new Integer(id));
-		logger.info("Person loaded successfully, Person details="+p);
+		logger.info("State loaded successfully, State details="+p);
 		return p;
 	}
 
@@ -61,7 +61,7 @@ public class StateDAOImpl implements StateDAO {
 		if(null != p){
 			session.delete(p);
 		}
-		logger.info("Person deleted successfully, person details="+p);
+		logger.info("State deleted successfully, State details="+p);
 	}
 
 }

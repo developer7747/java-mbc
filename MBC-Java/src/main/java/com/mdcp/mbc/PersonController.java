@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -79,17 +80,19 @@ public class PersonController {
 	
 	//For add and update person both
 	@RequestMapping(value= "/person/add", method = RequestMethod.POST)
-	public String addPerson(@ModelAttribute("person") Person p){
+	public Person addPerson(@RequestBody final Person p){
 		
 		if(p.getId() == 0){
 			//new person, add it
 			this.personService.addPerson(p);
+			return p;
 		}else{
 			//existing person, call update
 			this.personService.updatePerson(p);
+			return p;
 		}
 		
-		return "redirect:/persons";
+		//return "redirect:/persons";
 		
 	}
 	
