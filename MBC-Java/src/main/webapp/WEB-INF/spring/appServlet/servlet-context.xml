@@ -44,6 +44,7 @@
 			<beans:list>
 				<beans:value>com.mdcp.mbc.model.Person</beans:value>
 				<beans:value>com.mdcp.mbc.model.State</beans:value>
+				<beans:value>com.mdcp.mbc.model.City</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">
@@ -72,6 +73,15 @@
 	</beans:bean>
 	<beans:bean id="stateService" class="com.mdcp.mbc.service.StateServiceImpl">
 		<beans:property name="stateDAO" ref="stateDAO"></beans:property>
+	</beans:bean>
+	
+	
+	
+	<beans:bean id="cityDAO" class="com.mdcp.mbc.dao.CityDAOImpl">
+		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+	<beans:bean id="cityService" class="com.mdcp.mbc.service.CityServiceImpl">
+		<beans:property name="cityDAO" ref="cityDAO"></beans:property>
 	</beans:bean>
 	
 	
