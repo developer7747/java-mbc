@@ -34,8 +34,6 @@ public class CityController {
 	
 	@RequestMapping(value = "/citys", method = RequestMethod.GET)
 	public String listCitys(Model model) {
-		model.addAttribute("city", new City());
-		model.addAttribute("listcitys", this.cityService.listCitys());
 		return "city";
 	}
 	////////////////////////////////

@@ -68,6 +68,7 @@
 	</beans:bean>
 	
 	
+	
 	<beans:bean id="stateDAO" class="com.mdcp.mbc.dao.StateDAOImpl">
 		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</beans:bean>

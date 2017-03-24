@@ -19,7 +19,7 @@
    
    
 <!-- Modal -->
-<div id="AddEditStateModal" class="modal fade" role="dialog">
+<div id="AddEditCityModal" class="modal fade" role="dialog">
   <div class="modal-dialog" style=" width:90%;">
 
     <!-- Modal content-->
@@ -41,6 +41,19 @@
                 </div>
                 <div class="col-sm-8">
                     <input class="form-control" type="text" id="cityName" name="cityName" value=""/>
+                </div>
+            </div>
+            
+            
+            
+                <div class="form-group">
+                <div class="col-sm-4">
+                     	   State
+                </div>
+                <div class="col-sm-8">
+                   <select id="stateDrpdown">
+                   
+                   </select>
                 </div>
             </div>
             
@@ -108,16 +121,6 @@
                     <input class="form-control" type="text" id="isActive" name="isActive" value=""/>
                 </div>
             </div> 
-         
-
-
-
-
-
-
-
-
-
 
         </div>
             <div class="modal-footer">
@@ -133,7 +136,7 @@
      
       <button type="button" onclick="AddState()" class="btn btn-default" data-dismiss="modal">New User</button>
       <div style="margin-left:20px">
-    <table id="multiple37"></table> <div id="pmultiple37" ></div>
+    <table id="city_JQ_Grid"></table> <div id="pcity_JQ_Grid" ></div>
 </div>   
     </section>
 
@@ -142,7 +145,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
- <script src="resources/admin/adminscript/state.js"></script>
+ <script src="resources/admin/adminscript/city.js"></script>
 <jsp:include page="/WEB-INF/views/common/footer.jsp"/>
 </body>
 </html>

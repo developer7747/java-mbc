@@ -5,13 +5,11 @@
     	// alert(parseInt($('#isActive').val()));
          return JSON.stringify({
         	 "id": $('#id').val(),
-        	 "bannerContent": CKEDITOR.instances['bannerContent'].getData(),
-             "intial": $('#intial').val(),   
-             "activeornot132": $('#activeornot132').val(),
-             "longDescription": CKEDITOR.instances['longDescription'].getData(),
-             "name": $('#name').val(),
-             "shortDescription": CKEDITOR.instances['shortDescription'].getData(),
-             "uploadImage": $('#uploadImage').val()
+        	 "cityZipCode": $('#CityZipCode').val(),  
+             "citylongDescription": CKEDITOR.instances['CitylongDescription'].getData(),         
+             "cityshortDescription": CKEDITOR.instances['CityshortDescription'].getData(),       
+             "cityName": $('#cityName').val(),
+             "stateId": $('#stateDrpdown').val()
          });
      }   
      
@@ -39,24 +37,24 @@
      
      function AddState() {
          $('#stateform').get(0).reset();      	
-         $('#AddEditStateModal').modal('show');
+         $('#AddEditCityModal').modal('show');
      }
      function UpdateRecordPopup(RowID)
      {
     	 $('#stateform').get(0).reset();
-         var Row_Data = $("#multiple37").getRowData(RowID);         
+         var Row_Data = $("#city_JQ_Grid").getRowData(RowID);         
          $('#id').val(Row_Data['id']);
-         CKEDITOR.instances['bannerContent'].setData(Row_Data['bannerContent']),
+    
          
+         $('#cityZipCode').val(Row_Data['cityZipCode']);
+         CKEDITOR.instances['citylongDescription'].setData(Row_Data['citylongDescription']),
          
-         $('#intial').val(Row_Data['intial']);
-         $('#activeornot132').val(Row_Data['activeornot132']);
-         CKEDITOR.instances['longDescription'].setData(Row_Data['longDescription']),
-         
-         $('#name').val(Row_Data['name']);
-         CKEDITOR.instances['shortDescription'].setData(Row_Data['shortDescription']),
+         CKEDITOR.instances['cityshortDescription'].setData(Row_Data['cityshortDescription']),
+         $('#cityName').val(Row_Data['cityName']);
+         $('#isActive').val(Row_Data['isActive']);
+         $('#isPopular').val(Row_Data['isPopular']);         
         // $('#shortDescription').val(Row_Data['shortDescription']);         
-         $('#AddEditStateModal').modal('show');
+         $('#AddEditCityModal').modal('show');
      }
      
      
@@ -75,21 +73,39 @@
      
      
      
-     $(document).ready(function () {         
-         $("#multiple37").jqGrid({
-         	url: 'http://localhost:8080/MBC-Java/state/getState',              
+     $(document).ready(function () {
+    	 $.getJSON("http://localhost:8080/MBC-Java/state/getState1", function (data)  
+    		        {        
+    		            $.each(data, function (i, data)  
+    		            {       
+    		            	alert(data.name);
+    		                 $('<option>',  
+    		                    {  
+    		                        value: data.id,  
+    		                        text: data.name  
+    		                    }).html(data.name).appendTo("#stateDrpdown");  
+    		                });  
+    		        })  ;
+    		        
+    		        
+    		         
+    	 
+    	 
+
+         $("#city_JQ_Grid").jqGrid({
+         	url: 'http://localhost:8080/MBC-Java/city/getcity',              
              mtype: "GET",
              styleUI: 'Bootstrap',
              datatype: "json",
              colModel: [
                  { label: 'id', name: 'id', key: true, width: 75 },
-                 { label: 'bannerContent', name: 'bannerContent', width: 150 },
-                 { label: 'intial', name: 'intial', width: 150 },
-                 { label: 'activeornot132', name: 'activeornot132', width: 150 },
-                 { label: 'longDescription', name: 'longDescription', width: 150 },
-                 { label: 'name', name: 'name', width: 150 },
-                 { label: 'shortDescription', name: 'shortDescription', width: 150 },
-                 { label: 'uploadImage', name: 'uploadImage', width: 150 },                 
+                 { label: 'cityZipCode', name: 'cityZipCode', width: 150 },
+                 { label: 'citylongDescription', name: 'citylongDescription', width: 150 },
+                 { label: 'cityshortDescription', name: 'cityshortDescription', width: 150 },
+                 { label: 'cityName', name: 'cityName', width: 150 },
+                 { label: 'isActive', name: 'isActive', width: 150 },
+                 { label: 'isPopular', name: 'isPopular', width: 150 },
+                 { label: 'stateIdIndex', name: 'stateIdIndex', width: 150 },                 
                  { label: 'Action', name: 'Action', width: 82, formatter: displayButtons },
              ],
              autowidth: true,
@@ -97,7 +113,7 @@
              height: "auto",
              //multiselect: true,
              multiboxonly: true,
-             pager: "#pmultiple37",
+             pager: "#pcity_JQ_Grid",
              rowNum: 10,
              rowList: [5, 10, 20, 30, 40],
              jsonReader: {

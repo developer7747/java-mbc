@@ -20,11 +20,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.mdcp.mbc.model.State;
 import com.mdcp.mbc.service.StateService;
+import com.mdcp.mbc.service.GenericService;
+
 
 @Controller
-public class StateController {
+public class StateController<E, K> {
 	
 	private StateService stateService;
+	private GenericService<State, K> gen;
 	
 	@Autowired(required=true)
 	@Qualifier(value="stateService")
@@ -40,14 +43,11 @@ public class StateController {
 	}
 	////////////////////////////////
 	
-	@RequestMapping("student12")
-	 public @ResponseBody
-	 Object getStudentList() {
-		Object jsonData;
-		Object response = new Object();
-		//response.(this.personService.listPersons());
+	@RequestMapping(value = "/state/getState1", method = RequestMethod.GET)
+	public @ResponseBody
+	List<State> getStateList() {
 	return this.stateService.listStates();
-	 }
+	} 
 	
 	@RequestMapping(value = "/state/getState", method = RequestMethod.GET)
 	public @ResponseBody
@@ -61,6 +61,7 @@ public class StateController {
 	// Use the spring BeanUtils tool, copy attribute to u.
 	// BeanUtils.copyProperties(this, user);
 	List<State> list = this.stateService.listStates();
+	//List<State> list = gen.getAll();
 	int total = list.size();
 	if(list==null||list.size()==0){
 	result.put("records", 10);//
