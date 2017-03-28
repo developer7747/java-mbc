@@ -31,7 +31,7 @@
 		destroy-method="close">
 		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<beans:property name="url"
-			value="jdbc:mysql://localhost:3306/test" />
+			value="jdbc:mysql://192.168.2.62:3306/test" />
 		<beans:property name="username" value="root" />
 		<beans:property name="password" value="" />
 	</beans:bean>
@@ -45,6 +45,7 @@
 				<beans:value>com.mdcp.mbc.model.Person</beans:value>
 				<beans:value>com.mdcp.mbc.model.State</beans:value>
 				<beans:value>com.mdcp.mbc.model.City</beans:value>
+				<beans:value>com.mdcp.mbc.model.Speciality</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">
@@ -84,6 +85,17 @@
 	<beans:bean id="cityService" class="com.mdcp.mbc.service.CityServiceImpl">
 		<beans:property name="cityDAO" ref="cityDAO"></beans:property>
 	</beans:bean>
+	
+	
+	
+	
+	<beans:bean id="SpecialityDAO" class="com.mdcp.mbc.dao.SpecialityDaoImpl">
+		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+	<beans:bean id="SpecialityService" class="com.mdcp.mbc.service.SpecailityServiceImpl">
+		<beans:property name="specialityDAO" ref="SpecialityDAO"></beans:property>
+	</beans:bean>
+	
 	
 	
 	<tx:annotation-driven transaction-manager="transactionManager"/>
