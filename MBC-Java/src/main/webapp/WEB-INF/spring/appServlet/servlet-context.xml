@@ -92,8 +92,7 @@
 	</beans:bean>
 	
 	
-	
-	
+
 	<beans:bean id="SpecialityDAO" class="com.mdcp.mbc.dao.SpecialityDaoImpl">
 		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</beans:bean>
