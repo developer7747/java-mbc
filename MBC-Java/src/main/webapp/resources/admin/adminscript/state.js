@@ -75,7 +75,30 @@
      
      
      
-     $(document).ready(function () {         
+     $(document).ready(function () {       
+    	 
+    	 $("#bt").click(function() {
+    			alert("HHHH");
+    		
+    			var formData = new FormData($('#uploadForm')[0]);
+    			var url="http://localhost:8080/MBC-Java/state/upload";
+    			$.ajax({
+    			    url: url,
+    			    type: "POST",
+    			    dataType: 'text',
+    			    contentType: false,
+    			    processData: false,
+    			    cache: false,
+    			    data: formData,
+    			    success: function(response) {
+    			        alert("success");
+    			    },
+    			    error: function() {
+    			        alert("unable to create the record");
+    			    }
+    		});
+    	 });
+    	 
          $("#multiple37").jqGrid({
          	url: 'http://localhost:8080/MBC-Java/state/getState',              
              mtype: "GET",

@@ -9,7 +9,7 @@
              "citylongDescription": CKEDITOR.instances['CitylongDescription'].getData(),         
              "cityshortDescription": CKEDITOR.instances['CityshortDescription'].getData(),       
              "cityName": $('#cityName').val(),
-             "stateId": $('#stateDrpdown').val()
+            // "stateId": $('#stateDrpdown').val()
          });
      }   
      

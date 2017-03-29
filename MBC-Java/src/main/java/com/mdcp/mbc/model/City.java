@@ -31,7 +31,7 @@ public class City {
 	private String cityName;
 	
 	//Start Relations
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name="stateId",referencedColumnName="id")
 	private State state;
 	public State getState() {

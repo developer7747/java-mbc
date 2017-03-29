@@ -16,9 +16,21 @@
      
      
    
-   
+<%--    <form method="POST" action="${pageContext.request.contextPath}/upload" enctype="multipart/form-data"> --%>
+<!--     <input type="file" name="file" /><br/><br/> -->
+<!--     <input type="submit" value="Submit" /> -->
+<!-- </form> -->
    
 <!-- Modal -->
+<script>
+
+
+</script>
+<form id="uploadForm">
+     <input type="file" name="myimage" id="imageid" accept=".png" />
+     <input id="bt" type="button"  value="s"/>
+</form>
+
 <div id="AddEditStateModal" class="modal fade" role="dialog">
   <div class="modal-dialog" style=" width:90%;">
 
@@ -35,6 +47,7 @@
             <input class="form-control" type="text" id="id" name="id" value=""/>
            
            
+         
              <div class="form-group">
                 <div class="col-sm-4">
                      	   name

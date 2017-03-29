@@ -1,5 +1,9 @@
 package com.mdcp.mbc;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,8 +19,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.mdcp.mbc.model.State;
 import com.mdcp.mbc.service.StateService;
@@ -25,7 +31,7 @@ import com.mdcp.mbc.service.GenericService;
 
 @Controller
 public class StateController<E, K> {
-	
+	private static String UPLOADED_FOLDER = "G://";
 	private StateService stateService;
 	private GenericService<State, K> gen;
 	
@@ -78,7 +84,20 @@ public class StateController<E, K> {
 	
 	
 	//////////////////////////////
-	
+	@RequestMapping(value= "/state/upload", method = RequestMethod.POST)
+	public @ResponseBody Map<String, Object> upload(@RequestParam("myimage") MultipartFile file) {
+	    
+		  try {
+        	  
+	            byte[] bytes = file.getBytes();
+	            Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
+	            Files.write(path, bytes);
+		  } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+		//rest of the code goes here...
+		return null;
+	}
 	//For add and update person both
 	
 	@RequestMapping(value= "/state/add", method = RequestMethod.POST)
