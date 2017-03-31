@@ -32,9 +32,13 @@ public class EmrSoftware {
 	}
 	
 	private String Name;   
-	@Column(name="name",nullable = true,columnDefinition = "varchar(50)")
+	
 	private String Logo;
-	@Column(name="Logo",nullable = true,columnDefinition = "varchar(50)")
+	@Column(name="Logo", insertable=false, updatable=false,nullable = true,columnDefinition = "varchar(50)")
+	
+	
+
+	
 	
 	private String Description;
 	@Column(name="Description",nullable = true,columnDefinition = "text")
@@ -84,7 +88,8 @@ public class EmrSoftware {
 	private String CertificationType;
 	@Column(name="CertificationType",nullable = true,columnDefinition = "varchar(50)")
 	
-
+	private String shortDescription;
+	@Column(name="shortDescription",nullable = true,columnDefinition = "text")
 	
 
 	public String getLogo() {
@@ -223,12 +228,13 @@ public class EmrSoftware {
 		this.CertificationType = certificationType;
 	}
 
-	public String getName() {
-		return Name;
+	
+	public String getShortDescription() {
+		return shortDescription;
 	}
 
-	public void setName(String name) {
-		Name = name;
+	public void setShortDescription(String shortDescription) {
+		this.shortDescription = shortDescription;
 	}
 
 	

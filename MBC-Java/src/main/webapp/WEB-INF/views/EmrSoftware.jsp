@@ -59,7 +59,18 @@
                 
                 </div>
             </div>   
-          
+           <div class="form-group">
+                <div class="col-sm-4">
+                    shortDescription
+                </div>
+                <div class="col-sm-8">
+
+  <textarea cols="80" class="ckeditor" id="shortDescription" name="shortDescription" rows="10" ></textarea>
+	
+   
+                </div>
+            </div>          
+            
            
            
             <div class="form-group">

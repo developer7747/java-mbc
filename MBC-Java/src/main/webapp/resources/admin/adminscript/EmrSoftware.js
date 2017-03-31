@@ -4,22 +4,22 @@
      function formToJSON() {
     	// alert(parseInt($('#isActive').val()));
          return JSON.stringify({
-        	 "id": $('#id').val()
+        	 "id": $('#id').val(),
 //"name": $('#name').val(),
-//       	   "Logo": $('#Logo').val(),
-//        	   "LatestVersion": $('#LatestVersion').val(),  
+       	 //  "Logo": $('#Logo').val(),
+        	   //"LatestVersion": $('#LatestVersion').val() 
 //        	   "Certification": $('#Certification').val(),  
 //      	   "CertificationPeriod": $('#CertificationPeriod').val(),
-//       	   "EnvironmentRequired": $('#EnvironmentRequired').val(),
+//      	   "EnvironmentRequired": $('#EnvironmentRequired').val(),
 //        	   "Integration": $('#Integration').val(),
-////        	   "SupportHospitalClaim": $('#SupportHospitalClaim').val(),
-////        	   "CreateDate": $('#CreateDate').val(),
-////        	   "ModifiedDate": $('#ModifiedDate').val(),
-////        	   "SpecialtiesId": $('#SpecialtiesId').val(),
-////        	   "isPopular": $('#isPopular').val(),
-////             "Description": CKEDITOR.instances['DescriptionContent'].getData(),
-////             "Features": CKEDITOR.instances['Features'].getData()
-//            
+        	   //"SupportHospitalClaim": $('#SupportHospitalClaim').val()
+//        	   "CreateDate": $('#CreateDate').val(),
+//        	   "ModifiedDate": $('#ModifiedDate').val(),
+        	   //"SpecialtiesId": $('#SpecialtiesId').val()
+//        	   "isPopular": $('#isPopular').val(),
+          // "Description": CKEDITOR.instances['DescriptionContent'].getData()
+         // "Features": CKEDITOR.instances['Features'].getData()
+        	   "shortDescription": CKEDITOR.instances['shortDescription'].getData()
              
          });
      }   
