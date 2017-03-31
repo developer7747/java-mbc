@@ -9,12 +9,12 @@
              "citylongDescription": CKEDITOR.instances['CitylongDescription'].getData(),         
              "cityshortDescription": CKEDITOR.instances['CityshortDescription'].getData(),       
              "cityName": $('#cityName').val(),
-            // "stateId": $('#stateDrpdown').val()
+             
          });
      }   
      
   function addUpdateRecord()  {
-	  var url="city/add";
+	  var url="city/add?stateId="+ $('#stateDrpdown').val();
 	  addUpdateCommonRecord(url,formToJSON())
   }  	 
     	function deleteRecord() {
@@ -78,7 +78,7 @@
     		        {        
     		            $.each(data, function (i, data)  
     		            {       
-    		            	alert(data.name);
+    		            	//alert(data.name);
     		                 $('<option>',  
     		                    {  
     		                        value: data.id,  

@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -22,17 +24,28 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mdcp.mbc.model.City;
 import com.mdcp.mbc.model.State;
 import com.mdcp.mbc.service.CityService;
+import com.mdcp.mbc.service.StateService;
+
 
 @Controller
 public class CityController {
 	
 	private CityService cityService;
+	private StateService stateService;
 	
 	@Autowired(required=true)
 	@Qualifier(value="cityService")
+	
 	public void setcityService(CityService ps){
 		this.cityService = ps;
 	}
+	
+	@Autowired(required=true)	
+	@Qualifier(value="stateService")
+	public void setStateService(StateService ps){
+		this.stateService = ps;
+	}
+	
 	
 	@RequestMapping(value = "/citys", method = RequestMethod.GET)
 	public String listCitys(Model model) {
@@ -81,19 +94,24 @@ public class CityController {
 	//For add and update person both
 	
 	@RequestMapping(value= "/city/add", method = RequestMethod.POST)
-	public @ResponseBody City addCity(@RequestBody City c){
+	public ResponseEntity<String> addCity(@RequestBody City c,@RequestParam String stateId){
+		
+		
 		if(c.getid() == 0){
-			c.setCityName("rrrrrrrrr");
-			c.getState().setId(1);
+			State st =  stateService.getStateById(Integer.parseInt(stateId) );		       
+			c.setState(st);
+			//c.setCityName("rrrrrrrrr");
+			//c.getState().setId(1);
 			//new person, add it
 //			model.addAttribute("personId", personId);
 //			model.addAttribute("personId", personId);
 			this.cityService.addCity(c);
-			return c;
+			
+			 return new ResponseEntity<String>("City Added Successfully!", HttpStatus.OK);
 		}else{
 			//existing person, call update
 			this.cityService.updateCity(c);
-			return c;
+			return new ResponseEntity<String>("City Updated Successfully!", HttpStatus.OK);
 		}
 		
 		//return "redirect:/citys";
