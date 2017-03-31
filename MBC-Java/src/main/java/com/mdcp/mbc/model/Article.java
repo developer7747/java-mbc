@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -64,6 +66,29 @@ public class Article {
 	@Column(name="isActive", nullable = true,columnDefinition = "varchar(50)")
 	private String  isActive;
 
+	
+	
+	//Start Relations
+	@ManyToOne
+	@JoinColumn(name="stateId",referencedColumnName="id")
+	private State state;
+
+	public State getState() {
+		return state;
+	}
+
+
+	public void setState(State state) {
+		this.state = state;
+	}
+	
+
+	
+	
+	
+	
+	
+	
 
 	public int getId() {
 		return id;
@@ -223,6 +248,7 @@ public class Article {
 	public void setImagepath(String imagepath) {
 		this.imagepath = imagepath;
 	}
-	
+
+
 	
 }

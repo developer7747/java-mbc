@@ -176,7 +176,10 @@
                   Speciality
                 </div>
                 <div class="col-sm-8">
-                    <input class="form-control" type="text" id="speciality" name="speciality" value=""/>
+<!--                     <input class="form-control" type="text" id="speciality" name="speciality" value=""/> -->
+                <select id="stateDrpdown">
+                   
+                   </select>
                 </div>
             </div>   
 

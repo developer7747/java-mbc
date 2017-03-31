@@ -26,11 +26,15 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.mdcp.mbc.model.Article;
+
+import com.mdcp.mbc.model.State;
 import com.mdcp.mbc.service.ArticleService;
+import com.mdcp.mbc.service.StateService;
 
 @Controller
 public class ArticleController {
 	 
+	private StateService stateService;
 	private static String UPLOADED_FOLDER = "D:\\";
 
 	private ArticleService ArticleService;
@@ -73,21 +77,12 @@ e.printStackTrace();
 return null;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//many to many start
+@Autowired(required=true)	
+@Qualifier(value="stateService")
+public void setStateService(StateService ps){
+	this.stateService = ps;
+}
 
 
 	
@@ -133,21 +128,32 @@ return null;
 	//For add and update person both
 	
 	@RequestMapping(value= "/Article/add", method = RequestMethod.POST)
-	public @ResponseBody Article addArticle(@RequestBody Article p){
-		//p.setUploaddate();
+	//old before relation 
+	//public @ResponseBody Article addArticle(@RequestBody Article p){
+	public ResponseEntity<String> addArticle(@RequestBody Article p,@RequestParam String stateId ){
+		
 		if(p.getId() == 0){
-			//new person, add it
-			this.ArticleService.addArticle(p);
-			return p;
+			
+			State st = stateService.getStateById(Integer.parseInt(stateId));
+			//old
+			//this.ArticleService.addArticle(p);
+			//return p;
+	
+		p.setState(st);
+		this.ArticleService.addArticle(p);
+		return new ResponseEntity<String>("Article Added SuccessFully!",HttpStatus.OK);
+		
 		}else{
-			//existing person, call update
+			
 			this.ArticleService.updateArticle(p);
-			return p;
+			return new ResponseEntity<String>("Article  Updated SuccessFully!",HttpStatus.OK);
 		}
 		
-		//return "redirect:/Articles";
+		
 		
 	}
+	
+
 	
 	@RequestMapping("/Article/remove/{id}")
    public String removeArticle(@PathVariable("id") int id){

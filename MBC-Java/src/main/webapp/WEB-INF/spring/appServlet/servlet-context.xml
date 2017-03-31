@@ -51,6 +51,9 @@
 				<beans:value>com.mdcp.mbc.model.State</beans:value>
 				<beans:value>com.mdcp.mbc.model.City</beans:value>
 				<beans:value>com.mdcp.mbc.model.Speciality</beans:value>
+				<beans:value>com.mdcp.mbc.model.Article</beans:value>
+				<beans:value>com.mdcp.mbc.model.EmrSoftware</beans:value>
+				
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">
@@ -99,7 +102,20 @@
 	<beans:bean id="SpecialityService" class="com.mdcp.mbc.service.SpecailityServiceImpl">
 		<beans:property name="specialityDAO" ref="SpecialityDAO"></beans:property>
 	</beans:bean>
+	<beans:bean id="ArticleDAO" class="com.mdcp.mbc.dao.ArticleDaoImpl">
+		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+	<beans:bean id="ArticleService" class="com.mdcp.mbc.service.ArticleServiceImpl">
+		<beans:property name="articleDAO" ref="ArticleDAO"></beans:property>
+	</beans:bean>
 	
+	
+	<beans:bean id="EmrSoftwareDAO" class="com.mdcp.mbc.dao.EmrSoftwareDaoImpl">
+		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+	<beans:bean id="EmrSoftwareService" class="com.mdcp.mbc.service.EmrSoftwareServiceImpl">
+		<beans:property name="emrSoftwareDAO" ref="EmrSoftwareDAO"></beans:property>
+	</beans:bean>
 	
 	
 	<tx:annotation-driven transaction-manager="transactionManager"/>

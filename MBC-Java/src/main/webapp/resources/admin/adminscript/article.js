@@ -54,6 +54,35 @@
     	
     	
     	
+    	
+    	
+        
+        $(document).ready(function () {
+       	 $.getJSON("http://localhost:8080/MBC-Java/state/getState1", function (data)  
+       		        {        
+       		            $.each(data, function (i, data)  
+       		            {       
+       		            	//alert(data.name);
+       		                 $('<option>',  
+       		                    {  
+       		                        value: data.id,  
+       		                        text: data.name  
+       		                    }).html(data.name).appendTo("#stateDrpdown");  
+       		                });  
+       		 
+       		        
+       		     });  
+   		   
+       		    
+        });  
+  		 
+    	
+    	
+    	
+    	
+    	
+    	
+    	
      
      function AddArticle() {
          $('#Articleform').get(0).reset();      	
