@@ -27,14 +27,15 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.mdcp.mbc.model.Article;
 
-import com.mdcp.mbc.model.State;
+import com.mdcp.mbc.model.Speciality;
+
 import com.mdcp.mbc.service.ArticleService;
-import com.mdcp.mbc.service.StateService;
+import com.mdcp.mbc.service.SpecialityService;
 
 @Controller
 public class ArticleController {
 	 
-	private StateService stateService;
+	private SpecialityService specialityService;
 	private static String UPLOADED_FOLDER = "D:\\";
 
 	private ArticleService ArticleService;
@@ -79,9 +80,9 @@ return null;
 
 //many to many start
 @Autowired(required=true)	
-@Qualifier(value="stateService")
-public void setStateService(StateService ps){
-	this.stateService = ps;
+@Qualifier(value="SpecialityService")
+public void setSpecialityService(SpecialityService ps){
+	this.specialityService = ps;
 }
 
 
@@ -130,16 +131,17 @@ public void setStateService(StateService ps){
 	@RequestMapping(value= "/Article/add", method = RequestMethod.POST)
 	//old before relation 
 	//public @ResponseBody Article addArticle(@RequestBody Article p){
-	public ResponseEntity<String> addArticle(@RequestBody Article p,@RequestParam String stateId ){
+	public ResponseEntity<String> addArticle(@RequestBody Article p,@RequestParam String specialityId ){
 		
 		if(p.getId() == 0){
 			
-			State st = stateService.getStateById(Integer.parseInt(stateId));
+			
+			Speciality st =specialityService.getSpecialityById(Integer.parseInt(specialityId));
 			//old
 			//this.ArticleService.addArticle(p);
 			//return p;
 	
-		p.setState(st);
+			p.setSpeciality(st);
 		this.ArticleService.addArticle(p);
 		return new ResponseEntity<String>("Article Added SuccessFully!",HttpStatus.OK);
 		
@@ -154,6 +156,7 @@ public void setStateService(StateService ps){
 	}
 	
 
+	
 	
 	@RequestMapping("/Article/remove/{id}")
    public String removeArticle(@PathVariable("id") int id){

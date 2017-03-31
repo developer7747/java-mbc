@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mdcp.mbc.model.Speciality;
+import com.mdcp.mbc.model.State;
 import com.mdcp.mbc.service.SpecialityService;
 
 @Controller
@@ -43,7 +44,12 @@ public class SpecialityController {
 	}
 	////////////////////////////////
 	
-	
+
+	@RequestMapping(value = "/speciality/getSpeciality1", method = RequestMethod.GET)
+	public @ResponseBody
+	List<Speciality> getSpecialityList() {
+	return this.SpecialityService.listSpecialitys();
+	} 
 	
 	@RequestMapping(value = "/speciality/getSpeciality", method = RequestMethod.GET)
 	public @ResponseBody

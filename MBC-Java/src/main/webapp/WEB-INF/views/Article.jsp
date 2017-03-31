@@ -168,7 +168,7 @@
                     Category
                 </div>
                 <div class="col-sm-8">
-                    <input class="form-control" type="text" id="category" name="category" value=""/>
+                    <input class="form-control" type="text" id="categoryid" name="categoryid" value=""/>
                 </div>
             </div>   
 <div class="form-group">
@@ -176,8 +176,8 @@
                   Speciality
                 </div>
                 <div class="col-sm-8">
-<!--                     <input class="form-control" type="text" id="speciality" name="speciality" value=""/> -->
-                <select id="stateDrpdown">
+<!--                     <input class="form-control" type="text" id="specialityid" name="specialityid" value=""/> -->
+                <select id="SpecialityDrpdown">
                    
                    </select>
                 </div>

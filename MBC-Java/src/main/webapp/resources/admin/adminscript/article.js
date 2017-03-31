@@ -14,8 +14,8 @@
         	  "longDescription": CKEDITOR.instances['longDescription'].getData(),
               
               "shortDescription": CKEDITOR.instances['shortDescription'].getData(),
-              "category": $('#category').val(),
-              "speciality": $('#speciality').val(),
+              "categoryid": $('#categoryid').val(),
+              "specialityid": $('#specialityid').val(),
               "isActive": $('#isActive').val(),
               "imagepath": $('#imagepath').val(),
               "uploaddate": $('#uploaddate').val()
@@ -33,9 +33,16 @@
      }   
      
   function addUpdateRecord()  {
-	  var url="Article/add";
+	  var url="Article/add?specialityId="+$('#SpecialityDrpdown').val();
 	  addUpdateCommonRecord(url,formToJSON())
   }  	 
+  
+  
+  
+  
+  
+  
+  
   
     	function deleteRecord() {
     	    console.log('deleteRecord');
@@ -58,7 +65,7 @@
     	
         
         $(document).ready(function () {
-       	 $.getJSON("http://localhost:8080/MBC-Java/state/getState1", function (data)  
+       	 $.getJSON("http://localhost:8080/MBC-Java/speciality/getSpeciality1", function (data)  
        		        {        
        		            $.each(data, function (i, data)  
        		            {       
@@ -67,7 +74,7 @@
        		                    {  
        		                        value: data.id,  
        		                        text: data.name  
-       		                    }).html(data.name).appendTo("#stateDrpdown");  
+       		                    }).html(data.name).appendTo("#SpecialityDrpdown");  
        		                });  
        		 
        		        
@@ -200,8 +207,8 @@
                  
                  { label: 'pdfupload', name: 'pdfupload', width: 150 }, 
                  { label: 'uploaddate', name: 'uploaddate', width: 150 }, 
-                 { label: 'category', name: 'category', width: 150 }, 
-                 { label: 'speciality', name: 'speciality', width: 150 }, 
+                 { label: 'categoryid', name: 'categoryid', width: 150 }, 
+                 { label: 'specialityid', name: 'specialityid', width: 150 }, 
                  { label: 'isActive', name: 'isActive', width: 150 }, 
                  
                  { label: 'Action', name: 'Action', width: 82, formatter: displayButtons },

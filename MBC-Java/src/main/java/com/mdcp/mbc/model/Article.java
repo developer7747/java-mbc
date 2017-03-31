@@ -56,12 +56,10 @@ public class Article {
 	private Date  uploaddate;
 	
 	
-	@Column(name="category", nullable = true,columnDefinition = "varchar(50)")
-	private String  category;
+	@Column(name="categoryid", nullable = true,columnDefinition = "varchar(50)")
+	private String  categoryid;
 	
-	@Column(name="speciality", nullable = true,columnDefinition = "varchar(150)")
-	private String  speciality;
-	
+
 
 	@Column(name="isActive", nullable = true,columnDefinition = "varchar(50)")
 	private String  isActive;
@@ -69,23 +67,37 @@ public class Article {
 	
 	
 	//Start Relations
+//	@ManyToOne
+//	@JoinColumn(name="stateId",referencedColumnName="id")
+//	private State state;
+//
+//	public State getState() {
+//		return state;
+//	}
+//
+//
+//	public void setState(State state) {
+//		this.state = state;
+//	}
+//	
+
 	@ManyToOne
-	@JoinColumn(name="stateId",referencedColumnName="id")
-	private State state;
+	@JoinColumn(name="specialityid",referencedColumnName="id")
+	private Speciality speciality;
 
-	public State getState() {
-		return state;
+	
+	
+	public Speciality getSpeciality() {
+		return speciality;
 	}
 
 
-	public void setState(State state) {
-		this.state = state;
-	}
-	
 
-	
-	
-	
+	public void setSpeciality(Speciality speciality) {
+		this.speciality = speciality;
+	}
+
+
 	
 	
 	
@@ -210,24 +222,8 @@ public class Article {
 	}
 
 
-	public String getCategory() {
-		return category;
-	}
-
-
-	public void setCategory(String category) {
-		this.category = category;
-	}
-
-
-	public String getSpeciality() {
-		return speciality;
-	}
-
-
-	public void setSpeciality(String speciality) {
-		this.speciality = speciality;
-	}
+	
+	
 
 
 	public String getIsActive() {
@@ -249,6 +245,17 @@ public class Article {
 		this.imagepath = imagepath;
 	}
 
+	
+	public String getCategoryid() {
+		return categoryid;
+	}
 
+
+	public void setCategoryid(String categoryid) {
+		this.categoryid = categoryid;
+	}
+
+
+	
 	
 }
