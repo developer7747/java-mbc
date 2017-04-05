@@ -1,5 +1,9 @@
 package com.mdcp.mbc;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -8,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -15,8 +21,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.mdcp.mbc.model.Speciality;
 import com.mdcp.mbc.model.State;
@@ -25,8 +33,21 @@ import com.mdcp.mbc.service.SpecialityService;
 @Controller
 public class SpecialityController {
 
-	 
-	
+	private static String UPLOADED_FOLDER = "D:\\";
+	@RequestMapping(value= "/speciality/upload", method = RequestMethod.POST)
+	public ResponseEntity <String> upload(@RequestParam("uploadImage") MultipartFile file) {
+
+	try {
+
+	byte[] bytes = file.getBytes();
+	Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
+	Files.write(path, bytes);
+	} catch (IOException e) {
+	e.printStackTrace();
+	}
+	//rest of the code goes here...
+	return new ResponseEntity<String>(file.getOriginalFilename(), HttpStatus.OK);
+	}
 
 	private SpecialityService SpecialityService;
 	

@@ -31,7 +31,7 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title">EmrSoftware Details</h4>
         </div>
-        <form id="EmrSoftwareform"  method="post">
+        <form id="EmrSoftwareform" class="Form-horizontal"  method="post">
         <div class="modal-body">
                
          
@@ -242,7 +242,7 @@
      
       <button type="button" onclick="AddEmrSoftware()" class="btn btn-default" data-dismiss="modal">New User</button>
       <div style="margin-left:20px">
-    <table id="multiple37"></table> <div id="pmultiple37" ></div>
+    <table id="multiple37"></table> <div class="pagination-div" id="pmultiple37" ></div>
 </div>   
     </section>
 

@@ -62,6 +62,16 @@ public class CityController {
 	return this.cityService.listCitys();
 	 }
 	
+	@RequestMapping(value = "/city/getCity1", method = RequestMethod.GET)
+	public @ResponseBody
+	List<City> getCityList() {
+	return this.cityService.listCitys();
+	} 
+	
+	
+	
+	
+	
 	@RequestMapping(value = "/city/getcity", method = RequestMethod.GET)
 	public @ResponseBody
 	Map<String, Object> getAll(String userName, HttpServletRequest request) {

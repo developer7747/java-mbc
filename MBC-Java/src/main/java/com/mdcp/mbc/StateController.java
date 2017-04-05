@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -31,7 +33,9 @@ import com.mdcp.mbc.service.GenericService;
 
 @Controller
 public class StateController<E, K> {
-	private static String UPLOADED_FOLDER = "G://";
+//yuvi	private static String UPLOADED_FOLDER = "G://";
+	
+	private static String UPLOADED_FOLDER = "D:\\";
 	private StateService stateService;
 	private GenericService<State, K> gen;
 	
@@ -83,21 +87,51 @@ public class StateController<E, K> {
 	
 	
 	
-	//////////////////////////////
+	////////////yuvi//////////////////
+//	@RequestMapping(value= "/state/upload", method = RequestMethod.POST)
+//	public @ResponseBody Map<String, Object> upload(@RequestParam("myimage") MultipartFile file) {
+//	    
+//		  try {
+//        	  
+//	            byte[] bytes = file.getBytes();
+//	            Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
+//	            Files.write(path, bytes);
+//		  } catch (IOException e) {
+//	            e.printStackTrace();
+//	        }
+//		//rest of the code goes here...
+//		return null;
+//	}
+//	
+	
 	@RequestMapping(value= "/state/upload", method = RequestMethod.POST)
-	public @ResponseBody Map<String, Object> upload(@RequestParam("myimage") MultipartFile file) {
-	    
-		  try {
-        	  
-	            byte[] bytes = file.getBytes();
-	            Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
-	            Files.write(path, bytes);
-		  } catch (IOException e) {
-	            e.printStackTrace();
-	        }
-		//rest of the code goes here...
-		return null;
+	public ResponseEntity <String> upload(@RequestParam("uploadImage") MultipartFile file) {
+
+	try {
+
+	byte[] bytes = file.getBytes();
+	Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
+	Files.write(path, bytes);
+	} catch (IOException e) {
+	e.printStackTrace();
 	}
+	//rest of the code goes here...
+	return new ResponseEntity<String>(file.getOriginalFilename(), HttpStatus.OK);
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	//For add and update person both
 	
 	@RequestMapping(value= "/state/add", method = RequestMethod.POST)

@@ -17,6 +17,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class homeController {
 	
 	private static String UPLOADED_FOLDER = "G://";
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home()
 	{

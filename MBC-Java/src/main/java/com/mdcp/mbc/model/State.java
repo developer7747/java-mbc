@@ -17,7 +17,7 @@ public class State {
 	private int id;
 	
 	private String name;
-	
+	private String imagepath;
 	@Column(name="intial",nullable = true,columnDefinition = "varchar(50)")
 	private String intial;
 	
@@ -35,10 +35,10 @@ public class State {
 	@Column(name="activeornot132", nullable = true,columnDefinition = "varchar(50)")
 	private String  activeornot132;
 	
-	
-	@Column(name="uploadImage", nullable = true,columnDefinition = "text")
-	private String  uploadImage;
-	
+//	
+//	@Column(name="uploadImage", nullable = true,columnDefinition = "text")
+//	private String  uploadImage;
+//	
 	public int getId() {
 		return id;
 	}
@@ -96,11 +96,20 @@ public class State {
 
 	
 
-	public String getUploadImage() {
-		return uploadImage;
+	public String getImagepath() {
+		return imagepath;
 	}
 
-	public void setUploadImage(String uploadImage) {
-		this.uploadImage = uploadImage;
+
+	public void setImagepath(String imagepath) {
+		this.imagepath = imagepath;
 	}
+	
+//	public String getUploadImage() {
+//		return uploadImage;
+//	}
+//
+//	public void setUploadImage(String uploadImage) {
+//		this.uploadImage = uploadImage;
+//	}
 }

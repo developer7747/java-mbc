@@ -22,16 +22,27 @@
               
 //              "pdfupload": $('#pdfupload').val(),
 //              
+
+
 //             
 //              "uploadImage": $('#uploadImage').val()
 //            
+             
+           
          });
      }   
      
   function addUpdateRecord()  {
-	  var url="Article/add?specialityId="+$('#SpecialityDrpdown').val();
+	  var url="PressRelease/add?specialityId="+$('#SpecialityDrpdown').val();
 	  addUpdateCommonRecord(url,formToJSON())
   }  	 
+  
+  
+  
+  
+  
+  
+  
   
     	function deleteRecord() {
     	    console.log('deleteRecord');
@@ -47,6 +58,10 @@
     	    });
     	}
      
+    	
+    	
+    	
+    	
     	
         
         $(document).ready(function () {
@@ -69,13 +84,20 @@
         });  
   		 
     	
-     function AddArticle() {
-         $('#Articleform').get(0).reset();      	
-         $('#AddEditArticleModal').modal('show');
+    	
+    	
+    	
+    	
+    	
+    	
+     
+     function AddPressRelease() {
+         $('#PressReleaseform').get(0).reset();      	
+         $('#AddEditPressReleaseModal').modal('show');
      }
      function UpdateRecordPopup(RowID)
      {
-    	 $('#Articleform').get(0).reset();
+    	 $('#PressReleaseform').get(0).reset();
          var Row_Data = $("#multiple37").getRowData(RowID);         
          $('#id').val(Row_Data['id']);
          CKEDITOR.instances['bannerContent'].setData(Row_Data['bannerContent']),
@@ -88,7 +110,7 @@
          $('#name').val(Row_Data['name']);
          CKEDITOR.instances['shortDescription'].setData(Row_Data['shortDescription']),
         // $('#shortDescription').val(Row_Data['shortDescription']);         
-         $('#AddEditArticleModal').modal('show');
+         $('#AddEditPressReleaseModal').modal('show');
      }
      
      
@@ -101,9 +123,9 @@
      
      function testUpload()
      {
-    	 var formData = new FormData($('#Articleform')[0]);
-		 // var url="Article/add";
-	var url="http://localhost:8080/MBC-Java/Article/upload";
+    	 var formData = new FormData($('#PressReleaseform')[0]);
+		 // var url="PressRelease/add";
+	var url="http://localhost:8080/MBC-Java/PressRelease/upload";
 		$.ajax({
 		    url: url,
 		    type: "POST",
@@ -126,9 +148,9 @@
      
      function pdfUpload()
      {
-    	 var formData = new FormData($('#Articleform')[0]);
-		 // var url="Article/add";
-	var url="http://localhost:8080/MBC-Java/Article/pdfupload";
+    	 var formData = new FormData($('#PressReleaseform')[0]);
+		 // var url="PressRelease/add";
+	var url="http://localhost:8080/MBC-Java/PressRelease/pdfupload";
 		$.ajax({
 		    url: url,
 		    type: "POST",
@@ -148,32 +170,46 @@
   
      
      
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
      $(document).ready(function () {         
          $("#multiple37").jqGrid({
-         	url: 'http://localhost:8080/MBC-Java/Article/getArticle',              
+         	url: 'http://localhost:8080/MBC-Java/PressRelease/getPressRelease',              
              mtype: "GET",
              styleUI: 'Bootstrap',
              datatype: "json",
              colModel: [
-                 { label: 'id', name: 'id', key: true, width: 75 },
-                 { label: 'bannerContent', name: 'bannerContent', width: 150 },
-                 { label: 'name', name: 'name', width: 150 },
-                 { label: 'metaDescription', name: 'metaDescription', width: 150 },
-                 { label: 'metaKeyword', name: 'metaKeyword', width: 150 },
-                 { label: 'linkurl', name: 'linkurl', width: 150 },
-                 { label: 'heading', name: 'heading', width: 150 },
-                 { label: 'uploadImage', name: 'uploadImage', width: 150 },
+                 { label: 'Id', name: 'id', key: true, width: 75 },
+                 { label: 'BannerContent', name: 'bannerContent', width: 150 },
+                 { label: 'Name', name: 'name', width: 150 },
+                 { label: 'MetaDescription', name: 'metaDescription', width: 150 },
+                 { label: 'MetaKeyword', name: 'metaKeyword', width: 150 },
+                 { label: 'Linkurl', name: 'linkurl', width: 150 },
+                 { label: 'Heading', name: 'heading', width: 150 },
+                 { label: 'UploadImage', name: 'uploadImage', width: 150 },
                
-                 { label: 'longDescription', name: 'longDescription', width: 150 },
+                 { label: 'LongDescription', name: 'longDescription', width: 150 },
                 
-                 { label: 'shortDescription', name: 'shortDescription', width: 150 },
-                 { label: 'uploadImage', name: 'uploadImage', width: 150 }, 
+                 { label: 'ShortDescription', name: 'shortDescription', width: 150 },
+                 { label: 'UploadImage', name: 'uploadImage', width: 150 }, 
                  
-                 { label: 'pdfupload', name: 'pdfupload', width: 150 }, 
-                 { label: 'uploaddate', name: 'uploaddate', width: 150 }, 
-                 { label: 'categoryid', name: 'categoryid', width: 150 }, 
-                 { label: 'specialityid', name: 'specialityid', width: 150 }, 
-                 { label: 'isActive', name: 'isActive', width: 150 }, 
+                 { label: 'Pdfupload', name: 'pdfupload', width: 150 }, 
+                 { label: 'Uploaddate', name: 'uploaddate', width: 150 }, 
+                 { label: 'Categoryid', name: 'categoryid', width: 150 }, 
+                 { label: 'Specialityid', name: 'specialityid', width: 150 }, 
+                 { label: 'IsActive', name: 'isActive', width: 150 }, 
                  
                  { label: 'Action', name: 'Action', width: 82, formatter: displayButtons },
              ],

@@ -1,8 +1,8 @@
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.3.12
+<!--       <b>Version</b> 2.3.12 -->
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+    <strong>Copyright &copy; 2016-2017 <a href="http://Medicalbillersandcoders.com">MDCP</a>.</strong> All rights
     reserved.
   </footer>
 

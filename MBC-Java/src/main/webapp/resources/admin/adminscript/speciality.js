@@ -10,7 +10,8 @@
              "longDescription": CKEDITOR.instances['longDescription'].getData(),
              "name": $('#name').val(),
              "shortDescription": CKEDITOR.instances['shortDescription'].getData(),
-             "uploadImage": $('#uploadImage').val()
+             "imagepath": $('#imagepath').val()
+             // "uploadImage": $('#uploadImage').val()
          });
      }   
      
@@ -32,6 +33,40 @@
     	    });
     	}
      
+    	
+    	
+    	
+    	
+    	
+
+        function testUpload()
+        {
+       	 var formData = new FormData($('#Specialityform')[0]);
+   		 // var url="Article/add";
+   	var url="http://localhost:8080/MBC-Java/speciality/upload";
+   		$.ajax({
+   		    url: url,
+   		    type: "POST",
+   		    dataType: 'text',
+   		    contentType: false,
+   		    processData: false,
+   		    cache: false,
+   		    data: formData,
+   		    success: function(response) {
+   		    	$("#imagepath").val(response)
+   		        alert("success");
+   		    },
+   		    error: function() {
+   		        alert("unable to create the record");
+   		    }
+   	});
+        }
+    	
+    	
+    	
+    	
+    	
+    	
     	
     	
     	

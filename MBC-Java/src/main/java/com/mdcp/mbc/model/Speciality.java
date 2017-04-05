@@ -17,7 +17,7 @@ public class Speciality {
 	private int id;
 	
 	private String name;
-	
+	private String imagepath;
 
 	@Column(name="bannerContent",nullable = true,columnDefinition = "text")
 	private String bannerContent;
@@ -34,8 +34,8 @@ public class Speciality {
 	private String  isActive;
 	
 	
-	@Column(name="uploadImage", nullable = true,columnDefinition = "text")
-	private String  uploadImage;
+//	@Column(name="uploadImage", nullable = true,columnDefinition = "text")
+//	private String  uploadImage;
 	
 	public int getId() {
 		return id;
@@ -94,11 +94,30 @@ public class Speciality {
 
 	
 
-	public String getUploadImage() {
-		return uploadImage;
+//	public String getUploadImage() {
+//		return uploadImage;
+//	}
+//
+//	public void setUploadImage(String uploadImage) {
+//		this.uploadImage = uploadImage;
+//	}
+	
+	
+	
+	
+	public String getImagepath() {
+		return imagepath;
 	}
 
-	public void setUploadImage(String uploadImage) {
-		this.uploadImage = uploadImage;
+
+	public void setImagepath(String imagepath) {
+		this.imagepath = imagepath;
 	}
+	
+	
+	
+	
+	
+	
+	
 }

@@ -22,20 +22,20 @@
    
    
 <!-- Modal -->
-<div id="AddEditArticleModal" class="modal fade" role="dialog">
+<div id="AddEditProfileModal"  class="modal fade Form-horizontal" role="dialog">
   <div class="modal-dialog" style=" width:90%;">
 
     <!-- Modal content-->
     <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">User Information</h4>
+            <h4 class="modal-title">Profile Information</h4>
         </div>
-        <form id="Articleform"  class="Form-horizontal" method="post">
+        <form id="Profileform"  method="post">
         <div class="modal-body">
                
          
-            <input class="form-control" type="text" id="id" name="id" value=""/>
+            <input class="form-control" type="hidden" id="id" name="id" value=""/>
            
            
              <div class="form-group">
@@ -48,13 +48,39 @@
             </div>
             
            
+             <div class="form-group">
+                <div class="col-sm-4">
+                     	 BillersName
+                </div>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" id="Billersname" name="Billersname" value=""/>
+                </div>
+            </div>
+            
+              <div class="form-group">
+                <div class="col-sm-4">
+                     	MetaDescription
+                </div>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" id="metaDescription" name="metaDescription" value=""/>
+                </div>
+            </div>
+              <div class="form-group">
+                <div class="col-sm-4">
+                     	MetaKeyword
+                </div>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" id="metaKeyword" name="metaKeyword" value=""/>
+                </div>
+            </div>
+            
            
           
            
            
             <div class="form-group">
                 <div class="col-sm-4">
-                     	bannerContent
+                     	BannerContent
                 </div>
                 <div class="col-sm-8">
                    
@@ -68,55 +94,12 @@
            
              <div class="form-group">
                 <div class="col-sm-4">
-                     	   MetaDescription
-                </div>
-                <div class="col-sm-8">
-                    <input class="form-control" type="text" id="metaDescription" name="metaDescription" value=""/>
-                </div>
-            </div>
-              <div class="form-group">
-                <div class="col-sm-4">
-                     	   MetaKeyword
-                </div>
-                <div class="col-sm-8">
-                    <input class="form-control" type="text" id="metaKeyword" name="metaKeyword" value=""/>
-                </div>
-            </div>
-            
-           
-            <div class="form-group">
-                <div class="col-sm-4">
-                     	  linkurl
-                </div>
-                <div class="col-sm-8">
-                    <input class="form-control" type="text" id="linkurl" name="linkurl" value=""/>
-                </div>
-            </div>
-           
-           <div class="form-group">
-                <div class="col-sm-4">
                      	Heading
                 </div>
                 <div class="col-sm-8">
                     <input class="form-control" type="text" id="heading" name="heading" value=""/>
                 </div>
             </div>
-             <div class="form-group">
-                <div class="col-sm-4">
-                     	BannerContent
-                </div>
-                <div class="col-sm-8">
-                    <input class="form-control" type="text" id="bannerContent" name="bannerContent" value=""/>
-                </div>
-            </div>
-           
-           
-           
-           
-           
-           
-           
-           
            
             
              <div class="form-group">
@@ -142,8 +125,79 @@
                    
                 </div>
             </div>
-            
+            <div class="form-group">
+                <div class="col-sm-4">
+                    uploadImage
+                </div>
+                <div class="col-sm-8">
 
+                    <input class="form-control"  type="file"    onchange="testUpload()" name="uploadImage" id="uploadImage" />
+      
+               <input class="form-control" type="hidden"  id="imagepath" name="imagepath"   />
+        
+                
+                </div>
+            </div> 
+            
+            
+            <div class="form-group">
+                <div class="col-sm-4">
+                   ProfileAddress
+                </div>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" id="ProfileAddress" name="ProfileAddress" value=""/>
+                </div>
+            </div>   
+            
+               
+            <div class="form-group">
+                <div class="col-sm-4">
+                  PhoneNumber
+                </div>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" id="PhoneNumber" name="PhoneNumber" value=""/>
+                </div>
+            </div>  
+            
+            
+             <div class="form-group">
+                <div class="col-sm-4">
+               Email
+                </div>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" id="Email" name="Email" value=""/>
+                </div>
+            </div>    
+
+
+ 
+             <div class="form-group">
+                <div class="col-sm-4">
+               Zipcode
+                </div>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" id="Zipcode" name="Zipcode" value=""/>
+                </div>
+            </div>    
+            
+            
+            <div class="form-group">
+                <div class="col-sm-4">
+                    Upload Date
+                </div>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" id="uploaddate" name="uploaddate" value=""/>
+                </div>
+            </div>   
+            
+            <div class="form-group">
+                <div class="col-sm-4">
+                    Category
+                </div>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" id="categoryid" name="categoryid" value=""/>
+                </div>
+            </div>   
 <div class="form-group">
                 <div class="col-sm-4">
                     isActive
@@ -152,25 +206,75 @@
                     <input class="form-control" type="text" id="isActive" name="isActive" value=""/>
                 </div>
             </div>   
-
+<div class="form-group">
+                <div class="col-sm-4">
+                  Experience
+                </div>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" id="Experience" name="Experience" value=""/>
+                </div>
+            </div>  
 
 <div class="form-group">
                 <div class="col-sm-4">
-                    Upload Date
+                  Software
                 </div>
                 <div class="col-sm-8">
-                    <input class="form-control" type="text" id="uploaddate" name="uploaddate" value=""/>
+                    <input class="form-control" type="text" id="Software" name="Software" value=""/>
                 </div>
-            </div>   
+            </div>  
 
 <div class="form-group">
                 <div class="col-sm-4">
-                    Category
+                Certification
                 </div>
                 <div class="col-sm-8">
-                    <input class="form-control" type="text" id="categoryid" name="categoryid" value=""/>
+                    <input class="form-control" type="text" id="Certification" name="Certification" value=""/>
+                </div>
+            </div>  <div class="form-group">
+                <div class="col-sm-4">
+                Specific  Interest
+                </div>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" id="SpecificInterest" name="SpecificInterest" value=""/>
+                </div>
+            </div>  
+            
+            <div class="form-group">
+                <div class="col-sm-4">
+                Status
+                </div>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" id="Status" name="Status" value=""/>
+                </div>
+            </div>  
+
+<div class="form-group">
+                <div class="col-sm-4">
+                State
+                </div>
+                <div class="col-sm-8">
+
+                <select id="StateDrpdown">
+                   
+                   </select>
                 </div>
             </div>   
+<div class="form-group">
+                <div class="col-sm-4">
+                City
+                </div>
+                <div class="col-sm-8">
+
+                <select id="CityDrpdown">
+                   
+                   </select>
+                </div>
+            </div>   
+
+
+
+
 <div class="form-group">
                 <div class="col-sm-4">
                   Speciality
@@ -183,34 +287,6 @@
                 </div>
             </div>   
 
-
-<div class="form-group">
-                <div class="col-sm-4">
-                    uploadImage
-                </div>
-                <div class="col-sm-8">
-
-                    <input class="form-control"  type="file"    onchange="testUpload()" name="uploadImage" id="uploadImage" />
-      
-               <input class="form-control" type="hidden"  id="imagepath" name="imagepath"   />
-        
-                
-                </div>
-            </div>   
-            
-         <div class="form-group">
-                <div class="col-sm-4">
-                    Pdf Upload
-                </div>
-                <div class="col-sm-8">
-
-                    <input class="form-control"  type="file"   onchange="pdfUpload()" name="pdfupload" id="pdfupload" />
-
-               
-                
-                </div>
-            </div>   
-            
 
 
 
@@ -233,9 +309,9 @@
 </div>
 <!--  End Bootstrap modal -->
      
-      <button type="button" onclick="AddArticle()" class="btn btn-default" data-dismiss="modal">New User</button>
+      <button type="button" onclick="AddProfile()" class="btn btn-default" data-dismiss="modal">New User</button>
       <div style="margin-left:20px">
-    <table id="multiple37"></table> <div class="pagination-div" id="pmultiple37" ></div>
+    <table id="multiple37"></table> <div  class="pagination-div" id="pmultiple37" ></div>
 </div>   
     </section>
 
@@ -244,7 +320,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
- <script src="resources/admin/adminscript/article.js"></script>
+ <script src="resources/admin/adminscript/profile.js"></script>
 <jsp:include page="/WEB-INF/views/common/footer.jsp"/>
 </body>
 </html>

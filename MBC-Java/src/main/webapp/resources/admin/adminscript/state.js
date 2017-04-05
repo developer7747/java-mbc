@@ -11,7 +11,7 @@
              "longDescription": CKEDITOR.instances['longDescription'].getData(),
              "name": $('#name').val(),
              "shortDescription": CKEDITOR.instances['shortDescription'].getData(),
-             "uploadImage": $('#uploadImage').val()
+             "imagepath": $('#imagepath').val()
          });
      }   
      
@@ -75,6 +75,41 @@
      
      
      
+     
+     
+     
+     
+     function testUpload()
+     {
+    	 var formData = new FormData($('#stateform')[0]);
+		 // var url="Article/add";
+	var url="http://localhost:8080/MBC-Java/state/upload";
+		$.ajax({
+		    url: url,
+		    type: "POST",
+		    dataType: 'text',
+		    contentType: false,
+		    processData: false,
+		    cache: false,
+		    data: formData,
+		    success: function(response) {
+		    	$("#imagepath").val(response)
+		        alert("success");
+		    },
+		    error: function() {
+		        alert("unable to create the record");
+		    }
+	});
+     }
+     
+     
+     
+     
+     
+     
+     
+     
+     
      $(document).ready(function () {       
     	 
     	 $("#bt").click(function() {
@@ -105,14 +140,15 @@
              styleUI: 'Bootstrap',
              datatype: "json",
              colModel: [
-                 { label: 'id', name: 'id', key: true, width: 75 },
-                 { label: 'bannerContent', name: 'bannerContent', width: 150 },
-                 { label: 'intial', name: 'intial', width: 150 },
-                 { label: 'activeornot132', name: 'activeornot132', width: 150 },
-                 { label: 'longDescription', name: 'longDescription', width: 150 },
-                 { label: 'name', name: 'name', width: 150 },
-                 { label: 'shortDescription', name: 'shortDescription', width: 150 },
-                 { label: 'uploadImage', name: 'uploadImage', width: 150 },                 
+                 { label: 'Id', name: 'id', key: true, width: 75 },
+                 { label: 'BannerContent', name: 'bannerContent', width: 150 },
+                 { label: 'Intial', name: 'intial', width: 150 },
+//                 { label: 'activeornot132', name: 'activeornot132', width: 150 },
+                 { label: 'Isactive', name: 'activeornot132', width: 150 },
+                 { label: 'LongDescription', name: 'longDescription', width: 150 },
+                 { label: 'Name', name: 'name', width: 150 },
+                 { label: 'ShortDescription', name: 'shortDescription', width: 150 },
+                 { label: 'UploadImage', name: 'uploadImage', width: 150 },                 
                  { label: 'Action', name: 'Action', width: 82, formatter: displayButtons },
              ],
              autowidth: true,

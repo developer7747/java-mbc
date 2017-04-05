@@ -22,25 +22,25 @@
    
    
 <!-- Modal -->
-<div id="AddEditArticleModal" class="modal fade" role="dialog">
+<div id="AddEditPressReleaseModal"   class="modal fade Form-horizontal" role="dialog">
   <div class="modal-dialog" style=" width:90%;">
 
     <!-- Modal content-->
     <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">User Information</h4>
+            <h4 class="modal-title">Press Release </h4>
         </div>
-        <form id="Articleform"  class="Form-horizontal" method="post">
+        <form id="PressReleaseform"  method="post">
         <div class="modal-body">
                
          
-            <input class="form-control" type="text" id="id" name="id" value=""/>
+            <input class="form-control" type="hidden" id="id" name="id" value=""/>
            
            
              <div class="form-group">
                 <div class="col-sm-4">
-                     	   name
+                     	   Name
                 </div>
                 <div class="col-sm-8">
                     <input class="form-control" type="text" id="name" name="name" value=""/>
@@ -54,7 +54,7 @@
            
             <div class="form-group">
                 <div class="col-sm-4">
-                     	bannerContent
+                     	Banner Content
                 </div>
                 <div class="col-sm-8">
                    
@@ -86,7 +86,7 @@
            
             <div class="form-group">
                 <div class="col-sm-4">
-                     	  linkurl
+                     	 Linkurl
                 </div>
                 <div class="col-sm-8">
                     <input class="form-control" type="text" id="linkurl" name="linkurl" value=""/>
@@ -101,27 +101,21 @@
                     <input class="form-control" type="text" id="heading" name="heading" value=""/>
                 </div>
             </div>
-             <div class="form-group">
-                <div class="col-sm-4">
-                     	BannerContent
-                </div>
-                <div class="col-sm-8">
-                    <input class="form-control" type="text" id="bannerContent" name="bannerContent" value=""/>
-                </div>
-            </div>
-           
-           
-           
-           
-           
-           
+<!--              <div class="form-group"> -->
+<!--                 <div class="col-sm-4"> -->
+<!--                      	BannerContent -->
+<!--                 </div> -->
+<!--                 <div class="col-sm-8"> -->
+<!--                     <input class="form-control" type="text" id="bannerContent" name="bannerContent" value=""/> -->
+<!--                 </div> -->
+<!--             </div> -->
            
            
            
             
              <div class="form-group">
                 <div class="col-sm-4">
-                    shortDescription
+                    ShortDescription
                 </div>
                 <div class="col-sm-8">
 
@@ -133,7 +127,7 @@
             
  <div class="form-group">
                 <div class="col-sm-4">
-                     	   longDescription
+                     	  LongDescription
                 </div>
                 <div class="col-sm-8">
               <textarea cols="80" class="ckeditor" id="longDescription" name="longDescription" rows="10" ></textarea>
@@ -146,7 +140,7 @@
 
 <div class="form-group">
                 <div class="col-sm-4">
-                    isActive
+                   IsActive
                 </div>
                 <div class="col-sm-8">
                     <input class="form-control" type="text" id="isActive" name="isActive" value=""/>
@@ -186,7 +180,7 @@
 
 <div class="form-group">
                 <div class="col-sm-4">
-                    uploadImage
+                    UploadImage
                 </div>
                 <div class="col-sm-8">
 
@@ -233,9 +227,13 @@
 </div>
 <!--  End Bootstrap modal -->
      
-      <button type="button" onclick="AddArticle()" class="btn btn-default" data-dismiss="modal">New User</button>
+   
+     
+     
+      <button type="button" onclick="AddPressRelease()" class="btn btn-default" data-dismiss="modal">New PR</button>
       <div style="margin-left:20px">
-    <table id="multiple37"></table> <div class="pagination-div" id="pmultiple37" ></div>
+    <table id="multiple37"  ></table> <div  class="pagination-div" id="pmultiple37" ></div>
+<!-- #535F6B     -->
 </div>   
     </section>
 
@@ -244,7 +242,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
- <script src="resources/admin/adminscript/article.js"></script>
+ <script src="resources/admin/adminscript/pressRelease.js"></script>
 <jsp:include page="/WEB-INF/views/common/footer.jsp"/>
 </body>
 </html>

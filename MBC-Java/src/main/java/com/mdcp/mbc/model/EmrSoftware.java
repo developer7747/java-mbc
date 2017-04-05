@@ -32,7 +32,7 @@ public class EmrSoftware {
 	}
 	
 	private String Name;   
-	
+	 
 	private String Logo;
 	@Column(name="Logo", insertable=false, updatable=false,nullable = true,columnDefinition = "varchar(50)")
 	
@@ -59,10 +59,10 @@ public class EmrSoftware {
 	@Column(name="Integration",nullable = true,columnDefinition = "varchar(50)")
 	
 	private String Environmentrequired;
-	@Column(name="Environmentrequired",nullable = true,columnDefinition = "varchar(50)")
+
 	
 	private String SupportHospitalClaim;
-	@Column(name="SupportHospitalClaim",nullable = true,columnDefinition = "varchar(50)")
+	@Column(name="SupportHospitalClaim",insertable=false, updatable=false,nullable = true,columnDefinition = "varchar(50)")
 	
 	private String Features;
 	@Column(name="Features",nullable = true,columnDefinition = "text")
@@ -72,18 +72,21 @@ public class EmrSoftware {
 	
 //	private boolean isActive;
 //	@Column(name="isActive",nullable = true,columnDefinition = "boolean")
-	
+//	
 //	private String CreateDate;
 //	@Column(name="CreateDate",nullable = true,columnDefinition = "DateTime")
 //	
 //	private String ModifiedDate;
 //	@Column(name="ModifiedDate",nullable = true,columnDefinition = "DateTime")
+//	
+
+//	private boolean isPopular;
+//	@Column(name="isPopular",nullable = true,columnDefinition = "boolean")
+//	
+	
 	
 	private String SpecialtiesId;
 	@Column(name="SpecialtiesId",nullable = true,columnDefinition = "int")
-	
-//	private boolean isPopular;
-//	@Column(name="isPopular",nullable = true,columnDefinition = "boolean")
 	
 	private String CertificationType;
 	@Column(name="CertificationType",nullable = true,columnDefinition = "varchar(50)")
@@ -148,13 +151,7 @@ public class EmrSoftware {
 		this.Integration = integration;
 	}
 
-	public String getEnvironmentrequired() {
-		return Environmentrequired;
-	}
-
-	public void setEnvironmentrequired(String environmentrequired) {
-		this.Environmentrequired = environmentrequired;
-	}
+	
 
 	public String getSupportHospitalClaim() {
 		return SupportHospitalClaim;
@@ -236,6 +233,56 @@ public class EmrSoftware {
 	public void setShortDescription(String shortDescription) {
 		this.shortDescription = shortDescription;
 	}
+
+	public String getName() {
+		return Name;
+	}
+
+	public String getEnvironmentrequired() {
+		return Environmentrequired;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public void setEnvironmentrequired(String environmentrequired) {
+		Environmentrequired = environmentrequired;
+	}
+
+//	public boolean isActive() {
+//		return isActive;
+//	}
+//
+//	public String getCreateDate() {
+//		return CreateDate;
+//	}
+//
+//	public String getModifiedDate() {
+//		return ModifiedDate;
+//	}
+//
+//	public boolean isPopular() {
+//		return isPopular;
+//	}
+//
+//	public void setActive(boolean isActive) {
+//		this.isActive = isActive;
+//	}
+//
+//	public void setCreateDate(String createDate) {
+//		CreateDate = createDate;
+//	}
+//
+//	public void setModifiedDate(String modifiedDate) {
+//		ModifiedDate = modifiedDate;
+//	}
+//
+//	public void setPopular(boolean isPopular) {
+//		this.isPopular = isPopular;
+//	}
+
+
 
 	
 	
