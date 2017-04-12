@@ -45,6 +45,7 @@
 		<beans:property name="dataSource" ref="dataSource" />
 		<beans:property name="annotatedClasses">
 			<beans:list>
+				<beans:value>com.mdcp.mbc.model.Category</beans:value>
 				<beans:value>com.mdcp.mbc.model.Person</beans:value>
 				<beans:value>com.mdcp.mbc.model.State</beans:value>
 				<beans:value>com.mdcp.mbc.model.City</beans:value>
@@ -53,6 +54,7 @@
 				<beans:value>com.mdcp.mbc.model.EmrSoftware</beans:value>
 				<beans:value>com.mdcp.mbc.model.Profile</beans:value>
 				<beans:value>com.mdcp.mbc.model.PressRelease</beans:value>
+	<beans:value>com.mdcp.mbc.model.SpecialityGuideline</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">
@@ -107,6 +109,12 @@
 	<beans:bean id="ArticleService" class="com.mdcp.mbc.service.ArticleServiceImpl">
 		<beans:property name="articleDAO" ref="ArticleDAO"></beans:property>
 	</beans:bean>
+	<beans:bean id="CategoryDAO" class="com.mdcp.mbc.dao.CategoryDaoImpl">
+		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+	<beans:bean id="CategoryService" class="com.mdcp.mbc.service.CategoryServiceImpl">
+		<beans:property name="categoryDAO" ref="CategoryDAO"></beans:property>
+	</beans:bean>
 	
 	
 	<beans:bean id="PressReleaseDAO" class="com.mdcp.mbc.dao.PressReleaseDaoImpl">
@@ -131,6 +139,24 @@
 		<beans:property name="emrSoftwareDAO" ref="EmrSoftwareDAO"></beans:property>
 	</beans:bean>
 	
+	
+	
+	<beans:bean id="SpecialityGuidelineDAO" class="com.mdcp.mbc.dao.SpecialityGuidelineDaoImpl">
+		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+	<beans:bean id="SpecialityGuidelineService" class="com.mdcp.mbc.service.SpecialityGuidelineServiceImpl">
+		<beans:property name="specialityGuidelineDAO" ref="SpecialityGuidelineDAO"></beans:property>
+	</beans:bean>
+	
+	
+	
+		
+<!-- 	<beans:bean id="SpecialityGuidelineDAO" class="com.mdcp.mbc.dao.SpecialityGuidelineDaoImpl"> -->
+<!-- 		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" /> -->
+<!-- 	</beans:bean> -->
+<!-- 	<beans:bean id="SpecialityGuidelineService" class="com.mdcp.mbc.service.SpecilaityGuidelineServiceImpl"> -->
+<!-- 		<beans:property name="specialityGuidelineDAO" ref="SpecialityGuidelineDAO"></beans:property> -->
+<!-- 	</beans:bean> -->
 	
 	<tx:annotation-driven transaction-manager="transactionManager"/>
 	
