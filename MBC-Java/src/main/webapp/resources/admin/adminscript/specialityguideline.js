@@ -36,6 +36,30 @@
     	    });
     	}
      
+    	
+    	
+    	
+    	$(document).ready(function() {
+    		$.getJSON("http://localhost:8080/MBC-Java/Category/getCategory1", function(data) {
+    			$.each(data, function(i, data) {
+    				//alert(data.name);
+    				$('<option>', {
+    					value : data.id,
+    					text : data.catname
+    				}).html(data.catname).appendTo("#CategoryDrpdown");
+    			});
+
+    		});
+
+    	});
+
+    	
+    	
+    	
+    	
+    	
+    	
+    	
         function testUpload()
         {
        	 var formData = new FormData($('#SpecialityGuidelineform')[0]);

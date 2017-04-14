@@ -39,7 +39,7 @@ import com.mdcp.mbc.service.SpecialityGuidelineService;
 @Controller
 public class SpecialityGuidelineController {
 
-	
+	private CityService cityService;
 	private CategoryService CategoryService;
 	
 	
@@ -51,6 +51,21 @@ public class SpecialityGuidelineController {
 		this.CategoryService = ps;
 	}
 
+	@Autowired(required=true)	
+	@Qualifier(value="cityService")
+	public void setCityService(CityService ps){
+		this.cityService = ps;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	private static String UPLOADED_FOLDER = "D:\\";
 	@RequestMapping(value= "/specialityguideline/upload", method = RequestMethod.POST)
@@ -82,6 +97,10 @@ public class SpecialityGuidelineController {
 		model.addAttribute("listSpecialityGuidelines", this.SpecialityGuidelineService.listSpecialityGuidelines());
 		return "SpecialityGuideline";
 	}
+	
+	
+	
+ 
 	////////////////////////////////
 	
 
@@ -132,6 +151,15 @@ public class SpecialityGuidelineController {
 		
 		if(p.getId() == 0){
 			Category  cat =CategoryService.getCategoryById(Integer.parseInt(categoryid));
+	      
+			
+	     
+	       p.setCategoryid(cat);
+			
+		
+		
+			
+			
 			
 			//new person, add it
 			this.SpecialityGuidelineService.addSpecialityGuideline(p);

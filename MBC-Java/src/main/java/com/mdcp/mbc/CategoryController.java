@@ -80,7 +80,11 @@ return null;
 
 //many to many start
 
-
+@RequestMapping(value = "/Category/getCategory1", method = RequestMethod.GET)
+public @ResponseBody
+List<Category> getCategoryList() {
+return this.CategoryService.listCategorys();
+} 
 
 	
 	@RequestMapping(value = "/Category", method = RequestMethod.GET)

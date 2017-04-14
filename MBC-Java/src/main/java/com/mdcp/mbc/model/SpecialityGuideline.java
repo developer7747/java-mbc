@@ -17,6 +17,30 @@ import com.mysql.fabric.xmlrpc.base.Data;
 public class SpecialityGuideline {
 
 
+	
+	
+	@ManyToOne
+	@JoinColumn(name="categoryid",referencedColumnName="id")
+	private Category  categoryid;
+	
+	
+	public Category getCategoryid() {
+		return categoryid;
+	}
+	
+	
+	public void setCategoryid(Category categoryid) {
+		this.categoryid = categoryid;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
 	@Id
 	@Column(name="id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -37,9 +61,7 @@ public class SpecialityGuideline {
 	
 	private String uploadDate;
 	
-	@ManyToOne
-	@JoinColumn(name="categoryid",referencedColumnName="id")
-	private Category  categoryid;
+	
 
 	public int getId() {
 		return id;
@@ -65,9 +87,7 @@ public class SpecialityGuideline {
 		return imagepath;
 	}
 
-	public Category getCategoryid() {
-		return categoryid;
-	}
+	
 
 	public void setId(int id) {
 		this.id = id;
@@ -93,10 +113,7 @@ public class SpecialityGuideline {
 		this.imagepath = imagepath;
 	}
 
-	public void setCategoryid(Category categoryid) {
-		this.categoryid = categoryid;
-	}
-
+	
 	public String getUploadDate() {
 		return uploadDate;
 	}
