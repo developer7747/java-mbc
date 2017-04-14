@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | General Form Elements</title>
+    <title>Admin </title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -18,9 +18,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="resources/admin/dist/css/AdminLTE.min.css">
   
-  <link rel="stylesheet" href="resources/admin/common-css/common.css">
-  
-  
+  <link rel="stylesheet" href="resources/admin/common-cs/common.css">
   
   
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -28,6 +26,14 @@
   <link rel="stylesheet" href="resources/admin/dist/css/skins/_all-skins.min.css">
   <script src="resources/admin/plugins/jQuery/jquery-2.2.3.min.js"></script>
    <script src="http://cdn.ckeditor.com/4.6.2/standard-all/ckeditor.js"></script>
+   <link href="resources/admin/adminscript/date-picker/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />  
+    <script src="resources/admin/adminscript/date-picker/bootstrap-datepicker.min.js" type="text/javascript"></script>        
+   
+   <script type="text/javascript">
+       $(function () {
+       	$('.datepicker').datepicker();
+       });
+   </script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -38,7 +44,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>Admin</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">

@@ -12,10 +12,7 @@
     <script type="text/ecmascript" src="http://www.workflow.dhsmedicalbilling.com/Content/JQGrid/grid.locale-en.js"></script>
     <script type="text/ecmascript" src="http://www.workflow.dhsmedicalbilling.com/Content/JQGrid/jquery.jqGrid.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="http://www.workflow.dhsmedicalbilling.com/Content/JQGrid/ui.jqgrid-bootstrap.css"/>
-     <link href="resources/admin/adminscript/date-picker/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />  
-    <script src="resources/admin/adminscript/date-picker/bootstrap-datepicker.min.js" type="text/javascript"></script>        
-
-<script src="resources/admin/adminscript/date-picker/components-date-time-pickers.min.js" type="text/javascript"></script>
+     
      
     
    
@@ -92,6 +89,20 @@
             </div>
             
   
+ 
+ <div class="form-group">
+                <div class="col-sm-4">
+        Category
+                </div>
+                <div class="col-sm-8">
+
+                <select id="CategoryDrpdown">
+                   
+                   </select>
+                </div>
+            </div>   
+
+  
 
 
 <div class="form-group">
@@ -104,7 +115,7 @@
                                         
                
                           
-                    <input type= "text"  name="uploadDate"  class="form-control form-control-inline input-medium date-picker" value = "" />
+                    <input type= "text" id="uploadDate"  name="uploadDate"  class="form-control form-control-inline input-medium datepicker" value = "" />
                         </div>
                 </div>
             </div>   
@@ -155,6 +166,7 @@
 </div>
 <!--  End Bootstrap modal -->
      
+     
       <button type="button" onclick="AddSpecialityGuideline()" class="btn btn-default" data-dismiss="modal">New User</button>
       <div style="margin-left:20px">
     <table class="tb-header1" id="multiple37"></table> <div class="pagination-div" id="pmultiple37" ></div>
@@ -166,7 +178,12 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
- <script src="resources/admin/adminscript/specialityguideline.js"></script>
+   <script src="resources/admin/adminscript/specialityguideline.js"></script>
+ <script>
+ $(function(){
+	  alert("HI");
+	  }) 
+ </script>
 <jsp:include page="/WEB-INF/views/common/footer.jsp"/>
 </body>
 </html>

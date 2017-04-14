@@ -63,7 +63,7 @@
          <li><a href="Article"><i class="fa fa-circle-o"></i> Article</a></li>
          <li><a href="EmrSoftware"><i class="fa fa-circle-o"></i> Emr Software</a></li>
          <li><a href="Profile"><i class="fa fa-circle-o"></i>Profile</a></li>
-         
+                  <li><a href="SpecialityGuideline"><i class="fa fa-circle-o"></i>SpecialityGuideline</a></li>
          
          
           </ul>

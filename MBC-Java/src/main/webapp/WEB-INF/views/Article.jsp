@@ -29,13 +29,13 @@
     <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">User Information</h4>
+            <h4 class="modal-title">Article </h4>
         </div>
         <form id="Articleform"  class="Form-horizontal" method="post">
         <div class="modal-body">
                
          
-            <input class="form-control" type="text" id="id" name="id" value=""/>
+            <input class="form-control" type="hidden" id="id" name="id" value=""/>
            
            
              <div class="form-group">

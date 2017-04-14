@@ -97,6 +97,14 @@ public class SpecialityGuideline {
 		this.categoryid = categoryid;
 	}
 
+	public String getUploadDate() {
+		return uploadDate;
+	}
+
+	public void setUploadDate(String uploadDate) {
+		this.uploadDate = uploadDate;
+	}
+
 	
 	
 }

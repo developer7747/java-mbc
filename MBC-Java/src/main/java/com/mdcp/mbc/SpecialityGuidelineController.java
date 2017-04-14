@@ -26,13 +26,32 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.mdcp.mbc.model.Category;
+import com.mdcp.mbc.model.City;
+import com.mdcp.mbc.model.Profile;
+import com.mdcp.mbc.model.Speciality;
 import com.mdcp.mbc.model.SpecialityGuideline;
 import com.mdcp.mbc.model.State;
+import com.mdcp.mbc.service.CategoryService;
+import com.mdcp.mbc.service.CityService;
 import com.mdcp.mbc.service.SpecialityGuidelineService;
 
 @Controller
 public class SpecialityGuidelineController {
 
+	
+	private CategoryService CategoryService;
+	
+	
+	
+	//many to many start
+	@Autowired(required=true)	
+	@Qualifier(value="CategoryService")
+	public void setCategoryService(CategoryService ps){
+		this.CategoryService = ps;
+	}
+
+	
 	private static String UPLOADED_FOLDER = "D:\\";
 	@RequestMapping(value= "/specialityguideline/upload", method = RequestMethod.POST)
 	public ResponseEntity <String> upload(@RequestParam("uploadImage") MultipartFile file) {
@@ -103,17 +122,25 @@ public class SpecialityGuidelineController {
 	
 	//For add and update person both
 	
+	
+	
+
+	
+	
 	@RequestMapping(value= "/specialityguideline/add", method = RequestMethod.POST)
-	public @ResponseBody SpecialityGuideline addSpecialityGuideline(@RequestBody SpecialityGuideline p){
+	public ResponseEntity<String> addSpecialityGuideline(@RequestBody SpecialityGuideline p,@RequestParam String categoryid){
 		
 		if(p.getId() == 0){
+			Category  cat =CategoryService.getCategoryById(Integer.parseInt(categoryid));
+			
 			//new person, add it
 			this.SpecialityGuidelineService.addSpecialityGuideline(p);
-			return p;
+			return new ResponseEntity<String>("SpecialityGuidelineService  Updated SuccessFully!",HttpStatus.OK);
+
 		}else{
 			//existing person, call update
 			this.SpecialityGuidelineService.updateSpecialityGuideline(p);
-			return p;
+			return new ResponseEntity<String>("SpecialityGuidelineService  Updated SuccessFully!",HttpStatus.OK);
 		}
 		
 		//return "redirect:/SpecialityGuidelines";

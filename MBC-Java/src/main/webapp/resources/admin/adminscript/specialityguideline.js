@@ -3,24 +3,23 @@
      function formToJSON() {
     	// alert(parseInt($('#isActive').val()));
          return JSON.stringify({
-        	 "id": $('#id').val(),
-        	
-       	 "bannerContent": CKEDITOR.instances['bannerContent'].getData(),   
-//            
-//        	
-             "longDescription": CKEDITOR.instances['longDescription'].getData(),
-            "title": $('#Title').val(),
-            "shortDescription": CKEDITOR.instances['shortDescription'].getData(),
-             "imagepath": $('#imagepath').val(),
-            "categoryid":$('#categoryid').val(),
-               "uploadDate":$('#uploadDate').val()
-            
+	    "id" : $('#id').val(),
+		"bannerContent" : CKEDITOR.instances['bannerContent'].getData(),
+		"longDescription" : CKEDITOR.instances['longDescription'].getData(),
+		"title" : $('#Title').val(),
+		"shortDescription" : CKEDITOR.instances['shortDescription'].getData(),
+		"imagepath" : $('#imagepath').val(),
+		//"categoryid" : $('#categoryid').val(),
+		"uploadDate" : $('#uploadDate').val()
+            	
             // "uploadImage": $('#uploadImage').val()
          });
      }   
      
   function addUpdateRecord()  {
-	  var url="specialityguideline/add";
+	  var url="specialityguideline/add?categoryid="+$('#CategoryDrpdown').val();
+	// var url="specialityguideline/add;
+	  
 	  addUpdateCommonRecord(url,formToJSON())
   }  	 
     	function deleteRecord() {
@@ -37,12 +36,6 @@
     	    });
     	}
      
-    	
-    	
-    	
-    	
-    	
-
         function testUpload()
         {
        	 var formData = new FormData($('#SpecialityGuidelineform')[0]);
@@ -65,16 +58,9 @@
    		    }
    	});
         }
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-     
+        
+        
+    
      function AddSpecialityGuideline() {
          $('#SpecialityGuidelineform').get(0).reset();      	
          $('#AddEditSpecialityGuidelineModal').modal('show');
@@ -115,19 +101,19 @@
      
      $(document).ready(function () {         
          $("#multiple37").jqGrid({
-         	url: 'http://localhost:8080/MBC-Java/speciality/getSpecialityGuideline',              
+         	url: 'http://localhost:8080/MBC-Java/SpecialityGuideline/getSpecialityGuideline',              
              mtype: "GET",
              styleUI: 'Bootstrap',
              datatype: "json",
              colModel: [
-                 { label: 'id', name: 'id', key: true, width: 75 },
+                
+            	 { label: 'id', name: 'id', key: true, width: 75 },
                  { label: 'bannerContent', name: 'bannerContent', width: 150 },
-               
-                 { label: 'isActive', name: 'isActive', width: 150 },
+              
                  { label: 'longDescription', name: 'longDescription', width: 150 },
-                 { label: 'name', name: 'name', width: 150 },
+                 { label: 'Title', name: 'title', width: 150 },
                  { label: 'shortDescription', name: 'shortDescription', width: 150 },
-                 { label: 'uploadImage', name: 'uploadImage', width: 150 },                 
+                 { label: 'uploadDate', name: 'uploadDate', width: 150 },                 
                  { label: 'Action', name: 'Action', width: 82, formatter: displayButtons },
              ],
              autowidth: true,
