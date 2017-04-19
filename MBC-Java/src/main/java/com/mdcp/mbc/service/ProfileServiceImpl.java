@@ -9,21 +9,13 @@ import com.mdcp.mbc.model.Profile;
 
 public class ProfileServiceImpl implements ProfileService {
 
-	
-	
 	private ProfileDAO ProfileDAOobj;
 
-	
-	public void setProfileDAO(ProfileDAO ProfileDAO){
-		
-		
-		this.ProfileDAOobj= ProfileDAO;
-	}
-	
-	
+	public void setProfileDAO(ProfileDAO ProfileDAO) {
 
-	
-	
+		this.ProfileDAOobj = ProfileDAO;
+	}
+
 	@Override
 	@Transactional
 	public void addProfile(Profile p) {
@@ -51,7 +43,7 @@ public class ProfileServiceImpl implements ProfileService {
 		// TODO Auto-generated method stub
 		return this.ProfileDAOobj.getProfileById(id);
 	}
-	
+
 	@Override
 	@Transactional
 	public void removeProfile(int id) {

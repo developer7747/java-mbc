@@ -208,15 +208,15 @@
 <!-- jQuery 2.2.3 -->
 
 <!-- Bootstrap 3.3.6 -->
-<script src="resources/admin/bootstrap/js/bootstrap.min.js"></script>
+<script src="<c:url value="/resources/admin/bootstrap/js/bootstrap.min.js"/>"></script>
 <!-- FastClick -->
-<script src="resources/admin/plugins/fastclick/fastclick.js"></script>
+<script src="<c:url value="/resources/admin/plugins/fastclick/fastclick.js"/>"></script>
 <!-- AdminLTE App -->
-<script src="resources/admin/dist/js/app.min.js"></script>
+<script src="<c:url value="/resources/admin/dist/js/app.min.js"/>"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="resources/admin/dist/js/demo.js"></script>
+<script src="<c:url value="/resources/admin/dist/js/demo.js"/>"></script>
 
- <script src="resources/admin/adminscript/common.js"></script>
+ <script src="<c:url value="/resources/admin/adminscript/common.js"/>"></script>
  
  
  

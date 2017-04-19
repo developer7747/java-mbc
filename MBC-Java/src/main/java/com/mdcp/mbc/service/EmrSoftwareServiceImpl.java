@@ -9,21 +9,13 @@ import com.mdcp.mbc.model.EmrSoftware;
 
 public class EmrSoftwareServiceImpl implements EmrSoftwareService {
 
-	
-	
 	private EmrSoftwareDAO EmrSoftwareDAOobj;
 
-	
-	public void setEmrSoftwareDAO(EmrSoftwareDAO EmrSoftwareDAO){
-		
-		
-		this.EmrSoftwareDAOobj= EmrSoftwareDAO;
-	}
-	
-	
+	public void setEmrSoftwareDAO(EmrSoftwareDAO EmrSoftwareDAO) {
 
-	
-	
+		this.EmrSoftwareDAOobj = EmrSoftwareDAO;
+	}
+
 	@Override
 	@Transactional
 	public void addEmrSoftware(EmrSoftware p) {
@@ -51,7 +43,7 @@ public class EmrSoftwareServiceImpl implements EmrSoftwareService {
 		// TODO Auto-generated method stub
 		return this.EmrSoftwareDAOobj.getEmrSoftwareById(id);
 	}
-	
+
 	@Override
 	@Transactional
 	public void removeEmrSoftware(int id) {

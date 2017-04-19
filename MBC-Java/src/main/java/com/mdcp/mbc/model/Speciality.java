@@ -8,35 +8,32 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Speciality")
+@Table(name = "Speciality")
 public class Speciality {
 
 	@Id
-	@Column(name="id")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	
+
 	private String name;
 	private String imagepath;
 
-	@Column(name="bannerContent",nullable = true,columnDefinition = "text")
+	@Column(name = "bannerContent", nullable = true, columnDefinition = "text")
 	private String bannerContent;
-	
-	@Column(name="shortDescription",nullable = true,columnDefinition = "text")
-	private String shortDescription;
-	
-	@Column(name="longDescription", nullable = true,columnDefinition = "text")
-	private String longDescription;
-	
 
-	
-	@Column(name="isActive", nullable = true,columnDefinition = "varchar(50)")
-	private String  isActive;
-	
-	
-//	@Column(name="uploadImage", nullable = true,columnDefinition = "text")
-//	private String  uploadImage;
-	
+	@Column(name = "shortDescription", nullable = true, columnDefinition = "text")
+	private String shortDescription;
+
+	@Column(name = "longDescription", nullable = true, columnDefinition = "text")
+	private String longDescription;
+
+	@Column(name = "isActive", nullable = true, columnDefinition = "varchar(50)")
+	private String isActive;
+
+	// @Column(name="uploadImage", nullable = true,columnDefinition = "text")
+	// private String uploadImage;
+
 	public int getId() {
 		return id;
 	}
@@ -52,7 +49,6 @@ public class Speciality {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
 
 	public String getBannerContent() {
 		return bannerContent;
@@ -70,8 +66,6 @@ public class Speciality {
 		this.shortDescription = shortDescription;
 	}
 
-	
-	
 	public String getIsActive() {
 		return isActive;
 	}
@@ -79,10 +73,6 @@ public class Speciality {
 	public void setIsActive(String isActive) {
 		this.isActive = isActive;
 	}
-	
-
-
-	
 
 	public String getLongDescription() {
 		return longDescription;
@@ -92,32 +82,20 @@ public class Speciality {
 		this.longDescription = longDescription;
 	}
 
-	
+	// public String getUploadImage() {
+	// return uploadImage;
+	// }
+	//
+	// public void setUploadImage(String uploadImage) {
+	// this.uploadImage = uploadImage;
+	// }
 
-//	public String getUploadImage() {
-//		return uploadImage;
-//	}
-//
-//	public void setUploadImage(String uploadImage) {
-//		this.uploadImage = uploadImage;
-//	}
-	
-	
-	
-	
 	public String getImagepath() {
 		return imagepath;
 	}
 
-
 	public void setImagepath(String imagepath) {
 		this.imagepath = imagepath;
 	}
-	
-	
-	
-	
-	
-	
-	
+
 }

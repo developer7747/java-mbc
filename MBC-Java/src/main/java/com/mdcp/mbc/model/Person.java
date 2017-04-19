@@ -8,27 +8,26 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Entity bean with JPA annotations
- * Hibernate provides JPA implementation
+ * Entity bean with JPA annotations Hibernate provides JPA implementation
+ * 
  * @author pankaj
  *
  */
 @Entity
-@Table(name="PERSON")
+@Table(name = "PERSON")
 public class Person {
 
 	@Id
-	@Column(name="id")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	
+
 	private String name;
-	
+
 	private String country;
 	private String Email;
 	private String Phone;
 
-	
 	public int getId() {
 		return id;
 	}
@@ -44,7 +43,7 @@ public class Person {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	public String getPhone() {
 		return Phone;
 	}
@@ -60,6 +59,7 @@ public class Person {
 	public void setCountry(String country) {
 		this.country = country;
 	}
+
 	public String getEmail() {
 		return Email;
 	}
@@ -67,9 +67,9 @@ public class Person {
 	public void setEmail(String email) {
 		this.Email = email;
 	}
-	
+
 	@Override
-	public String toString(){
-		return "id="+id+", name="+name+", country="+country;
+	public String toString() {
+		return "id=" + id + ", name=" + name + ", country=" + country;
 	}
 }

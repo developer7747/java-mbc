@@ -10,7 +10,7 @@ import com.mdcp.mbc.model.City;;
 
 @Service
 public class CityServiceImpl implements CityService {
-	
+
 	private CityDAO CityDAO;
 
 	public void setCityDAO(CityDAO CityDAO) {

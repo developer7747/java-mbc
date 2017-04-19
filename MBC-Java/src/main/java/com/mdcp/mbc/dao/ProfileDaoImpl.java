@@ -1,4 +1,5 @@
 package com.mdcp.mbc.dao;
+
 import java.util.List;
 
 import org.hibernate.Session;
@@ -11,26 +12,20 @@ import com.mdcp.mbc.model.Profile;
 
 public class ProfileDaoImpl implements ProfileDAO {
 
-	
-	
 	private static final Logger logger = LoggerFactory.getLogger(ProfileDaoImpl.class);
 
 	private SessionFactory sessionFactory;
-	
-	public void setSessionFactory(SessionFactory sf){
+
+	public void setSessionFactory(SessionFactory sf) {
 		this.sessionFactory = sf;
 	}
-	
-	
-	
-	
-	
+
 	@Override
 	public void addProfile(Profile p) {
 		// TODO Auto-generated method stub
 		Session session = this.sessionFactory.getCurrentSession();
 		session.persist(p);
-		logger.info("Profile saved successfully, Profile Details="+p);
+		logger.info("Profile saved successfully, Profile Details=" + p);
 	}
 
 	@Override
@@ -38,7 +33,7 @@ public class ProfileDaoImpl implements ProfileDAO {
 		// TODO Auto-generated method stub
 		Session session = this.sessionFactory.getCurrentSession();
 		session.update(p);
-		logger.info("Profile updated successfully, Profile Details="+p);
+		logger.info("Profile updated successfully, Profile Details=" + p);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -47,8 +42,8 @@ public class ProfileDaoImpl implements ProfileDAO {
 		// TODO Auto-generated method stub
 		Session session = this.sessionFactory.getCurrentSession();
 		List<Profile> ProfilesList = session.createQuery("from Profile").list();
-		for(Profile p : ProfilesList){
-			logger.info("Profile List::"+p);
+		for (Profile p : ProfilesList) {
+			logger.info("Profile List::" + p);
 		}
 		return ProfilesList;
 	}
@@ -56,9 +51,9 @@ public class ProfileDaoImpl implements ProfileDAO {
 	@Override
 	public Profile getProfileById(int id) {
 		// TODO Auto-generated method stub
-		Session session = this.sessionFactory.getCurrentSession();		
+		Session session = this.sessionFactory.getCurrentSession();
 		Profile p = (Profile) session.load(Profile.class, new Integer(id));
-		logger.info("Profile loaded successfully, Profile details="+p);
+		logger.info("Profile loaded successfully, Profile details=" + p);
 		return p;
 	}
 
@@ -66,11 +61,10 @@ public class ProfileDaoImpl implements ProfileDAO {
 	public void removeProfile(int id) {
 		Session session = this.sessionFactory.getCurrentSession();
 		Profile p = (Profile) session.load(Profile.class, new Integer(id));
-		if(null != p){
+		if (null != p) {
 			session.delete(p);
 		}
-		logger.info("Profile deleted successfully, "
-				+ " details="+p);
+		logger.info("Profile deleted successfully, " + " details=" + p);
 	}
 
 }

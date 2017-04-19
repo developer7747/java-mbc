@@ -83,7 +83,7 @@
      {
     	 var formData = new FormData($('#stateform')[0]);
 		 // var url="Article/add";
-	var url="http://localhost:8080/MBC-Java/state/upload";
+	var url=hosting_url+"Admin/state/upload";
 		$.ajax({
 		    url: url,
 		    type: "POST",
@@ -116,7 +116,7 @@
     			alert("HHHH");
     		
     			var formData = new FormData($('#uploadForm')[0]);
-    			var url="http://localhost:8080/MBC-Java/state/upload";
+    			var url=hosting_url+"Admin/state/upload";
     			$.ajax({
     			    url: url,
     			    type: "POST",
@@ -135,7 +135,7 @@
     	 });
     	 
          $("#multiple37").jqGrid({
-         	url: 'http://localhost:8080/MBC-Java/state/getState',              
+         	url: hosting_url+"Admin/state/getState",              
              mtype: "GET",
              styleUI: 'Bootstrap',
              datatype: "json",

@@ -1,4 +1,4 @@
-function addUpdateCommonRecord(url,data) {
+function addUpdateCommonRecord(url,data) {alert("common");
     	    console.log('addWine');
     	    $.ajax({
     	        type: 'POST',

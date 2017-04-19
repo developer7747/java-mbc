@@ -1,4 +1,5 @@
 package com.mdcp.mbc.dao;
+
 import java.util.List;
 
 import org.hibernate.Session;
@@ -11,26 +12,20 @@ import com.mdcp.mbc.model.SpecialityGuideline;
 
 public class SpecialityGuidelineDaoImpl implements SpecialityGuidelineDAO {
 
-	
-	
 	private static final Logger logger = LoggerFactory.getLogger(SpecialityGuidelineDaoImpl.class);
 
 	private SessionFactory sessionFactory;
-	
-	public void setSessionFactory(SessionFactory sf){
+
+	public void setSessionFactory(SessionFactory sf) {
 		this.sessionFactory = sf;
 	}
-	
-	
-	
-	
-	
+
 	@Override
 	public void addSpecialityGuideline(SpecialityGuideline p) {
 		// TODO Auto-generated method stub
 		Session session = this.sessionFactory.getCurrentSession();
 		session.persist(p);
-		logger.info("SpecialityGuideline saved successfully, SpecialityGuideline Details="+p);
+		logger.info("SpecialityGuideline saved successfully, SpecialityGuideline Details=" + p);
 	}
 
 	@Override
@@ -38,7 +33,7 @@ public class SpecialityGuidelineDaoImpl implements SpecialityGuidelineDAO {
 		// TODO Auto-generated method stub
 		Session session = this.sessionFactory.getCurrentSession();
 		session.update(p);
-		logger.info("SpecialityGuideline updated successfully, SpecialityGuideline Details="+p);
+		logger.info("SpecialityGuideline updated successfully, SpecialityGuideline Details=" + p);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -47,8 +42,8 @@ public class SpecialityGuidelineDaoImpl implements SpecialityGuidelineDAO {
 		// TODO Auto-generated method stub
 		Session session = this.sessionFactory.getCurrentSession();
 		List<SpecialityGuideline> SpecialityGuidelinesList = session.createQuery("from SpecialityGuideline").list();
-		for(SpecialityGuideline p : SpecialityGuidelinesList){
-			logger.info("SpecialityGuideline List::"+p);
+		for (SpecialityGuideline p : SpecialityGuidelinesList) {
+			logger.info("SpecialityGuideline List::" + p);
 		}
 		return SpecialityGuidelinesList;
 	}
@@ -56,9 +51,9 @@ public class SpecialityGuidelineDaoImpl implements SpecialityGuidelineDAO {
 	@Override
 	public SpecialityGuideline getSpecialityGuidelineById(int id) {
 		// TODO Auto-generated method stub
-		Session session = this.sessionFactory.getCurrentSession();		
+		Session session = this.sessionFactory.getCurrentSession();
 		SpecialityGuideline p = (SpecialityGuideline) session.load(SpecialityGuideline.class, new Integer(id));
-		logger.info("SpecialityGuideline loaded successfully, SpecialityGuideline details="+p);
+		logger.info("SpecialityGuideline loaded successfully, SpecialityGuideline details=" + p);
 		return p;
 	}
 
@@ -66,11 +61,10 @@ public class SpecialityGuidelineDaoImpl implements SpecialityGuidelineDAO {
 	public void removeSpecialityGuideline(int id) {
 		Session session = this.sessionFactory.getCurrentSession();
 		SpecialityGuideline p = (SpecialityGuideline) session.load(SpecialityGuideline.class, new Integer(id));
-		if(null != p){
+		if (null != p) {
 			session.delete(p);
 		}
-		logger.info("SpecialityGuideline deleted successfully, "
-				+ " details="+p);
+		logger.info("SpecialityGuideline deleted successfully, " + " details=" + p);
 	}
 
 }

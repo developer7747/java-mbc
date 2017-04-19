@@ -9,21 +9,13 @@ import com.mdcp.mbc.model.Category;
 
 public class CategoryServiceImpl implements CategoryService {
 
-	
-	
 	private CategoryDAO CategoryDAOobj;
 
-	
-	public void setCategoryDAO(CategoryDAO CategoryDAO){
-		
-		
-		this.CategoryDAOobj= CategoryDAO;
-	}
-	
-	
+	public void setCategoryDAO(CategoryDAO CategoryDAO) {
 
-	
-	
+		this.CategoryDAOobj = CategoryDAO;
+	}
+
 	@Override
 	@Transactional
 	public void addCategory(Category p) {
@@ -51,7 +43,7 @@ public class CategoryServiceImpl implements CategoryService {
 		// TODO Auto-generated method stub
 		return this.CategoryDAOobj.getCategoryById(id);
 	}
-	
+
 	@Override
 	@Transactional
 	public void removeCategory(int id) {

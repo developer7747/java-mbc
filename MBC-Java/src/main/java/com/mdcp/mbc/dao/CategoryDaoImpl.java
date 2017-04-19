@@ -1,4 +1,5 @@
 package com.mdcp.mbc.dao;
+
 import java.util.List;
 
 import org.hibernate.Session;
@@ -11,26 +12,20 @@ import com.mdcp.mbc.model.Category;
 
 public class CategoryDaoImpl implements CategoryDAO {
 
-	
-	
 	private static final Logger logger = LoggerFactory.getLogger(CategoryDaoImpl.class);
 
 	private SessionFactory sessionFactory;
-	
-	public void setSessionFactory(SessionFactory sf){
+
+	public void setSessionFactory(SessionFactory sf) {
 		this.sessionFactory = sf;
 	}
-	
-	
-	
-	
-	
+
 	@Override
 	public void addCategory(Category p) {
 		// TODO Auto-generated method stub
 		Session session = this.sessionFactory.getCurrentSession();
 		session.persist(p);
-		logger.info("Category saved successfully, Category Details="+p);
+		logger.info("Category saved successfully, Category Details=" + p);
 	}
 
 	@Override
@@ -38,7 +33,7 @@ public class CategoryDaoImpl implements CategoryDAO {
 		// TODO Auto-generated method stub
 		Session session = this.sessionFactory.getCurrentSession();
 		session.update(p);
-		logger.info("Category updated successfully, Category Details="+p);
+		logger.info("Category updated successfully, Category Details=" + p);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -47,8 +42,8 @@ public class CategoryDaoImpl implements CategoryDAO {
 		// TODO Auto-generated method stub
 		Session session = this.sessionFactory.getCurrentSession();
 		List<Category> CategorysList = session.createQuery("from Category").list();
-		for(Category p : CategorysList){
-			logger.info("Category List::"+p);
+		for (Category p : CategorysList) {
+			logger.info("Category List::" + p);
 		}
 		return CategorysList;
 	}
@@ -56,9 +51,9 @@ public class CategoryDaoImpl implements CategoryDAO {
 	@Override
 	public Category getCategoryById(int id) {
 		// TODO Auto-generated method stub
-		Session session = this.sessionFactory.getCurrentSession();		
+		Session session = this.sessionFactory.getCurrentSession();
 		Category p = (Category) session.load(Category.class, new Integer(id));
-		logger.info("Category loaded successfully, Category details="+p);
+		logger.info("Category loaded successfully, Category details=" + p);
 		return p;
 	}
 
@@ -66,11 +61,10 @@ public class CategoryDaoImpl implements CategoryDAO {
 	public void removeCategory(int id) {
 		Session session = this.sessionFactory.getCurrentSession();
 		Category p = (Category) session.load(Category.class, new Integer(id));
-		if(null != p){
+		if (null != p) {
 			session.delete(p);
 		}
-		logger.info("Category deleted successfully, "
-				+ " details="+p);
+		logger.info("Category deleted successfully, " + " details=" + p);
 	}
 
 }

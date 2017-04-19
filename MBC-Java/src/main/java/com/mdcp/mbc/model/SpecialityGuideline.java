@@ -1,6 +1,5 @@
 package com.mdcp.mbc.model;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,55 +12,40 @@ import javax.persistence.Table;
 import com.mysql.fabric.xmlrpc.base.Data;
 
 @Entity
-@Table(name="SpecialityGuideline")
+@Table(name = "SpecialityGuideline")
 public class SpecialityGuideline {
 
-
-	
-	
 	@ManyToOne
-	@JoinColumn(name="categoryid",referencedColumnName="id")
-	private Category  categoryid;
-	
-	
+	@JoinColumn(name = "categoryid", referencedColumnName = "id")
+	private Category categoryid;
+
 	public Category getCategoryid() {
 		return categoryid;
 	}
-	
-	
+
 	public void setCategoryid(Category categoryid) {
 		this.categoryid = categoryid;
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
 	@Id
-	@Column(name="id")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	
+
 	private String Title;
 
-	@Column(name="bannerContent",nullable = true,columnDefinition = "text")
+	@Column(name = "bannerContent", nullable = true, columnDefinition = "text")
 	private String bannerContent;
-	
-	@Column(name="shortDescription",nullable = true,columnDefinition = "text")
+
+	@Column(name = "shortDescription", nullable = true, columnDefinition = "text")
 	private String shortDescription;
-	
-	@Column(name="longDescription", nullable = true,columnDefinition = "text")
+
+	@Column(name = "longDescription", nullable = true, columnDefinition = "text")
 	private String longDescription;
-	
+
 	private String imagepath;
-	
+
 	private String uploadDate;
-	
-	
 
 	public int getId() {
 		return id;
@@ -87,8 +71,6 @@ public class SpecialityGuideline {
 		return imagepath;
 	}
 
-	
-
 	public void setId(int id) {
 		this.id = id;
 	}
@@ -113,7 +95,6 @@ public class SpecialityGuideline {
 		this.imagepath = imagepath;
 	}
 
-	
 	public String getUploadDate() {
 		return uploadDate;
 	}
@@ -122,6 +103,4 @@ public class SpecialityGuideline {
 		this.uploadDate = uploadDate;
 	}
 
-	
-	
 }

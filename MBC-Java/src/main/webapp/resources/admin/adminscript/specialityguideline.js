@@ -40,7 +40,7 @@
     	
     	
     	$(document).ready(function() {
-    		$.getJSON("http://localhost:8080/MBC-Java/Category/getCategory1", function(data) {
+    		$.getJSON(hosting_url+"Admin/Category/getCategory1", function(data) {
     			$.each(data, function(i, data) {
     				//alert(data.name);
     				$('<option>', {
@@ -64,7 +64,7 @@
         {
        	 var formData = new FormData($('#SpecialityGuidelineform')[0]);
    		 // var url="Article/add";
-   	var url="http://localhost:8080/MBC-Java/specialityguideline/upload";
+   	var url=hosting_url+"Admin/specialityguideline/upload";
    		$.ajax({
    		    url: url,
    		    type: "POST",
@@ -125,7 +125,7 @@
      
      $(document).ready(function () {         
          $("#multiple37").jqGrid({
-         	url: 'http://localhost:8080/MBC-Java/SpecialityGuideline/getSpecialityGuideline',              
+         	url: hosting_url+"Admin/SpecialityGuideline/getSpecialityGuideline",              
              mtype: "GET",
              styleUI: 'Bootstrap',
              datatype: "json",

@@ -5,7 +5,7 @@ function formToJSON() {
 	return JSON.stringify({
 		"id" : $('#id').val(),
 		"name" : $('#name').val(),
-		"logo" : $('#Logo').val(),
+		"logo" : $('#uploadImage').val(),
 		"latestVersion" : $('#LatestVersion').val(),
 		"certification" : $('#Certification').val(),
 		"certificationPeriod" : $('#CertificationPeriod').val(),
@@ -42,6 +42,31 @@ function deleteRecord() {
 	});
 }
 
+function UpdateRecordPopup(RowID)
+{
+	 $('#EmrSoftwareform').get(0).reset();
+    var Row_Data = $("#multiple37").getRowData(RowID);         
+    $('#id').val(Row_Data['id']);
+    
+    
+    
+    $('#isActive').val(Row_Data['isActive']);
+   
+    $('#name').val(Row_Data['EmrSoftware Name']);
+    CKEDITOR.instances['shortDescription'].setData(Row_Data['shortDescription']),
+   // $('#shortDescription').val(Row_Data['shortDescription']);         
+    $('#AddEditEmrSoftwareModal').modal('show');
+}
+
+
+
+
+
+
+
+
+
+
 function AddEmrSoftware() {
 	$('#EmrSoftwareform').get(0).reset();
 	$('#AddEditEmrSoftwareModal').modal('show');
@@ -58,7 +83,7 @@ function AddEmrSoftware() {
 
 $(document).ready(function() {
 	$("#multiple37").jqGrid({
-		url : 'http://localhost:8080/MBC-Java/emrsoftware/getEmrSoftware',
+		url : hosting_url+"Admin/EmrSoftware/getEmrSoftware",
 		mtype : "GET",
 		styleUI : 'Bootstrap',
 		datatype : "json",
@@ -75,59 +100,59 @@ $(document).ready(function() {
 
 		{
 			label : 'Logo',
-			name : 'uploadImage',
+			name : 'imagepath',
 			width : 150
 		}, {
 			label : 'Description',
-			name : 'DescriptionContent',
+			name : 'descriptionContent',
 			width : 150
 		}, {
 			label : 'Recent Release',
-			name : 'RecentRelease',
+			name : 'recentRelease',
 			width : 150
 		}, {
 			label : 'Latest Version',
-			name : 'LatestVersion',
+			name : 'latestVersion',
 			width : 150
 		}, {
 			label : 'Certification',
-			name : 'Certification',
+			name : 'certification',
 			width : 150
 		}, {
 			label : 'Certification Period',
-			name : 'CertificationPeriod',
+			name : 'certificationPeriod',
 			width : 150
 		}, {
 			label : 'Environment Required',
-			name : 'EnvironmentRequired',
+			name : 'environmentRequired',
 			width : 150
 		}, {
 			label : 'Integration',
-			name : 'Integration',
+			name : 'integration',
 			width : 150
 		}, {
 			label : 'Support HospitalClaim',
-			name : 'SupportHospitalClaim',
+			name : 'supportHospitalClaim',
 			width : 150
 		}, {
 			label : 'Features',
-			name : 'Features',
+			name : 'features',
 			width : 150
 		}, {
 			label : 'MarketReach',
-			name : 'MarketReach',
+			name : 'marketReach',
 			width : 150
 		}, {
 			label : 'CreateDate',
-			name : 'CreateDate',
+			name : 'createDate',
 			width : 150
 		}, {
 			label : 'ModifiedDate',
-			name : 'ModifiedDate',
+			name : 'modifiedDate',
 			width : 150
 		}, {
 			label : 'SpecialtiesId',
-			name : 'SpecialtiesId',
+			name : 'speciality',
 			width : 150
 		}, {
 			label : 'IsPopular',
@@ -178,7 +203,7 @@ function displayButtons(cellvalue, options, rowObject) {
 function testUpload() {
 	var formData = new FormData($('#EmrSoftwareform')[0]);
 	// var url="EmrSoftware/add";
-	var url = "http://localhost:8080/MBC-Java/EmrSoftware/upload";
+	var url = hosting_url+"Admin/EmrSoftware/upload";
 	$.ajax({
 		url : url,
 		type : "POST",

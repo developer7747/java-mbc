@@ -8,21 +8,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Entity bean with JPA annotations
- * Hibernate provides JPA implementation
+ * Entity bean with JPA annotations Hibernate provides JPA implementation
+ * 
  * @author pankaj
  *
  */
 @Entity
-@Table(name="Emrsoftware")
+@Table(name = "Emrsoftware")
 public class EmrSoftware {
 
 	@Id
-	@Column(name="id")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	
 	public int getId() {
 		return id;
 	}
@@ -30,70 +29,65 @@ public class EmrSoftware {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
-	private String Name;   
-	 
-	private String Logo;
-	@Column(name="Logo", insertable=false, updatable=false,nullable = true,columnDefinition = "varchar(50)")
-	
-	
 
-	
-	
+	private String Name;
+
+	private String Logo;
+	@Column(name = "Logo", insertable = false, updatable = false, nullable = true, columnDefinition = "varchar(50)")
+
 	private String Description;
-	@Column(name="Description",nullable = true,columnDefinition = "text")
-	
+	@Column(name = "Description", nullable = true, columnDefinition = "text")
+
 	private String RecentRelease;
-	@Column(name="RecentRelease",nullable = true,columnDefinition = "text")
-	
+	@Column(name = "RecentRelease", nullable = true, columnDefinition = "text")
+
 	private String LatestVersion;
-	@Column(name="LatestVersion",nullable = true,columnDefinition = "varchar(50)")
-	
+	@Column(name = "LatestVersion", nullable = true, columnDefinition = "varchar(50)")
+
 	private String Certification;
-	@Column(name="Certification",nullable = true,columnDefinition = "varchar(50)")
-	
+	@Column(name = "Certification", nullable = true, columnDefinition = "varchar(50)")
+
 	private String CertificationPeriod;
-	@Column(name="CertificationPeriod",nullable = true,columnDefinition = "varchar(50)")
-	
+	@Column(name = "CertificationPeriod", nullable = true, columnDefinition = "varchar(50)")
+
 	private String Integration;
-	@Column(name="Integration",nullable = true,columnDefinition = "varchar(50)")
-	
+	@Column(name = "Integration", nullable = true, columnDefinition = "varchar(50)")
+
 	private String Environmentrequired;
 
-	
 	private String SupportHospitalClaim;
-	@Column(name="SupportHospitalClaim",insertable=false, updatable=false,nullable = true,columnDefinition = "varchar(50)")
-	
-	private String Features;
-	@Column(name="Features",nullable = true,columnDefinition = "text")
-	
-	private String MarketReach;
-	@Column(name="MarketReach",nullable = true,columnDefinition = "varchar(50)")
-	
-//	private boolean isActive;
-//	@Column(name="isActive",nullable = true,columnDefinition = "boolean")
-//	
-//	private String CreateDate;
-//	@Column(name="CreateDate",nullable = true,columnDefinition = "DateTime")
-//	
-//	private String ModifiedDate;
-//	@Column(name="ModifiedDate",nullable = true,columnDefinition = "DateTime")
-//	
+	@Column(name = "SupportHospitalClaim", insertable = false, updatable = false, nullable = true, columnDefinition = "varchar(50)")
 
-//	private boolean isPopular;
-//	@Column(name="isPopular",nullable = true,columnDefinition = "boolean")
-//	
-	
-	
+	private String Features;
+	@Column(name = "Features", nullable = true, columnDefinition = "text")
+
+	private String MarketReach;
+	@Column(name = "MarketReach", nullable = true, columnDefinition = "varchar(50)")
+
+	// private boolean isActive;
+	// @Column(name="isActive",nullable = true,columnDefinition = "boolean")
+	//
+	// private String CreateDate;
+	// @Column(name="CreateDate",nullable = true,columnDefinition = "DateTime")
+	//
+	// private String ModifiedDate;
+	// @Column(name="ModifiedDate",nullable = true,columnDefinition =
+	// "DateTime")
+	//
+
+	// private boolean isPopular;
+	// @Column(name="isPopular",nullable = true,columnDefinition = "boolean")
+	//
+
 	private String SpecialtiesId;
-	@Column(name="SpecialtiesId",nullable = true,columnDefinition = "int")
-	
+	@Column(name = "SpecialtiesId", nullable = true, columnDefinition = "int")
+
 	private String CertificationType;
-	@Column(name="CertificationType",nullable = true,columnDefinition = "varchar(50)")
-	
+	@Column(name = "CertificationType", nullable = true, columnDefinition = "varchar(50)")
+
 	private String shortDescription;
-	@Column(name="shortDescription",nullable = true,columnDefinition = "text")
-	
+
+	@Column(name = "shortDescription", nullable = true, columnDefinition = "text")
 
 	public String getLogo() {
 		return Logo;
@@ -151,8 +145,6 @@ public class EmrSoftware {
 		this.Integration = integration;
 	}
 
-	
-
 	public String getSupportHospitalClaim() {
 		return SupportHospitalClaim;
 	}
@@ -177,29 +169,29 @@ public class EmrSoftware {
 		this.MarketReach = marketReach;
 	}
 
-//	public boolean isActive() {
-//		return isActive;
-//	}
-//
-//	public void setActive(boolean isActive) {
-//		this.isActive = isActive;
-//	}
+	// public boolean isActive() {
+	// return isActive;
+	// }
+	//
+	// public void setActive(boolean isActive) {
+	// this.isActive = isActive;
+	// }
 
-//	public String getCreateDate() {
-//		return CreateDate;
-//	}
-//
-//	public void setCreateDate(String createDate) {
-//		this.CreateDate = createDate;
-//	}
-//
-//	public String getModifiedDate() {
-//		return ModifiedDate;
-//	}
-//
-//	public void setModifiedDate(String modifiedDate) {
-//		this.ModifiedDate = modifiedDate;
-//	}
+	// public String getCreateDate() {
+	// return CreateDate;
+	// }
+	//
+	// public void setCreateDate(String createDate) {
+	// this.CreateDate = createDate;
+	// }
+	//
+	// public String getModifiedDate() {
+	// return ModifiedDate;
+	// }
+	//
+	// public void setModifiedDate(String modifiedDate) {
+	// this.ModifiedDate = modifiedDate;
+	// }
 
 	public String getSpecialtiesId() {
 		return SpecialtiesId;
@@ -209,13 +201,13 @@ public class EmrSoftware {
 		this.SpecialtiesId = specialtiesId;
 	}
 
-//	public boolean isPopular() {
-//		return isPopular;
-//	}
-//
-//	public void setPopular(boolean isPopular) {
-//		this.isPopular = isPopular;
-//	}
+	// public boolean isPopular() {
+	// return isPopular;
+	// }
+	//
+	// public void setPopular(boolean isPopular) {
+	// this.isPopular = isPopular;
+	// }
 
 	public String getCertificationType() {
 		return CertificationType;
@@ -225,7 +217,6 @@ public class EmrSoftware {
 		this.CertificationType = certificationType;
 	}
 
-	
 	public String getShortDescription() {
 		return shortDescription;
 	}
@@ -250,48 +241,36 @@ public class EmrSoftware {
 		Environmentrequired = environmentrequired;
 	}
 
-//	public boolean isActive() {
-//		return isActive;
-//	}
-//
-//	public String getCreateDate() {
-//		return CreateDate;
-//	}
-//
-//	public String getModifiedDate() {
-//		return ModifiedDate;
-//	}
-//
-//	public boolean isPopular() {
-//		return isPopular;
-//	}
-//
-//	public void setActive(boolean isActive) {
-//		this.isActive = isActive;
-//	}
-//
-//	public void setCreateDate(String createDate) {
-//		CreateDate = createDate;
-//	}
-//
-//	public void setModifiedDate(String modifiedDate) {
-//		ModifiedDate = modifiedDate;
-//	}
-//
-//	public void setPopular(boolean isPopular) {
-//		this.isPopular = isPopular;
-//	}
+	// public boolean isActive() {
+	// return isActive;
+	// }
+	//
+	// public String getCreateDate() {
+	// return CreateDate;
+	// }
+	//
+	// public String getModifiedDate() {
+	// return ModifiedDate;
+	// }
+	//
+	// public boolean isPopular() {
+	// return isPopular;
+	// }
+	//
+	// public void setActive(boolean isActive) {
+	// this.isActive = isActive;
+	// }
+	//
+	// public void setCreateDate(String createDate) {
+	// CreateDate = createDate;
+	// }
+	//
+	// public void setModifiedDate(String modifiedDate) {
+	// ModifiedDate = modifiedDate;
+	// }
+	//
+	// public void setPopular(boolean isPopular) {
+	// this.isPopular = isPopular;
+	// }
 
-
-
-	
-	
-	
-
-	
-	
-	
-	
-
-	
 }

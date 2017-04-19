@@ -9,21 +9,13 @@ import com.mdcp.mbc.model.PressRelease;
 
 public class PressReleaseServiceImpl implements PressReleaseService {
 
-	
-	
 	private PressReleaseDAO PressReleaseDAOobj;
 
-	
-	public void setPressReleaseDAO(PressReleaseDAO PressReleaseDAO){
-		
-		
-		this.PressReleaseDAOobj= PressReleaseDAO;
-	}
-	
-	
+	public void setPressReleaseDAO(PressReleaseDAO PressReleaseDAO) {
 
-	
-	
+		this.PressReleaseDAOobj = PressReleaseDAO;
+	}
+
 	@Override
 	@Transactional
 	public void addPressRelease(PressRelease p) {
@@ -51,7 +43,7 @@ public class PressReleaseServiceImpl implements PressReleaseService {
 		// TODO Auto-generated method stub
 		return this.PressReleaseDAOobj.getPressReleaseById(id);
 	}
-	
+
 	@Override
 	@Transactional
 	public void removePressRelease(int id) {

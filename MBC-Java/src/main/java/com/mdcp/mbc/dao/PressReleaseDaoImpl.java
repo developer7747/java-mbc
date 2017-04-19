@@ -1,4 +1,5 @@
 package com.mdcp.mbc.dao;
+
 import java.util.List;
 
 import org.hibernate.Session;
@@ -11,26 +12,20 @@ import com.mdcp.mbc.model.PressRelease;
 
 public class PressReleaseDaoImpl implements PressReleaseDAO {
 
-	
-	
 	private static final Logger logger = LoggerFactory.getLogger(PressReleaseDaoImpl.class);
 
 	private SessionFactory sessionFactory;
-	
-	public void setSessionFactory(SessionFactory sf){
+
+	public void setSessionFactory(SessionFactory sf) {
 		this.sessionFactory = sf;
 	}
-	
-	
-	
-	
-	
+
 	@Override
 	public void addPressRelease(PressRelease p) {
 		// TODO Auto-generated method stub
 		Session session = this.sessionFactory.getCurrentSession();
 		session.persist(p);
-		logger.info("PressRelease saved successfully, PressRelease Details="+p);
+		logger.info("PressRelease saved successfully, PressRelease Details=" + p);
 	}
 
 	@Override
@@ -38,7 +33,7 @@ public class PressReleaseDaoImpl implements PressReleaseDAO {
 		// TODO Auto-generated method stub
 		Session session = this.sessionFactory.getCurrentSession();
 		session.update(p);
-		logger.info("PressRelease updated successfully, PressRelease Details="+p);
+		logger.info("PressRelease updated successfully, PressRelease Details=" + p);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -47,8 +42,8 @@ public class PressReleaseDaoImpl implements PressReleaseDAO {
 		// TODO Auto-generated method stub
 		Session session = this.sessionFactory.getCurrentSession();
 		List<PressRelease> PressReleasesList = session.createQuery("from PressRelease").list();
-		for(PressRelease p : PressReleasesList){
-			logger.info("PressRelease List::"+p);
+		for (PressRelease p : PressReleasesList) {
+			logger.info("PressRelease List::" + p);
 		}
 		return PressReleasesList;
 	}
@@ -56,9 +51,9 @@ public class PressReleaseDaoImpl implements PressReleaseDAO {
 	@Override
 	public PressRelease getPressReleaseById(int id) {
 		// TODO Auto-generated method stub
-		Session session = this.sessionFactory.getCurrentSession();		
+		Session session = this.sessionFactory.getCurrentSession();
 		PressRelease p = (PressRelease) session.load(PressRelease.class, new Integer(id));
-		logger.info("PressRelease loaded successfully, PressRelease details="+p);
+		logger.info("PressRelease loaded successfully, PressRelease details=" + p);
 		return p;
 	}
 
@@ -66,11 +61,10 @@ public class PressReleaseDaoImpl implements PressReleaseDAO {
 	public void removePressRelease(int id) {
 		Session session = this.sessionFactory.getCurrentSession();
 		PressRelease p = (PressRelease) session.load(PressRelease.class, new Integer(id));
-		if(null != p){
+		if (null != p) {
 			session.delete(p);
 		}
-		logger.info("PressRelease deleted successfully, "
-				+ " details="+p);
+		logger.info("PressRelease deleted successfully, " + " details=" + p);
 	}
 
 }

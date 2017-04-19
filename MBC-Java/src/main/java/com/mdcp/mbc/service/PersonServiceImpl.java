@@ -10,7 +10,7 @@ import com.mdcp.mbc.model.Person;
 
 @Service
 public class PersonServiceImpl implements PersonService {
-	
+
 	private PersonDAO personDAO;
 
 	public void setPersonDAO(PersonDAO personDAO) {

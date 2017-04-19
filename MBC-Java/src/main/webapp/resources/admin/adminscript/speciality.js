@@ -43,7 +43,7 @@
         {
        	 var formData = new FormData($('#Specialityform')[0]);
    		 // var url="Article/add";
-   	var url="http://localhost:8080/MBC-Java/speciality/upload";
+   	var url=hosting_url+"Admin/speciality/upload";
    		$.ajax({
    		    url: url,
    		    type: "POST",
@@ -111,7 +111,7 @@
      
      $(document).ready(function () {         
          $("#multiple37").jqGrid({
-         	url: 'http://localhost:8080/MBC-Java/speciality/getSpeciality',              
+         	url: hosting_url+"Admin/speciality/getSpeciality",              
              mtype: "GET",
              styleUI: 'Bootstrap',
              datatype: "json",
@@ -123,7 +123,7 @@
                  { label: 'longDescription', name: 'longDescription', width: 150 },
                  { label: 'name', name: 'name', width: 150 },
                  { label: 'shortDescription', name: 'shortDescription', width: 150 },
-                 { label: 'uploadImage', name: 'uploadImage', width: 150 },                 
+                 { label: 'uploadImage', name: 'imagepath', width: 150 },                 
                  { label: 'Action', name: 'Action', width: 82, formatter: displayButtons },
              ],
              autowidth: true,

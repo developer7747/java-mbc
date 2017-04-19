@@ -12,12 +12,12 @@ import com.mdcp.mbc.model.City;;
 
 @Repository
 public class CityDAOImpl implements CityDAO {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(CityDAOImpl.class);
 
 	private SessionFactory sessionFactory;
-	
-	public void setSessionFactory(SessionFactory sf){
+
+	public void setSessionFactory(SessionFactory sf) {
 		this.sessionFactory = sf;
 	}
 
@@ -25,14 +25,14 @@ public class CityDAOImpl implements CityDAO {
 	public void addCity(City p) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.persist(p);
-		logger.info("City saved successfully, City Details="+p);
+		logger.info("City saved successfully, City Details=" + p);
 	}
 
 	@Override
 	public void updateCity(City p) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.update(p);
-		logger.info("City updated successfully, City Details="+p);
+		logger.info("City updated successfully, City Details=" + p);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -40,17 +40,17 @@ public class CityDAOImpl implements CityDAO {
 	public List<City> listCitys() {
 		Session session = this.sessionFactory.getCurrentSession();
 		List<City> CitysList = session.createQuery("from City").list();
-		for(City p : CitysList){
-			logger.info("City List::"+p);
+		for (City p : CitysList) {
+			logger.info("City List::" + p);
 		}
 		return CitysList;
 	}
 
 	@Override
 	public City getCityById(int id) {
-		Session session = this.sessionFactory.getCurrentSession();		
+		Session session = this.sessionFactory.getCurrentSession();
 		City p = (City) session.load(City.class, new Integer(id));
-		logger.info("City loaded successfully, City details="+p);
+		logger.info("City loaded successfully, City details=" + p);
 		return p;
 	}
 
@@ -58,10 +58,10 @@ public class CityDAOImpl implements CityDAO {
 	public void removeCity(int id) {
 		Session session = this.sessionFactory.getCurrentSession();
 		City p = (City) session.load(City.class, new Integer(id));
-		if(null != p){
+		if (null != p) {
 			session.delete(p);
 		}
-		logger.info("City deleted successfully, City details="+p);
+		logger.info("City deleted successfully, City details=" + p);
 	}
 
 }

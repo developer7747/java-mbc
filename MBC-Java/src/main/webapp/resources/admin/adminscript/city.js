@@ -74,7 +74,7 @@
      
      
      $(document).ready(function () {
-    	 $.getJSON("http://localhost:8080/MBC-Java/state/getState1", function (data)  
+    	 $.getJSON(hosting_url+"Admin/state/getState1", function (data)  
     		        {        
     		            $.each(data, function (i, data)  
     		            {       
@@ -93,7 +93,7 @@
     	 
 
          $("#city_JQ_Grid").jqGrid({
-         	url: 'http://localhost:8080/MBC-Java/city/getcity',              
+         	url: hosting_url+"Admin/city/getcity",              
              mtype: "GET",
              styleUI: 'Bootstrap',
              datatype: "json",
@@ -105,7 +105,7 @@
                  { label: 'cityName', name: 'cityName', width: 150 },
                  { label: 'isActive', name: 'isActive', width: 150 },
                  { label: 'isPopular', name: 'isPopular', width: 150 },
-                 { label: 'stateIdIndex', name: 'stateIdIndex', width: 150 },                 
+                 { label: 'stateIdIndex', name: 'stateDrpdown', width: 150 },                 
                  { label: 'Action', name: 'Action', width: 82, formatter: displayButtons },
              ],
              autowidth: true,

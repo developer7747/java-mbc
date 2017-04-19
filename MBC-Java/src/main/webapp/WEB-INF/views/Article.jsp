@@ -244,7 +244,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
- <script src="resources/admin/adminscript/article.js"></script>
+ <script src="../resources/admin/adminscript/article.js"></script>
 <jsp:include page="/WEB-INF/views/common/footer.jsp"/>
 </body>
 </html>

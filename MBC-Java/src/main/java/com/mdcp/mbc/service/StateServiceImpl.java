@@ -10,7 +10,7 @@ import com.mdcp.mbc.model.State;;
 
 @Service
 public class StateServiceImpl implements StateService {
-	
+
 	private StateDAO stateDAO;
 
 	public void setStateDAO(StateDAO stateDAO) {

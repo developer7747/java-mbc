@@ -15,7 +15,7 @@
               
               "shortDescription": CKEDITOR.instances['shortDescription'].getData(),
               "categoryid": $('#categoryid').val(),
-              "specialityid": $('#specialityid').val(),
+             // "specialityid": $('#specialityid').val(),
               "isActive": $('#isActive').val(),
               "imagepath": $('#imagepath').val(),
               "uploaddate": $('#uploaddate').val()
@@ -65,7 +65,7 @@
     	
         
         $(document).ready(function () {
-       	 $.getJSON("http://localhost:8080/MBC-Java/speciality/getSpeciality1", function (data)  
+       	 $.getJSON(hosting_url+"Admin/speciality/getSpeciality1", function (data)  
        		        {        
        		            $.each(data, function (i, data)  
        		            {       
@@ -125,7 +125,7 @@
      {
     	 var formData = new FormData($('#PressReleaseform')[0]);
 		 // var url="PressRelease/add";
-	var url="http://localhost:8080/MBC-Java/PressRelease/upload";
+	var url=hosting_url+"Admin/PressRelease/upload";
 		$.ajax({
 		    url: url,
 		    type: "POST",
@@ -150,7 +150,7 @@
      {
     	 var formData = new FormData($('#PressReleaseform')[0]);
 		 // var url="PressRelease/add";
-	var url="http://localhost:8080/MBC-Java/PressRelease/pdfupload";
+	var url=hosting_url+"Admin/PressRelease/pdfupload";
 		$.ajax({
 		    url: url,
 		    type: "POST",
@@ -186,7 +186,7 @@
      
      $(document).ready(function () {         
          $("#multiple37").jqGrid({
-         	url: 'http://localhost:8080/MBC-Java/PressRelease/getPressRelease',              
+         	url: hosting_url+"Admin/PressRelease/getPressRelease",              
              mtype: "GET",
              styleUI: 'Bootstrap',
              datatype: "json",

@@ -8,37 +8,35 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="STATE")
+@Table(name = "STATE")
 public class State {
 
 	@Id
-	@Column(name="id")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	
+
 	private String name;
 	private String imagepath;
-	@Column(name="intial",nullable = true,columnDefinition = "varchar(50)")
+	@Column(name = "intial", nullable = true, columnDefinition = "varchar(50)")
 	private String intial;
-	
-	@Column(name="bannerContent",nullable = true,columnDefinition = "text")
-	private String bannerContent;
-	
-	@Column(name="shortDescription",nullable = true,columnDefinition = "text")
-	private String shortDescription;
-	
-	@Column(name="longDescription", nullable = true,columnDefinition = "text")
-	private String longDescription;
-	
 
-	
-	@Column(name="activeornot132", nullable = true,columnDefinition = "varchar(50)")
-	private String  activeornot132;
-	
-//	
-//	@Column(name="uploadImage", nullable = true,columnDefinition = "text")
-//	private String  uploadImage;
-//	
+	@Column(name = "bannerContent", nullable = true, columnDefinition = "text")
+	private String bannerContent;
+
+	@Column(name = "shortDescription", nullable = true, columnDefinition = "text")
+	private String shortDescription;
+
+	@Column(name = "longDescription", nullable = true, columnDefinition = "text")
+	private String longDescription;
+
+	@Column(name = "activeornot132", nullable = true, columnDefinition = "varchar(50)")
+	private String activeornot132;
+
+	//
+	// @Column(name="uploadImage", nullable = true,columnDefinition = "text")
+	// private String uploadImage;
+	//
 	public int getId() {
 		return id;
 	}
@@ -54,6 +52,7 @@ public class State {
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getIntial() {
 		return intial;
 	}
@@ -85,7 +84,7 @@ public class State {
 	public void setactiveornot132(String activeornot132) {
 		this.activeornot132 = activeornot132;
 	}
-	
+
 	public String getLongDescription() {
 		return longDescription;
 	}
@@ -94,22 +93,19 @@ public class State {
 		this.longDescription = longDescription;
 	}
 
-	
-
 	public String getImagepath() {
 		return imagepath;
 	}
 
-
 	public void setImagepath(String imagepath) {
 		this.imagepath = imagepath;
 	}
-	
-//	public String getUploadImage() {
-//		return uploadImage;
-//	}
-//
-//	public void setUploadImage(String uploadImage) {
-//		this.uploadImage = uploadImage;
-//	}
+
+	// public String getUploadImage() {
+	// return uploadImage;
+	// }
+	//
+	// public void setUploadImage(String uploadImage) {
+	// this.uploadImage = uploadImage;
+	// }
 }

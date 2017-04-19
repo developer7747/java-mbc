@@ -9,21 +9,13 @@ import com.mdcp.mbc.model.Article;
 
 public class ArticleServiceImpl implements ArticleService {
 
-	
-	
 	private ArticleDAO ArticleDAOobj;
 
-	
-	public void setArticleDAO(ArticleDAO ArticleDAO){
-		
-		
-		this.ArticleDAOobj= ArticleDAO;
-	}
-	
-	
+	public void setArticleDAO(ArticleDAO ArticleDAO) {
 
-	
-	
+		this.ArticleDAOobj = ArticleDAO;
+	}
+
 	@Override
 	@Transactional
 	public void addArticle(Article p) {
@@ -51,7 +43,7 @@ public class ArticleServiceImpl implements ArticleService {
 		// TODO Auto-generated method stub
 		return this.ArticleDAOobj.getArticleById(id);
 	}
-	
+
 	@Override
 	@Transactional
 	public void removeArticle(int id) {

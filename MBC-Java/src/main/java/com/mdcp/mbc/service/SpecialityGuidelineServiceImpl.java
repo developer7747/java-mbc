@@ -9,21 +9,13 @@ import com.mdcp.mbc.model.SpecialityGuideline;
 
 public class SpecialityGuidelineServiceImpl implements SpecialityGuidelineService {
 
-	
-	
 	private SpecialityGuidelineDAO SpecialityGuidelineDAOobj;
 
-	
-	public void setSpecialityGuidelineDAO(SpecialityGuidelineDAO SpecialityGuidelineDAO){
-		
-		
-		this.SpecialityGuidelineDAOobj= SpecialityGuidelineDAO;
-	}
-	
-	
+	public void setSpecialityGuidelineDAO(SpecialityGuidelineDAO SpecialityGuidelineDAO) {
 
-	
-	
+		this.SpecialityGuidelineDAOobj = SpecialityGuidelineDAO;
+	}
+
 	@Override
 	@Transactional
 	public void addSpecialityGuideline(SpecialityGuideline p) {
@@ -51,7 +43,7 @@ public class SpecialityGuidelineServiceImpl implements SpecialityGuidelineServic
 		// TODO Auto-generated method stub
 		return this.SpecialityGuidelineDAOobj.getSpecialityGuidelineById(id);
 	}
-	
+
 	@Override
 	@Transactional
 	public void removeSpecialityGuideline(int id) {

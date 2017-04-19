@@ -12,42 +12,40 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Category")
+@Table(name = "Category")
 public class Category {
-	
 
-	
 	@Id
-	@Column(name="id")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	
+
 	private String imagepath;
 	private String catname;
-	
-	@Column(name="customName",nullable = true,columnDefinition = "text")
+
+	@Column(name = "customName", nullable = true, columnDefinition = "text")
 	private String customName;
-	@Column(name="bannerContent",nullable = true,columnDefinition = "text")
+	@Column(name = "bannerContent", nullable = true, columnDefinition = "text")
 	private String bannerContent;
-	
-	
-	
-//	@Column(name="createdDate", nullable = true,columnDefinition = "Datetime")
-//	private Date  createdDate;
-//	
-//	@Column(name="modifiedDate", nullable = true,columnDefinition = "Datetime")
-//	private Date  modifiedDate;
-//	
-	@Column(name="catShortDesc",nullable = true,columnDefinition = "text")
+
+	// @Column(name="createdDate", nullable = true,columnDefinition =
+	// "Datetime")
+	// private Date createdDate;
+	//
+	// @Column(name="modifiedDate", nullable = true,columnDefinition =
+	// "Datetime")
+	// private Date modifiedDate;
+	//
+	@Column(name = "catShortDesc", nullable = true, columnDefinition = "text")
 	private String catShortDesc;
-	
-	@Column(name="catDesc", nullable = true,columnDefinition = "text")
+
+	@Column(name = "catDesc", nullable = true, columnDefinition = "text")
 	private String catDesc;
 
-//	
+	//
 
-	@Column(name="isActive", nullable = true,columnDefinition = "varchar(50)")
-	private String  isActive;
+	@Column(name = "isActive", nullable = true, columnDefinition = "varchar(50)")
+	private String isActive;
 
 	public int getId() {
 		return id;
@@ -60,16 +58,18 @@ public class Category {
 	public String getCatname() {
 		return catname;
 	}
-//
+
+	//
 	public String getCustomName() {
 		return customName;
 	}
-//
-//	
-//	public Date getModifiedDate() {
-//		return modifiedDate;
-//	}
-//
+
+	//
+	//
+	// public Date getModifiedDate() {
+	// return modifiedDate;
+	// }
+	//
 	public String getCatShortDesc() {
 		return catShortDesc;
 	}
@@ -77,28 +77,33 @@ public class Category {
 	public String getCatDesc() {
 		return catDesc;
 	}
-//
+
+	//
 	public void setId(int id) {
 		this.id = id;
 	}
-//
+
+	//
 	public void setImagepath(String imagepath) {
 		this.imagepath = imagepath;
 	}
-//
+
+	//
 	public void setCatname(String catname) {
 		this.catname = catname;
 	}
-//
+
+	//
 	public void setCustomName(String customName) {
 		this.customName = customName;
 	}
-//
-//	
-//	public void setModifiedDate(Date modifiedDate) {
-//		this.modifiedDate = modifiedDate;
-//	}
-//
+
+	//
+	//
+	// public void setModifiedDate(Date modifiedDate) {
+	// this.modifiedDate = modifiedDate;
+	// }
+	//
 	public void setCatShortDesc(String catShortDesc) {
 		this.catShortDesc = catShortDesc;
 	}
@@ -106,19 +111,20 @@ public class Category {
 	public void setCatDesc(String catDesc) {
 		this.catDesc = catDesc;
 	}
-//
-//	public Date getCreatedDate() {
-//		return createdDate;
-//	}
-//
+
+	//
+	// public Date getCreatedDate() {
+	// return createdDate;
+	// }
+	//
 	public String getIsActive() {
 		return isActive;
 	}
 
-//	public void setCreatedDate(Date createdDate) {
-//		this.createdDate = createdDate;
-//	}
-//
+	// public void setCreatedDate(Date createdDate) {
+	// this.createdDate = createdDate;
+	// }
+	//
 	public void setIsActive(String isActive) {
 		this.isActive = isActive;
 	}
@@ -131,6 +137,4 @@ public class Category {
 		this.bannerContent = bannerContent;
 	}
 
-
-	
 }

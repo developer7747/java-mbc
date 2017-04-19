@@ -105,7 +105,7 @@
      { 
     	 
     	 var formData = new FormData($('#Categoryform')[0]);
-    	 var url="http://localhost:8080/MBC-Java/Category/upload";
+    	 var url=hosting_url+"Admin/Category/upload";
 		$.ajax({
 		    url: url,
 		    type: "POST",
@@ -152,7 +152,7 @@
      
      $(document).ready(function () {         
          $("#multiple37").jqGrid({
-         	url: 'http://localhost:8080/MBC-Java/Category/getCategory',              
+         	url: hosting_url+"Admin/Category/getCategory",              
              mtype: "GET",
              styleUI: 'Bootstrap',
              datatype: "json",

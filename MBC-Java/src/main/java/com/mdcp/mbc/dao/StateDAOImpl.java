@@ -12,12 +12,12 @@ import com.mdcp.mbc.model.State;;
 
 @Repository
 public class StateDAOImpl implements StateDAO {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(StateDAOImpl.class);
 
 	private SessionFactory sessionFactory;
-	
-	public void setSessionFactory(SessionFactory sf){
+
+	public void setSessionFactory(SessionFactory sf) {
 		this.sessionFactory = sf;
 	}
 
@@ -25,14 +25,14 @@ public class StateDAOImpl implements StateDAO {
 	public void addState(State p) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.persist(p);
-		logger.info("State saved successfully, State Details="+p);
+		logger.info("State saved successfully, State Details=" + p);
 	}
 
 	@Override
 	public void updateState(State p) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.update(p);
-		logger.info("State updated successfully, State Details="+p);
+		logger.info("State updated successfully, State Details=" + p);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -40,17 +40,17 @@ public class StateDAOImpl implements StateDAO {
 	public List<State> listStates() {
 		Session session = this.sessionFactory.getCurrentSession();
 		List<State> statesList = session.createQuery("from State").list();
-		for(State p : statesList){
-			logger.info("State List::"+p);
+		for (State p : statesList) {
+			logger.info("State List::" + p);
 		}
 		return statesList;
 	}
 
 	@Override
 	public State getStateById(int id) {
-		Session session = this.sessionFactory.getCurrentSession();		
+		Session session = this.sessionFactory.getCurrentSession();
 		State p = (State) session.load(State.class, new Integer(id));
-		logger.info("State loaded successfully, State details="+p);
+		logger.info("State loaded successfully, State details=" + p);
 		return p;
 	}
 
@@ -58,10 +58,10 @@ public class StateDAOImpl implements StateDAO {
 	public void removeState(int id) {
 		Session session = this.sessionFactory.getCurrentSession();
 		State p = (State) session.load(State.class, new Integer(id));
-		if(null != p){
+		if (null != p) {
 			session.delete(p);
 		}
-		logger.info("State deleted successfully, State details="+p);
+		logger.info("State deleted successfully, State details=" + p);
 	}
 
 }

@@ -54,7 +54,7 @@ function deleteRecord() {
 $(document).ready(
 		function() {
 			$.getJSON(
-					"http://localhost:8080/MBC-Java/speciality/getSpeciality1",
+					hosting_url+"Admin/speciality/getSpeciality1",
 					function(data) {
 						$.each(data, function(i, data) {
 							//alert(data.name);
@@ -69,7 +69,7 @@ $(document).ready(
 		});
 
 $(document).ready(function() {
-	$.getJSON("http://localhost:8080/MBC-Java/state/getState1", function(data) {
+	$.getJSON(hosting_url+"Admin/state/getState1", function(data) {
 		$.each(data, function(i, data) {
 			//alert(data.name);
 			$('<option>', {
@@ -83,7 +83,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-	$.getJSON("http://localhost:8080/MBC-Java/city/getCity1", function(data) {
+	$.getJSON(hosting_url+"Admin/city/getCity1", function(data) {
 		$.each(data, function(i, data) {
 			//alert(data.name);
 			$('<option>', {
@@ -125,7 +125,7 @@ function displayButtons(cellvalue, options, rowObject) {
 function testUpload() {
 	var formData = new FormData($('#Profileform')[0]);
 	// var url="Profile/add";
-	var url = "http://localhost:8080/MBC-Java/Profile/upload";
+	var url = hosting_url+"Admin/Profile/upload";
 	$.ajax({
 		url : url,
 		type : "POST",
@@ -147,7 +147,7 @@ function testUpload() {
 function pdfUpload() {
 	var formData = new FormData($('#Profileform')[0]);
 	// var url="Profile/add";
-	var url = "http://localhost:8080/MBC-Java/Profile/pdfupload";
+	var url = hosting_url+"Admin/Profile/pdfupload";
 	$.ajax({
 		url : url,
 		type : "POST",
@@ -167,7 +167,7 @@ function pdfUpload() {
 
 $(document).ready(function() {
 	$("#multiple37").jqGrid({
-		url : 'http://localhost:8080/MBC-Java/Profile/getProfile',
+		url : hosting_url+"Admin/Profile/getProfile",
 		mtype : "GET",
 		styleUI : 'Bootstrap',
 		datatype : "json",

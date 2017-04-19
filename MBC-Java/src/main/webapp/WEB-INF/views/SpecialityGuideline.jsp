@@ -178,7 +178,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-   <script src="resources/admin/adminscript/specialityguideline.js"></script>
+   <script src="../resources/admin/adminscript/specialityguideline.js"></script>
  <script>
  $(function(){
 	  alert("HI");

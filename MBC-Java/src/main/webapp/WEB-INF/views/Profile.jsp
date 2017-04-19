@@ -320,7 +320,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
- <script src="resources/admin/adminscript/profile.js"></script>
+ <script src="../resources/admin/adminscript/profile.js"></script>
 <jsp:include page="/WEB-INF/views/common/footer.jsp"/>
 </body>
 </html>

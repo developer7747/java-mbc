@@ -51,7 +51,7 @@
                      	   State
                 </div>
                 <div class="col-sm-8">
-                   <select id="stateDrpdown">
+                   <select id="stateDrpdown" name="stateDrpdown">
                    
                    </select>
                 </div>
@@ -145,7 +145,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
- <script src="resources/admin/adminscript/city.js"></script>
+ <script src="../resources/admin/adminscript/city.js"></script>
 <jsp:include page="/WEB-INF/views/common/footer.jsp"/>
 </body>
 </html>

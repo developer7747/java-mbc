@@ -35,7 +35,7 @@
         <div class="modal-body">
                
          
-            <input class="form-control" type="text" id="id" name="id" value=""/>
+            <input class="form-control" type="hidden" id="id" name="id" value=""/>
            
            
              <div class="form-group">
@@ -57,6 +57,9 @@
                     <input class="form-control"  type="file"   onchange="testUpload()" name="uploadImage" id="uploadImage" />
                
                 
+             
+      
+               <input class="form-control" type="hidden"  id="imagepath" name="imagepath"   />
                 </div>
             </div>   
            <div class="form-group">
@@ -251,7 +254,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
- <script src="resources/admin/adminscript/EmrSoftware.js"></script>
+ <script src="../resources/admin/adminscript/EmrSoftware.js"></script>
 <jsp:include page="/WEB-INF/views/common/footer.jsp"/>
 </body>
 </html>

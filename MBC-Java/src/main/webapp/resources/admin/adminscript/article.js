@@ -29,7 +29,10 @@
      }   
      
   function addUpdateRecord()  {
-	  var url="Article/add?specialityId="+$('#SpecialityDrpdown').val();
+	  var url=hosting_url+"Admin/Article/add?specialityId="+$('#SpecialityDrpdown').val();
+	  //
+	
+	  
 	  addUpdateCommonRecord(url,formToJSON())
   }  	 
   
@@ -50,7 +53,8 @@
     	
         
         $(document).ready(function () {
-       	 $.getJSON("http://localhost:8080/MBC-Java/speciality/getSpeciality1", function (data)  
+        	
+       	 $.getJSON(hosting_url+"Admin/speciality/getSpeciality1", function (data)  
        		        {        
        		            $.each(data, function (i, data)  
        		            {       
@@ -103,7 +107,7 @@
      {
     	 var formData = new FormData($('#Articleform')[0]);
 		 // var url="Article/add";
-	var url="http://localhost:8080/MBC-Java/Article/upload";
+	var url=hosting_url+"Admin/Article/upload";
 		$.ajax({
 		    url: url,
 		    type: "POST",
@@ -128,7 +132,7 @@
      {
     	 var formData = new FormData($('#Articleform')[0]);
 		 // var url="Article/add";
-	var url="http://localhost:8080/MBC-Java/Article/pdfupload";
+	var url=hosting_url+"Admin/Article/pdfupload";
 		$.ajax({
 		    url: url,
 		    type: "POST",
@@ -150,7 +154,7 @@
      
      $(document).ready(function () {         
          $("#multiple37").jqGrid({
-         	url: 'http://localhost:8080/MBC-Java/Article/getArticle',              
+         	url: hosting_url+"Admin/Article/getArticle",              
              mtype: "GET",
              styleUI: 'Bootstrap',
              datatype: "json",

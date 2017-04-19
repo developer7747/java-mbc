@@ -9,21 +9,13 @@ import com.mdcp.mbc.model.Speciality;
 
 public class SpecailityServiceImpl implements SpecialityService {
 
-	
-	
 	private SpecialityDAO SpecialityDAOobj;
 
-	
-	public void setSpecialityDAO(SpecialityDAO SpecialityDAO){
-		
-		
-		this.SpecialityDAOobj= SpecialityDAO;
-	}
-	
-	
+	public void setSpecialityDAO(SpecialityDAO SpecialityDAO) {
 
-	
-	
+		this.SpecialityDAOobj = SpecialityDAO;
+	}
+
 	@Override
 	@Transactional
 	public void addSpeciality(Speciality p) {
@@ -51,7 +43,7 @@ public class SpecailityServiceImpl implements SpecialityService {
 		// TODO Auto-generated method stub
 		return this.SpecialityDAOobj.getSpecialityById(id);
 	}
-	
+
 	@Override
 	@Transactional
 	public void removeSpeciality(int id) {
