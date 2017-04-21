@@ -1,0 +1,75 @@
+.white{background-image:url(/images/description.svg);}
+.services-boxes{padding:15px;background:#fafafa;-moz-transition:all 1s ease;-webkit-transition:all 1s ease;transition:all 1 ease-in-out;width:100%;}
+.services-boxes:hover{padding:15px;background:#fafafa;-moz-transform:scale(1.11);-webkit-transform:scale(1.11);transform:scale(1.11);}
+.services-boxes h2{font-size:24px;color:#8dc153;text-transform:uppercase;}
+.services-boxes h3{font-size:18px;color:#8dc153;padding-top:0px;margin:0;height:50px;}
+.services-boxes .menu-circle{background:#8dc153;width:70px;height:70px;color:#fff;line-height:60px;}
+.services-boxes .btn{margin-top:10px;}
+.job-post-banner{background:#afd487;padding:15px 30px;text-align:center;border:2px solid #8dc153;font-size:16px;margin:10px 50px 20px 50px;}
+.icd10-boxes-heading{font-size:18px;text-align:center;padding:5px 90px 30px 90px;}
+.icd10-boxes{padding:25px 20px 15px 20px;background:#e9e9e9;-moz-transition:all 0.4s ease;-webkit-transition:all 0.4s ease;transition:all 0.4s ease-in-out;width:95%;text-align:center;margin:0 auto;border:1px solid #b6b6b6;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;height:390px;}
+.icd10-boxes:hover{padding:15px;background:#fafafa;-moz-transform:scale(1.11);-webkit-transform:scale(1.11);transform:scale(1.11);}
+.icd10-boxes .fa{font-size:50px;}
+.icd10-boxes h2{font-size:19px;}
+.icd10-boxes .menu-circle{margin-top:-110px;position:relative;top:-20px;}
+.icd10-boxes .text-left{height:100px;overflow:auto;text-align:center;}
+.icd10-boxes ul.billing-practices{text-align:left;margin:0;padding:15px 10px;list-style-type:none;}
+.icd10-boxes ul.billing-practices li{text-align:left;margin:0;padding:2px 0 5px 2px;}
+.icd10-boxes ul.billing-practices li .fa{font-size:19px;font-weight:bold;padding-right:10px;}
+.icd10-boxes .download-billing{width:100px;height:90px;margin:0 auto;margin-top:40px;padding-top:40px;text-align:center;background:url(../images/icons/download-billing.png) top center no-repeat;}
+.heading-space-big{padding-bottom:15px;}
+.right-green-roundedpanel{background:#B1CD6F;padding:20px 40px;color:#fff;-webkit-border-radius:7px;-moz-border-radius:7px;border-radius:7px;overflow:hidden;text-align:center;margin-bottom:20px;}
+.jobs-tabale-area .tabs-left > .nav-tabs > li,
+.jobs-tabale-area .tabs-right > .nav-tabs > li{float:none;}
+.jobs-tabale-area .tabs-left > .nav-tabs > li > a,
+.jobs-tabale-area .tabs-right > .nav-tabs > li > a{min-width:74px;margin-right:0;margin-bottom:3px;}
+.jobs-tabale-area .tabs-left > .nav-tabs{float:left;border:0px solid #ddd;}
+.jobs-tabale-area .tabs-left > .nav-tabs > li > a{margin-right:-1px;-webkit-border-radius:7px 0 0 7px;-moz-border-radius:7px 0 0 7px;border-radius:7px 0 0 7px;padding:25px 30px;color:#838383;border-bottom:2px solid #ddd;border-left:1px solid #e7e7e7;}
+.jobs-tabale-area .tabs-left > .nav-tabs > li > a:hover,
+.jobs-tabale-area .tabs-left > .nav-tabs > li > a:focus{border-color:#eeeeee #dddddd #eeeeee #eeeeee;outline:none;}
+.jobs-tabale-area .tabs-left > .nav-tabs .active > a,
+.jobs-tabale-area .tabs-left > .nav-tabs .active > a:hover,
+.jobs-tabale-area .tabs-left > .nav-tabs .active > a:focus{border-color:#838383 transparent #ddd #ddd;*border-right-color:#ffffff;background:#838383;color:#ffffff;}
+.jobs-tabale-area .tab-pane{background:#838383;margin-left:96px;text-align:left;padding:20px 40px!important;-webkit-border-radius:0px 7px 7px 7px;-moz-border-radius:0px 7px 7px 7px;border-radius:0px 7px 7px 7px;}
+.jobs-tabale-area{margin:50px auto;width:75%;float:none !important;}
+.jobs-tabale-area .nav-tabs i{font-size:34px;}
+.jobs-tabale-area h3{padding:0 0 25px 0;margin:0;font-size:26px;color:#ffffff;text-transform:uppercase;}
+.btn-blue{background:#00b1ba;border:1px solid #00b1ba;padding:5px 25px;color:#ffffff;font-size:16px;text-transform:uppercase;}
+.btn-blue:hover{color:#f2f2f2;background:#049ea6;}
+.btn-green{background:#8dc153;border:1px solid #87b94f;padding:5px 25px;color:#ffffff;font-size:16px;text-transform:uppercase;}
+.btn-green:hover{color:#f2f2f2;background:#87b94f;}
+.input-icon i{color:#CCCCCC;display:block;font-size:16px;height:16px;margin:11px 2px 4px 10px;position:absolute;text-align:center;width:16px;right:10px;}
+.tab-arrows{text-align:right;font-size:28px;}
+.tab-arrows a:hover{color:#f2f2f2;}
+@media screen and (max-width:992px){.jobs-tabale-area{width:100%;}
+}
+@media screen and (max-width:480px){.jobs-tabale-area .tabs-left > .nav-tabs > li > a,
+.jobs-tabale-area .tabs-right > .nav-tabs > li > a{width:34px;}
+.jobs-tabale-area .tab-pane{margin-left:74px;padding:15px 10px!important;}
+.jobs-tabale-area .tabs-left > .nav-tabs > li > a{padding:10px 5px;}
+.jobs-tabale-area .nav-tabs i{font-size:24px;}
+}
+ul.we-excel-in{margin:20px 0;padding:0;width:100%;display:inline-block;}
+ul.we-excel-in li{float:left;width:30%;border-bottom:1px solid #e7e7e7;margin:0 0 15px 20px;display:block;}
+ul.we-excel-in li a{display:block;padding:4px 0 15px 30px;background:url(../images/icons/arrow-link.png) left 2px no-repeat;text-decoration:none;color:#060606;}
+ul.we-excel-in li a:hover{background:url(../images/icons/arrow-link-hover.png) left 2px no-repeat;color:#87c047;}
+.right-lightgray-panel{background:#f5f5f5;padding:30px;margin-bottom:20px;width:100%;display:inline-block;}
+.right-lightgray-panel h4{margin:0;padding:0;font-size:20px;}
+.right-lightgray-panel a{color:#333;display:block;text-decoration:none;}
+.right-lightgray-panel .fa{font-size:40px;float:left;margin-right:15px;}
+.col-5 .services-boxes{padding-bottom:5px;}
+.col-5 .services-boxes .btn{position:relative;bottom:5px;left:1%;margin:0;}
+.col-5 .services-boxes .text-left{height:155px;overflow:auto;position:relative;}
+.col-5{padding-right:15px;padding-left:15px;float:left;width:20%;margin-bottom:20px;}
+@media screen and (max-width:992px){.col-5{width:30%;}
+}
+@media screen and (max-width:767px){ul.we-excel-in li{width:47%;margin:0 0 15px 15px;}
+.col-5{width:50%;}
+.services-boxes{margin-bottom:20px;}
+.icd10-boxes-heading{font-size:16px;padding:5px 30px 30px 30px;}
+.icd10-boxes{margin-bottom:20px;}
+}
+@media screen and (max-width:550px){ul.we-excel-in li{width:99%;margin:0 0 15px 10px;}
+.right-lightgray-panel h4{font-size:15px;}
+.col-5{width:100%;}
+}

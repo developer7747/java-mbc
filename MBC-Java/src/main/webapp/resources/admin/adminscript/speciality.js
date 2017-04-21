@@ -109,9 +109,13 @@
      
      
      
-     $(document).ready(function () {         
+     $(document).ready(function () { 
+    	
          $("#multiple37").jqGrid({
-         	url: hosting_url+"Admin/speciality/getSpeciality",              
+        	
+     
+        	 url: hosting_url+"Admin/speciality/getSpeciality",
+        	
              mtype: "GET",
              styleUI: 'Bootstrap',
              datatype: "json",

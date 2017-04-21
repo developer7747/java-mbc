@@ -1,0 +1,670 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('icomoon.eot?rv8ffn');
+	src:url('icomoon.eot?#iefixrv8ffn') format('embedded-opentype'),
+		url('icomoon.ttf?rv8ffn') format('truetype'),
+		url('icomoon.woff?rv8ffn') format('woff'),
+		url('icomoon.svg?rv8ffn#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-address:before {
+	content: "\e600";
+}
+.icon-applynow:before {
+	content: "\e601";
+}
+.icon-apply:before {
+	content: "\e602";
+}
+.icon-areyoulookingfor:before {
+	content: "\e603";
+}
+.icon-arrows:before {
+	content: "\e604";
+}
+.icon-articles:before {
+	content: "\e605";
+}
+.icon-backtopage:before {
+	content: "\e606";
+}
+.icon-bestbillingpractices:before {
+	content: "\e607";
+}
+.icon-billersandcodersdigest:before {
+	content: "\e608";
+}
+.icon-blog:before {
+	content: "\e609";
+}
+.icon-blogger:before {
+	content: "\e60a";
+}
+.icon-certifiedbiller:before {
+	content: "\e60b";
+}
+.icon-close:before {
+	content: "\e60c";
+}
+.icon-cmsandcodingupdates:before {
+	content: "\e60d";
+}
+.icon-codemapping:before {
+	content: "\e60e";
+}
+.icon-connect:before {
+	content: "\e60f";
+}
+.icon-consultwith .path1:before {
+	content: "\e610";
+	color: rgb(0, 0, 0);
+}
+.icon-consultwith .path2:before {
+	content: "\e611";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-consultwith .path3:before {
+	content: "\e612";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-consultwith .path4:before {
+	content: "\e613";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+.icon-consultwith .path5:before {
+	content: "\e614";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+.icon-consultancy:before {
+	content: "\e615";
+}
+.icon-demo .path1:before {
+	content: "\e616";
+	color: rgb(0, 0, 0);
+}
+.icon-demo .path2:before {
+	content: "\e617";
+	margin-left: -0.9990234375em;
+	color: rgb(255, 255, 255);
+}
+.icon-description:before {
+	content: "\e618";
+}
+.icon-download:before {
+	content: "\e619";
+}
+.icon-email:before {
+	content: "\e61a";
+}
+.icon-enrollwithus:before {
+	content: "\e61b";
+}
+.icon-events .path1:before {
+	content: "\e61c";
+	color: rgb(255, 255, 255);
+}
+.icon-events .path2:before {
+	content: "\e61d";
+	margin-left: -1.0029296875em;
+	color: rgb(255, 255, 255);
+}
+.icon-events .path3:before {
+	content: "\e61e";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path4:before {
+	content: "\e61f";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path5:before {
+	content: "\e620";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path6:before {
+	content: "\e621";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path7:before {
+	content: "\e622";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path8:before {
+	content: "\e623";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path9:before {
+	content: "\e624";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path10:before {
+	content: "\e625";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path11:before {
+	content: "\e626";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path12:before {
+	content: "\e627";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path13:before {
+	content: "\e628";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path14:before {
+	content: "\e629";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path15:before {
+	content: "\e62a";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path16:before {
+	content: "\e62b";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path17:before {
+	content: "\e62c";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path18:before {
+	content: "\e62d";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path19:before {
+	content: "\e62e";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path20:before {
+	content: "\e62f";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-events .path21:before {
+	content: "\e630";
+	margin-left: -1.0029296875em;
+	color: rgb(0, 0, 0);
+}
+.icon-expertpanel .path1:before {
+	content: "\e631";
+	color: rgb(0, 0, 0);
+}
+.icon-expertpanel .path2:before {
+	content: "\e632";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-expertpanel .path3:before {
+	content: "\e633";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-expertpanel .path4:before {
+	content: "\e634";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-expertpanel .path5:before {
+	content: "\e635";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-expertpanel .path6:before {
+	content: "\e636";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-expertpanel .path7:before {
+	content: "\e637";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-expertpanel .path8:before {
+	content: "\e638";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-expertpanel .path9:before {
+	content: "\e639";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-expertpanel .path10:before {
+	content: "\e63a";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-expertpanel .path11:before {
+	content: "\e63b";
+	margin-left: -1em;
+	color: rgb(51, 51, 51);
+}
+.icon-expertpanel .path12:before {
+	content: "\e63c";
+	margin-left: -1em;
+	color: rgb(51, 51, 51);
+}
+.icon-facebook:before {
+	content: "\e63d";
+}
+.icon-fax:before {
+	content: "\e63e";
+}
+.icon-glossary:before {
+	content: "\e63f";
+}
+.icon-google-plus:before {
+	content: "\e640";
+}
+.icon-hireabiller:before {
+	content: "\e641";
+}
+.icon-hospitalbilling:before {
+	content: "\e642";
+}
+.icon-howitswork:before {
+	content: "\e643";
+}
+.icon-icd9to10:before {
+	content: "\e644";
+}
+.icon-ICD-10consultancy:before {
+	content: "\e645";
+}
+.icon-icd-10services:before {
+	content: "\e646";
+}
+.icon-icd-10training:before {
+	content: "\e647";
+}
+.icon-icd-10:before {
+	content: "\e648";
+}
+.icon-inhousejobs:before {
+	content: "\e649";
+}
+.icon-infograph:before {
+	content: "\e64a";
+}
+.icon-information:before {
+	content: "\e64b";
+}
+.icon-knowmore:before {
+	content: "\e64c";
+}
+.icon-linkedin:before {
+	content: "\e64d";
+}
+.icon-medicalbillingglossary:before {
+	content: "\e64e";
+}
+.icon-medicalbillinginsights:before {
+	content: "\e64f";
+}
+.icon-medicalbillingjobs .path1:before {
+	content: "\e650";
+	color: rgb(0, 0, 0);
+}
+.icon-medicalbillingjobs .path2:before {
+	content: "\e651";
+	margin-left: -1.138671875em;
+	color: rgb(0, 0, 0);
+}
+.icon-medicalbillingjobs .path3:before {
+	content: "\e652";
+	margin-left: -1.138671875em;
+	color: rgb(0, 0, 0);
+}
+.icon-medicalbillingjobs .path4:before {
+	content: "\e653";
+	margin-left: -1.138671875em;
+	color: rgb(76, 76, 76);
+}
+.icon-medicalbillingjobs .path5:before {
+	content: "\e654";
+	margin-left: -1.138671875em;
+	color: rgb(76, 76, 76);
+}
+.icon-medicalbillingjobs .path6:before {
+	content: "\e655";
+	margin-left: -1.138671875em;
+	color: rgb(76, 76, 76);
+}
+.icon-medicalbillingjobs .path7:before {
+	content: "\e656";
+	margin-left: -1.138671875em;
+	color: rgb(0, 0, 0);
+}
+.icon-medicalbillingservices:before {
+	content: "\e657";
+}
+.icon-medicalcodingservices .path1:before {
+	content: "\e658";
+	color: rgb(59, 221, 160);
+}
+.icon-medicalcodingservices .path2:before {
+	content: "\e659";
+	margin-left: -0.9169921875em;
+	color: rgb(59, 221, 160);
+}
+.icon-medicalcodingservices .path3:before {
+	content: "\e65a";
+	margin-left: -0.9169921875em;
+	color: rgb(255, 255, 255);
+}
+.icon-medicalcodingservices .path4:before {
+	content: "\e65b";
+	margin-left: -0.9169921875em;
+	color: rgb(59, 221, 160);
+}
+.icon-medicalcodingservices .path5:before {
+	content: "\e65c";
+	margin-left: -0.9169921875em;
+	color: rgb(59, 221, 160);
+}
+.icon-medicalcodingservices .path6:before {
+	content: "\e65d";
+	margin-left: -0.9169921875em;
+	color: rgb(59, 221, 160);
+}
+.icon-medicalcodingservices .path7:before {
+	content: "\e65e";
+	margin-left: -0.9169921875em;
+	color: rgb(59, 221, 160);
+}
+.icon-medicalcodingservices .path8:before {
+	content: "\e65f";
+	margin-left: -0.9169921875em;
+	color: rgb(59, 221, 160);
+}
+.icon-medicalcodingservices .path9:before {
+	content: "\e660";
+	margin-left: -0.9169921875em;
+	color: rgb(59, 221, 160);
+}
+.icon-medicalcodingservices .path10:before {
+	content: "\e661";
+	margin-left: -0.9169921875em;
+	color: rgb(59, 221, 160);
+}
+.icon-medicalcodingservices .path11:before {
+	content: "\e662";
+	margin-left: -0.9169921875em;
+	color: rgb(59, 221, 160);
+}
+.icon-medicalcoding:before {
+	content: "\e663";
+}
+.icon-medicalhealthrecord .path1:before {
+	content: "\e664";
+	color: rgb(0, 0, 0);
+}
+.icon-medicalhealthrecord .path2:before {
+	content: "\e665";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-medicalhealthrecord .path3:before {
+	content: "\e666";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+.icon-medicalhealthrecord .path4:before {
+	content: "\e667";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-medicalhealthrecord .path5:before {
+	content: "\e668";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-medicalhealthrecord .path6:before {
+	content: "\e669";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-medicalhealthrecord .path7:before {
+	content: "\e66a";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-newsletter:before {
+	content: "\e66b";
+}
+.icon-offer:before {
+	content: "\e66c";
+}
+.icon-outsourceservices:before {
+	content: "\e66d";
+}
+.icon-personalinfo:before {
+	content: "\e66e";
+}
+.icon-phone:before {
+	content: "\e66f";
+}
+.icon-physiciangroup:before {
+	content: "\e670";
+}
+.icon-postyourjobrequirement:before {
+	content: "\e671";
+}
+.icon-practicemanagement:before {
+	content: "\e672";
+}
+.icon-pressrelease:before {
+	content: "\e673";
+}
+.icon-pricing .path1:before {
+	content: "\e674";
+	color: rgb(0, 0, 0);
+}
+.icon-pricing .path2:before {
+	content: "\e675";
+	margin-left: -0.9990234375em;
+	color: rgb(255, 255, 255);
+}
+.icon-quickfacts:before {
+	content: "\e676";
+}
+.icon-quicksolution:before {
+	content: "\e677";
+}
+.icon-quiz:before {
+	content: "\e678";
+}
+.icon-rcmservices .path1:before {
+	content: "\e679";
+	color: rgb(0, 0, 0);
+}
+.icon-rcmservices .path2:before {
+	content: "\e67a";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-rcmservices .path3:before {
+	content: "\e67b";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-rcmservices .path4:before {
+	content: "\e67c";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-rcmservices .path5:before {
+	content: "\e67d";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+.icon-rcmservices .path6:before {
+	content: "\e67e";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-rcmservices .path7:before {
+	content: "\e67f";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-rcmservices .path8:before {
+	content: "\e680";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-RCM:before {
+	content: "\e681";
+}
+.icon-registeryourresume:before {
+	content: "\e682";
+}
+.icon-requestfor:before {
+	content: "\e683";
+}
+.icon-requestmeeting .path1:before {
+	content: "\e684";
+	color: rgb(0, 0, 0);
+}
+.icon-requestmeeting .path2:before {
+	content: "\e685";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
+}
+.icon-requestmeeting .path3:before {
+	content: "\e686";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+.icon-savemoney:before {
+	content: "\e687";
+}
+.icon-selectbylocation:before {
+	content: "\e688";
+}
+.icon-softwareused:before {
+	content: "\e689";
+}
+.icon-specialtybillingguidline:before {
+	content: "\e68a";
+}
+.icon-SpecialtyWeExcel-home:before {
+	content: "\e68b";
+}
+.icon-stateswedominate:before {
+	content: "\e68c";
+}
+.icon-testimonials:before {
+	content: "\e68d";
+}
+.icon-topcity:before {
+	content: "\e68e";
+}
+.icon-topicofthemonth:before {
+	content: "\e68f";
+}
+.icon-transcription:before {
+	content: "\e690";
+}
+.icon-twitter:before {
+	content: "\e691";
+}
+.icon-videos:before {
+	content: "\e692";
+}
+.icon-WeDominateOver:before {
+	content: "\e693";
+}
+.icon-weexcelin:before {
+	content: "\e694";
+}
+.icon-whatsnew:before {
+	content: "\e695";
+}
+.icon-whyus .path1:before {
+	content: "\e696";
+	color: rgb(0, 217, 255);
+}
+.icon-whyus .path2:before {
+	content: "\e697";
+	margin-left: -1em;
+	color: rgb(0, 217, 255);
+}
+.icon-whyus .path3:before {
+	content: "\e698";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+.icon-whyus .path4:before {
+	content: "\e699";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+.icon-whyus .path5:before {
+	content: "\e69a";
+	margin-left: -1em;
+	color: rgb(126, 181, 82);
+}
+.icon-whyus .path6:before {
+	content: "\e69b";
+	margin-left: -1em;
+	color: rgb(126, 181, 82);
+}
+.icon-whyus .path7:before {
+	content: "\e69c";
+	margin-left: -1em;
+	color: rgb(126, 181, 82);
+}
+.icon-whyus .path8:before {
+	content: "\e69d";
+	margin-left: -1em;
+	color: rgb(126, 181, 82);
+}
+.icon-whyus .path9:before {
+	content: "\e69e";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+.icon-whyus .path10:before {
+	content: "\e69f";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}

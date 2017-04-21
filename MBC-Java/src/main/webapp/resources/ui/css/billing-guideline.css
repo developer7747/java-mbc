@@ -1,0 +1,103 @@
+.billing-guideline-area{background:#f8f8f9;margin-bottom:30px;padding-right:5px;}
+.billing-guideline-area H5{padding:5px 0 5px 0;font-size:18px;margin:0;}
+.billing-guideline-area p{padding-bottom:12px;}
+.billing-guideline-area .fa{margin-right:7px;}
+.billing-guideline-area ul{padding:0;}
+.billing-guideline-area ul a{color:#282828;}
+.billing-guideline-area ul a.text-blue{color:#00B1BA;}
+.billing-guideline-area ul li{margin-right:20px;}
+.popup-guideline{background:#019fbc;padding:10px;display:inline-block;width:100%;}
+.popup-guideline h3{text-align:center;padding-bottom:25px;color:#fff;}
+.popup-guideline .form-control{min-height:45px;margin-bottom:20px;border:none;}
+.popup-guideline .btn{background:#fff;padding:8px 35px;font-size:20px;}
+.popup-guideline .btn a{color:#282828;}
+.experts-block{background:#f8f8f9;margin-bottom:5px;padding-right:5px;width:100%;clear:both;display:inline-block;}
+.experts-block H5{padding:5px 0 5px 0;font-size:18px;}
+.experts-block img{margin-right:10px;width:70px;height:70px;overflow:hidden;float:left;}
+.billing-glossary-search{background:#f8f8f9;margin-bottom:10px;display:inline-block;width:100%;}
+.glossary-search-heading{float:left;font-size:18px;padding:7px 10px 7px 15px;width:200px;}
+.glossary-search-info{border-left:1px solid #d1d1d1;padding:7px 10px 7px 15px;margin-left:220px;}
+.glossary-search-form{}
+.glossary-search-form .input-box{border:1px solid #d1d1d1;}
+.glossary-search-form input[type="text"]{border:0 none;box-shadow:none !important;font-size:14px !important;font-weight:normal;margin:0;padding:7px 5px !important;position:relative;width:100%;}
+.glossary-search-form .submit{background:url(../images/icons/search-icon.png) right 2px no-repeat;border:none;position:absolute;right:30px;top:7px;}
+ul.glossary-alphabets{padding:30px 0 0 0;margin:0;list-style-type:none;}
+ul.glossary-alphabets li{float:left;margin:0;padding:0;margin-right:1px;margin-bottom:1px;font-size:20px;text-transform:uppercase;width:35px;height:40px;overflow:hidden;text-align:center;display:block;}
+ul.glossary-alphabets li a{color:#03ccd8;padding:10px !important;display:block;background:#f7f7f7;}
+ul.glossary-alphabets li a:hover{color:#fff;padding:10px !important;display:block;background:#03ccd8;}
+ul.glossary-alphabets li a.active{color:#fff;background:#03ccd8;}
+@media screen and (max-width:767px){.glossary-search-info{border:none;padding:7px 10px 7px 15px;margin-left:0px;}
+.glossary-search-heading{width:100%;}
+}
+.did-you-know-insight{text-align:left;background:#94c55d;color:#fff;padding:20px 20px 30px 40px;}
+.billing-insight-area{background:#f8f8f9;margin-bottom:15px;display:inline-block;width:94%;padding-left:5px;padding-right:10px;}
+.billing-insight-date{width:70px;text-align:center;float:left;padding-top:10px;overflow:hidden;}
+.billing-insight-info{float:left;padding:10px 10px 10px 25px;border-left:1px solid #d1d1d1;width:66%;}
+.billing-insight-info ul.list-inline{padding:0;}
+.billing-insight-info ul.list-inline li{padding:0 30px 10px 5px;}
+.billing-insight-area h5{padding-bottom:10px;font-size:20px;}
+.billing-insight-area .fa{margin-right:7px;}
+.billing-insight-area ul a{color:#282828;}
+.billing-insight-area ul a.text-blue{color:#00B1BA;}
+.billing-update-likes{border-top:1px solid #78787a;font-size:12px;background:url(../images/icons/likes.png) left 5px no-repeat;padding:5px 0 0px 18px;margin:10px;}
+.billing-insight-sidebar h4{margin:0;}
+ul.billing-insight-list{text-align:left;margin:0;padding:25px 10px;list-style-type:none;}
+ul.billing-insight-list li{text-align:left;margin:0;padding:0px 0 11px 2px;font-size:16px;}
+ul.billing-insight-list li a{color:#444343;}
+ul.billing-insight-list li .fa{font-size:19px;font-weight:bold;padding-right:10px;}
+.quick-facts-area{border:1px solid #d1d1d1;padding:10px;margin-bottom:70px;}
+.quick-facts-box{background:#e6e6e6;padding:10px;margin-bottom:5px;}
+ul.quick-facts-listing{margin:0;padding:6px;text-align:center;list-style-type:none;border:1px solid #d1d1d1;display:inline-block;width:100%;margin-bottom:30px;}
+ul.quick-facts-listing li{float:left;background:#e6e6e6;width:24%;padding:10px 5px;height:55px;margin:3px;}
+ul.quick-groups-listing{margin:0;padding:6px;text-align:center;list-style-type:none;border:1px solid #d1d1d1;display:inline-block;width:100%;}
+ul.quick-groups-listing li{float:left;background:#e6e6e6;padding:20px 18px;font-size:16px;margin-bottom:6px;}
+ul.quick-groups-listing .quick-groups-sign{margin-right:5px;margin-left:5px;background:#cdcdcd;font-weight:bold;font-size:18px;}
+.billing-insight-sidebar-blocks{padding:20px;margin-bottom:15px;background:#e3e3e3;}
+@media screen and (max-width:660px){ul.quick-facts-listing li{float:left;background:#e6e6e6;width:100%;padding:10px 5px;height:auto;margin:3px 0;}
+}
+.share-job{background:#f0f0f0;padding:20px 0px;float:left;height:70px;display:inline-block;margin:30px 0 50px 0;}
+.share-first{width:55%;margin-right:1%;}
+.share-second{width:16%;margin-right:1%;}
+.share-third{width:25%;}
+.share-job .control-label{padding:7px 10px 3px 10px;font-weight:normal;float:left;}
+.share-job .form-control{background:#3d3d3d;width:200px;color:#f3f3f3;margin:0;margin-right:5px;}
+.share-job .btn{background:#3d3d3d;color:#f3f3f3;text-transform:uppercase;}
+.share-job .fa{float:left;padding:0 5px;}
+.share-job span{margin-top:5px;float:left;}
+.share-job a{display:block;color:#282828;}
+@media screen and (max-width:1200px){.share-first{width:100%;margin-right:0%;margin-bottom:10px;}
+.share-second{width:49%;margin-right:1%;padding-left:25px;}
+.share-third{width:50%;padding-left:25px;}
+}
+@media screen and (max-width:991px){.share-first{width:100%;margin-right:0%;margin-bottom:10px;}
+.share-second{width:49%;margin-right:1%;padding-left:25px;}
+.share-third{width:50%;padding-left:25px;}
+}
+@media screen and (max-width:480px){.share-first{width:100%;margin-right:0%;margin-bottom:10px;}
+.share-second{width:100%;margin-right:1%;padding-left:5px;margin-bottom:10px;}
+.share-third{width:100%;padding-left:5px;margin-bottom:20px;}
+}
+.digest-sidebar h4{margin-bottom:15px;clear:both;}
+.digest-sidebar .latest-blog{background:#f8f8f9;padding:10px 20px;margin-bottom:10px;}
+.digest-sidebar .btn-gray{margin:0;padding:4px 20px;}
+.medicine-billers-profile{background:#f8f8f9;margin-bottom:15px;display:inline-block;width:100%;padding:10px 20px;}
+.medicine-billers-profile ul{padding:0;}
+.medicine-billers-profile .fa{margin-right:7px;}
+.medicine-billers-profile h5{color:#00B1BA;font-size:20px;padding:0;margin:0;}
+.medicine-billers-profile a.text-blue{color:#00B1BA;margin-right:20px;}
+.medicine-billers-profile a{color:#282828;}
+.right-blue-panel{background:#00B1BA;padding:30px 30px;margin-bottom:20px;width:100%;border-radius:4px;}
+.right-blue-panel h4{margin:0;padding:0;font-size:20px;}
+.right-blue-panel a{color:#fff;display:block;text-decoration:none;}
+.right-blue-panel .fa{font-size:44px;float:left;line-height:20px;margin-right:15px;}
+.consult-with{background:#f8f8f9;margin-bottom:20px;padding:15px;width:100%;clear:both;display:inline-block;color:#626262;}
+.consult-with-img{float:left;width:33%;margin-right:2%;text-align:center;}
+.icon-consultwith{width:86px;height:87px;background:url(../images/icons/consult-with.png) center top no-repeat;}
+.consult-with H4{padding:5px 0 5px 0;font-size:15px;font-weight:bold;margin:0;}
+.consult-with-info{float:right;width:62%;}
+.consult-with-info p{color:#00b1ba;}
+.consult-with-info strong{font-size:18px;font-weight:bold;}
+.consult-with-info ul{padding:0;padding-top:10px;}
+.consult-with-info ul li{padding:3px;margin:0 2px;border:1px solid #818181;-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;width:40px;height:40px;text-align:center;color:#676767;}
+.consult-with-info i{font-size:22px;padding-top:6px;display:block;}
+.consult-with-info a{display:block;color:#818181;}

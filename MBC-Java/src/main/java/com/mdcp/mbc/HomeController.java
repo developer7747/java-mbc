@@ -13,4 +13,15 @@ public class HomeController {
  
         return "home";
     }
+    
+    
+    @RequestMapping("/Specialty")
+    public String visitSpecialty() {
+ 
+        // do something before returning view name
+ 
+        return "UI/Specialty";
+    }
+    
+    
 }

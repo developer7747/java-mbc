@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{margin:0; padding:0; font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#666666; }
+#wrapper{width:90%;  padding:0.2% 5%; margin:0 auto; font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+.header{width:100%; height:102px; margin:0 0.5%;  text-align:center; vertical-align:middle;  font-size:30px; color:#103349;}
+.logo{ float:left; margin:0 0 0 50px; vertical-align:middle; border:0;}
+.img_header{width:100%; text-align:center; background:url(../images/survey-header.jpg) no-repeat center; width:1219px; height:247px; }
+.img_header_question{width:100%; text-align:center; background:url(../images/survey-header.jpg) no-repeat center top; width:1219px; height:149px; }
+h1{ font-family:30px; font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; text-align:center; color:#103349 }
+
+.main_form{width:70%; padding:0 auto; margin:0 auto;}
+.main_form input{width:40%; margin:0.5% 3%; background:#fff; border:none; border-bottom:1px solid #222; padding:1.5%; min-height:30px; font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size:20px; }
+.main_form select{width:43%; margin:0.5% 3%; background:#fff; border:none; border-bottom:1px solid #222; padding:1.5%; min-height:30px; font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size:20px; }
+.main_form submit{width:50%; padding:0 auto; margin:0 auto; background:#6b6b6b; color:#fff; margin:5% 25%; border:none;}
+
+.quiz_form{ float:left; width:70%;  }
+.quiz_lable{font-size:20px; padding:2% 0; border-bottom:1px solid #222; }
+.quiz_input{with:20%; margin:0.5% 3%; background:#fff; border:none; padding:1.5%; min-height:30px; font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size:20px; }
+.quiz select{with:20%; margin:0.5% 3%; background:#fff; border:none; border-bottom:1px solid #222; padding:1.5%; min-height:30px; font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size:20px; }
+.quiz_submit {  width: 50%;  padding: 2% auto; background: #6b6b6b; font-size:20px; color: #fff;  margin: 5% 25%;  border: none;}
+.quiz_result{ float:left; width:30%; min-height:300px;}
+.content{ float:left; width:100%; font-size:15px; text-align:center; padding:2% 0;}
+
+.footer{ float:left; width:100%; text-align:center; font-size:12px; margin:1% 0; color:#222; background:#f2f2f2; padding:1% 0}
+
+/*dash bord*/
+.mbshSpacer{display:block; clear:both;}
+.modalPopup{background-color: #FFFFDD;border: 3px solid Gray;padding: 3px;width:auto;z-index:2000;position:fixed;top:220px;left:500px;}
+.modalBackground1{background-color: Gray;filter: alpha(opacity=80);opacity: 0.8;z-index: 10000;}

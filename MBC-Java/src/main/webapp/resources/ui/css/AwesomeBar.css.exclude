@@ -1,0 +1,71 @@
+﻿
+    .awesome-bar {
+    display: none;
+}
+@media only screen and (min-width: 1025px) {
+.awesome-bar {
+    background: #1c94c6 none repeat scroll 0 0;
+    display: block;
+    position: fixed;
+    top: -60px;
+    transition: top 800ms ease 0s;
+    width: 100%;
+    z-index: 999;
+}
+}
+.awesome-bar p {
+    color: #fff;
+}
+.awesome-bar.show {
+    top: 0;
+}
+.awesome-bar_container {
+    display: block;
+    margin: 0 auto;
+    max-width: 80em;
+    padding: 0.7em 40px 0.7em 0.625em;
+    width: 100%;
+}
+.awesome-bar_container::before, .awesome-bar_container::after {
+    content: " ";
+    display: table;
+}
+.awesome-bar_container::after {
+    clear: both;
+}
+.awesome-bar_container * {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+.awesome-bar_brand {
+    float: left;
+    margin: 3px 45px 0 0;
+}
+.awesome-bar_message {
+    float: left;
+    font-weight: 700;
+    line-height: 1.8;
+}
+.awesome-bar_action {
+    background: #49b7e5 none repeat scroll 0 0;
+    float: right;
+    margin-bottom: 0;
+}
+.awesome-bar_close {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 13px;
+    height: 20px;
+    padding-top: 2px;
+    position: absolute;
+    right: 11px;
+    text-align: center;
+    top: 16px;
+    width: 20px;
+}
+.awesome-bar_close:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}

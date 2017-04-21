@@ -155,7 +155,10 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+<%--  <script src="<c:url value="/resources/admin/adminscript/speciality.js"/>"></script> --%>
  <script src="../resources/admin/adminscript/speciality.js"></script>
+ 
+ 
 <jsp:include page="/WEB-INF/views/common/footer.jsp"/>
 </body>
 </html>

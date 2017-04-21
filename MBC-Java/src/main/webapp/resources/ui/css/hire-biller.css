@@ -1,0 +1,133 @@
+
+.accordion-nopadding .panel-body {
+	border-left:5px solid #8dc153;
+	padding-left:5px;
+	
+}
+
+.accordion-nopadding .panel-body ul{
+	margin:0;
+	padding:0;
+	
+}
+.accordion-nopadding .panel-body ul li{
+	margin:0;
+	padding:10px 0 14px 30px;
+	display:inline-block;
+	width:100%;
+	list-style-type:none;
+	background:url(../images/icons/arrow-link-hover.png) left 8px no-repeat;
+	border-bottom:1px solid #e7e7e7;
+	line-height:20px;
+	
+}
+.accordion-nopadding .panel-body ul li:last-child {
+	border-bottom:none;
+}
+
+.accordion-nopadding .panel-body ul li a{
+	color:#8cc250;
+}
+
+.ljob-opening {
+	background:#00b1ba;
+	color:#fff;
+	padding:20px;
+	font-size:16px;
+	-webkit-border-radius: 7px 7px 0 0;
+     -moz-border-radius: 7px 7px 0 0;
+          border-radius: 7px 7px 0 0;
+		  display:inline-block;
+		  width:100%;
+
+}
+.ljob-opening input{
+	width:77%;
+	margin-right:8px;
+	height:45px;
+	float:left;
+}
+.ljob-opening span{
+	padding:0 5px;
+
+}
+.ljob-postjob {
+	background:#3d3d3d;
+	color:#fff;
+	padding:10px 20px;
+	font-size:16px;
+	-webkit-border-radius: 0 0 7px 7px ;
+     -moz-border-radius: 0 0 7px 7px ;
+          border-radius: 0 0 7px 7px ;
+		  display:inline-block;
+		  width:100%;
+}
+.ljob-postjob .fa {
+	float:left;
+	padding:10px 10px 0 20px;
+	
+}
+
+.postjob-heading{
+	float:left;
+	color:#fff;
+}
+.postjob-heading h4 {
+	font-size:23px;
+	margin:0;
+	padding:10px 0 0 0;
+	color:#fff;
+}
+.postjob-heading p{
+	font-size:12px;
+}
+.postjob-heading a { color:#fff;}
+
+
+.apply-now {
+	background:url(../images/icons/apply-now.png) left 2px no-repeat;
+	padding-left:35px;
+	height:30px;
+	line-height:30px;
+}
+.apply-now a{
+	color:#fff;
+	display:block;
+}
+
+.ljob-requirement {
+	background:#95c55f;
+	color:#fff;
+	padding:20px;
+	font-size:16px;
+	font-weight:bold;
+	text-align:center
+	-webkit-border-radius: 0 0 7px 7px;
+     -moz-border-radius: 0 0 7px 7px;
+          border-radius: 0 0 7px 7px;
+}
+.ljob-requirement h4{
+	padding:0 0 10px 0;
+	margin:0;
+	text-align:center;
+}
+
+.ljob-requirement h4 a{
+	color:#fff;
+}
+
+.ljob-requirement i{
+	font-size:26px
+}
+
+.job-requirement-btn {
+	background:url(../images/icons/post-job.png) left 2px no-repeat;
+	padding-left:47px;
+	height:45px;
+	line-height:45px;
+	width:260px;
+	margin:0 auto;
+}
+.job-requirement-btn a {
+	color:#fff;
+}

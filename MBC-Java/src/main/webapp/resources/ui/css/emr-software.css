@@ -1,0 +1,51 @@
+.emr-banner-search {
+	text-align:center;
+}
+.emr-banner-search .form-control {
+	height:60px;
+	font-size:22px;
+	color:#1d1d1d;
+	width:85%;
+	margin:30px auto;
+}
+.emr-banner-search .btn {
+	padding:10px 37px;
+	text-transform:uppercase;
+	font-size:22px;
+	color:#838383;
+}
+
+.emr-clients-list {
+	margin-bottom:20px;
+}
+
+.emr-clients-list h4 {
+	height:44px;
+	color:#00B1BA;
+}
+
+.emr-clients {
+	border:8px solid #eee;
+	height:88px;
+	overflow:hidden;
+	text-align:center;
+}
+.emr-request {
+	background:#f8f8f9;
+	padding:2px 4px;
+	text-align:center;
+}
+.emr-request h5 {
+	font-size:20px;
+}
+
+
+.emr-clients-list ul.list-inline li {
+	padding:5px 12px;
+}
+.emr-clients-list ul.list-inline li a{
+	color:#282828;
+}
+.emr-clients-list .fa{
+	margin-right:10px;
+}

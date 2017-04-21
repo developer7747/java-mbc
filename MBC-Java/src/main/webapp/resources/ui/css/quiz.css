@@ -1,0 +1,82 @@
+@media screen and (min-width:768px){.quiz-area{height:860px;position:relative;font-size:17px;}
+.quiz-corner{position:absolute;left:25%;top:20px;font-size:48px;text-transform:uppercase;line-height:55px;width:200px;}
+.quiz-middle-thumb{position:absolute;left:36%;top:130px;}
+.quiz-area i{-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;color:#fff;}
+.quiz-prac-manage{position:absolute;left:7%;top:150px;width:99px;text-align:center;}
+.quiz-prac-manage a{color:#8ed344;}
+.quiz-prac-manage .fa{background:#8ed344;padding:3px;font-size:60px;text-align:center;height:105px;width:105px;line-height:103px;position:relative;right:-100px;top:33px;}
+.quiz-icd10{position:absolute;left:13%;top:440px;width:150px;text-align:center;}
+.quiz-icd10 a{color:#3d3d3d;}
+.quiz-icd10 .fa{background:#3d3d3d;padding:3px;font-size:55px;text-align:center;height:87px;width:87px;line-height:85px;position:relative;right:-74px;top:-45px;}
+.med-billing{position:absolute;left:74%;top:365px;width:128px;text-align:center;}
+.med-billing a{color:#3d3d3d;}
+.med-billing .fa{background:#3d3d3d;font-size:54px;height:114px;line-height:100px;padding:3px;position:relative;right:0px;text-align:center;top:-15px;width:114px;}
+.quiz-icds{position:absolute;left:73%;top:152px;width:128px;text-align:center;}
+.quiz-icds a{color:#61c4cb;}
+.quiz-icds .fa{background:#61c4cb;font-size:36px;height:86px;line-height:78px;padding:3px;position:relative;right:0px;text-align:center;top:-15px;width:86px;}
+.quiz-gen-billing{position:absolute;left:64%;top:-6px;width:85px;text-align:center;}
+.quiz-gen-billing a{color:#8ed344;}
+.quiz-gen-billing .fa{background:#8ed344;font-size:34px;height:68px;line-height:60px;padding:3px;position:relative;right:94px;text-align:center;top:60px;width:68px;}
+.quiz-rcm{position:absolute;left:38%;top:475px;width:85px;text-align:center;}
+.quiz-rcm a{color:#61c4cb;}
+.quiz-rcm .fa{background:#61c4cb;font-size:44px;height:82px;line-height:72px;padding:3px;position:relative;right:0px;text-align:center;top:-11px;width:82px;}
+.quiz-medical-logo{position:relative;top:750px;text-align:center;}
+.quiz-medical-tagline{position:relative;top:530px;text-align:center;font-size:30px;line-height:65px;}
+}
+@media screen and (max-width:991px){.med-billing{position:absolute;left:80%;top:365px;width:128px;text-align:center;}
+.quiz-icds{position:absolute;left:79%;top:135px;width:128px;text-align:center;}
+}
+@media screen and (max-width:767px){.quiz-area{width:300px;margin:0 auto;font-size:18px;}
+.quiz-area i{-moz-border-radius:0%;-webkit-border-radius:0%;border-radius:0%;color:#fff;font-size:30px;line-height:22px;float:left;width:60px;}
+.quiz-corner{font-size:44px;text-transform:uppercase;margin-top:20px;text-align:center;line-height:55px;}
+.quiz-middle-thumb{padding:20px 0;}
+.quiz-rcm a{display:inline-block;padding:20px 15px;background:#61c4cb;color:#fff;width:100%;margin-bottom:10px;}
+.quiz-prac-manage a{display:inline-block;padding:20px 15px;background:#8ed344;color:#fff;width:100%;margin-bottom:10px;}
+.quiz-icd10 a{display:inline-block;padding:20px 15px;background:#3d3d3d;color:#fff;width:100%;margin-bottom:10px;}
+.med-billing{position:inherit;display:inline-block;width:100%;text-align:left;}
+.med-billing .fa{width:60px;position:inherit;}
+.med-billing a{display:inline-block;padding:20px 15px;background:#8ed344;color:#fff;width:100%;margin-bottom:10px;}
+.quiz-icds{position:inherit;display:inline-block;width:100%;text-align:left;}
+.quiz-icds .fa{width:60px;position:inherit;}
+.quiz-icds a{display:inline-block;padding:20px 15px;background:#3d3d3d;color:#fff;width:100%;margin-bottom:10px;}
+.quiz-gen-billing a{display:inline-block;padding:20px 15px;background:#8ed344;color:#fff;width:100%;margin-bottom:10px;}
+.quiz-medical-logo a{display:inline-block;padding:20px 15px;width:100%;margin-bottom:10px;text-align:center;}
+.quiz-medical-tagline{display:inline-block;padding:20px 15px;width:100%;margin-bottom:10px;font-size:22px;line-height:35px;text-align:center;}
+}
+.quiz-inner-bg{background:url(../images/quiz-bg.png) center top no-repeat;width:100%;}
+.quiz-inner-area{width:840px;margin:0 auto;min-height:600px;padding-top:20px;}
+.logo-quiz{margin-top:13px;float:right;}
+.quiz-rcm-heading{font-size:50px;margin-top:75px;color:#121212;text-transform:uppercase;float:left;}
+.quiz-content{width:680px;float:right;padding:60px 0 0 0;}
+.quiz-content h1{font-size:44px;margin:0;padding:0;}
+.quiz-content h4{font-size:18px;margin:0 0 20px 0;padding:0;}
+.quiz-content h3{font-size:19px;margin:0;padding:0;text-align:center;}
+.quiz-content h3 span{color:#83c43c;}
+.quiz-content h3 a{color:#83c43c;}
+.quiz-title{background:rgba(000,000,000,0.1);text-align:center;padding:20px 60px;font-size:20px;margin-bottom:10px;}
+.quiz-form-area{background:rgba(000,000,000,0.1);text-align:center;padding:40px 60px;font-size:20px;margin-bottom:20px;display:inline-block;width:100%;}
+.quiz-radioform-area{background:rgba(000,000,000,0.03);text-align:left;padding:30px 40px;font-size:20px;margin-bottom:20px;display:inline-block;width:100%;}
+.quiz-form-area .form-control{width:210px;margin-bottom:30px;}
+.quiz-content .radio-list > label{display:block;font-weight:normal;text-align:left;margin-bottom:20px;font-size:18px;}
+@media screen and (max-width:991px){.quiz-inner-area{width:90%;}
+.quiz-content{width:85%;}
+.quiz-form-area .form-control{width:220px;}
+.quiz-radioform-area{text-align:left;font-size:20px;width:79%;}
+}
+@media screen and (max-width:750px){.quiz-inner-area{width:96%;}
+.quiz-inner-area img{max-width:80%;}
+.logo-quiz{margin-top:13px;float:left;}
+.quiz-title{padding:20px 30px;}
+.pull-left{display:inline-block;width:100%;}
+.pull-right{display:inline-block;width:100%;}
+.quiz-content{width:100%;}
+.quiz-form-area{padding:20px 20px;}
+.quiz-radioform-area{padding:20px 20px;}
+.quiz-form-area .form-control{width:100%;margin-bottom:15px;}
+.pull-left{display:inline-block;width:100%;padding-left:20%;}
+.quiz-rcm-heading{font-size:32px !important;padding-left:7%;}
+.logo-quiz{margin-top:13px;float:left;padding-left:20%;padding-top:7%;}
+.quiz-title{padding-left:15px !important;padding-right:17px !important;width:78%;}
+.radioform-area{padding:20px;width:79%;}
+.quiz-radioform-area{text-align:left;font-size:20px;width:79%;}
+}

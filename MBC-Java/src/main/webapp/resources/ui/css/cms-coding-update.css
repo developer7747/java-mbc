@@ -1,0 +1,75 @@
+.cms-update-area {
+	background:#f8f8f9;
+	margin-bottom:15px;
+	display:inline-block;
+	width:100%;
+	padding-left:5px;
+	padding-right:10px;
+}
+.cms-update-date {
+	width:60px;
+	text-align:center;
+	float:left;
+	padding-top:10px;
+	overflow:hidden;
+	height:60px;
+}
+.cms-update-info {
+	float:left;
+	padding:10px;
+	border-left:1px solid #d1d1d1;
+	width:66%;
+	font-weight:bold;
+	
+}
+.cms-update-btn {
+	width:20%;
+	float:right;
+	text-align:right;
+	padding:10px;
+	
+}
+.update-month {
+	font-size:16px;
+	margin:0;
+	text-transform:uppercase;
+padding: 0 0 6px;
+
+}
+.update-date {
+	font-size:30px;
+	margin:0;
+	padding:0;
+	font-weight:bold;
+}
+
+@media screen and (max-width:991px){
+	
+	.cms-update-info {
+		float:left;
+		padding:10px;
+		width:80%;
+		font-weight:bold;
+		
+	}
+	.cms-update-btn {
+		width:100%;
+		float:left;
+		text-align:left;
+		padding:0px;
+		margin-left:70px;
+		padding-bottom:15px;
+
+		
+	}
+
+}
+
+@media screen and (max-width:370px){
+	
+	.cms-update-info {
+		width:76%;
+		
+	}
+
+}
