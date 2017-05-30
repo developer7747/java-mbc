@@ -148,7 +148,7 @@
                  { label: 'LongDescription', name: 'longDescription', width: 150 },
                  { label: 'Name', name: 'name', width: 150 },
                  { label: 'ShortDescription', name: 'shortDescription', width: 150 },
-                 { label: 'UploadImage', name: 'uploadImage', width: 150 },                 
+                 { label: 'UploadImage', name: 'imagepath', width: 150 },                 
                  { label: 'Action', name: 'Action', width: 82, formatter: displayButtons },
              ],
              autowidth: true,

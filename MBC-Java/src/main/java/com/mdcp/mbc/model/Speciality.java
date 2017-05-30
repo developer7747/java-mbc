@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Speciality")
+@Table(name = "speciality")
 public class Speciality {
 
 	@Id
@@ -17,8 +17,10 @@ public class Speciality {
 	private int id;
 
 	private String name;
-	private String imagepath;
+	
 
+	@Column(name = "catbanner", nullable = true, columnDefinition = "text")
+	private String catbanner;
 	@Column(name = "bannerContent", nullable = true, columnDefinition = "text")
 	private String bannerContent;
 
@@ -33,6 +35,28 @@ public class Speciality {
 
 	// @Column(name="uploadImage", nullable = true,columnDefinition = "text")
 	// private String uploadImage;
+	
+	
+	private String imagepath;
+	private String catname;
+
+	
+
+	
+	
+	
+	
+	
+	
+	@Column(name = "customName", nullable = true, columnDefinition = "text")
+	private String customName;
+
+	@Column(name = "catShortDesc", nullable = true, columnDefinition = "text")
+	private String catShortDesc;
+
+	@Column(name = "catDesc", nullable = true, columnDefinition = "text")
+	private String catDesc;
+
 
 	public int getId() {
 		return id;
@@ -96,6 +120,46 @@ public class Speciality {
 
 	public void setImagepath(String imagepath) {
 		this.imagepath = imagepath;
+	}
+
+	public String getCatname() {
+		return catname;
+	}
+
+	public String getCustomName() {
+		return customName;
+	}
+
+	public String getCatShortDesc() {
+		return catShortDesc;
+	}
+
+	public String getCatDesc() {
+		return catDesc;
+	}
+
+	public void setCatname(String catname) {
+		this.catname = catname;
+	}
+
+	public void setCustomName(String customName) {
+		this.customName = customName;
+	}
+
+	public void setCatShortDesc(String catShortDesc) {
+		this.catShortDesc = catShortDesc;
+	}
+
+	public void setCatDesc(String catDesc) {
+		this.catDesc = catDesc;
+	}
+
+	public String getCatbanner() {
+		return catbanner;
+	}
+
+	public void setCatbanner(String catbanner) {
+		this.catbanner = catbanner;
 	}
 
 }

@@ -42,29 +42,9 @@
 
 <link href="<c:url value="/resources/ui/css/custom.css"/>" rel="stylesheet" >
 
-<meta name="p:domain_verify" content="e99f97d685f0ba7be10516c8c57ed96a"/>
+<!-- <meta name="p:domain_verify" content="e99f97d685f0ba7be10516c8c57ed96a"/> -->
 
-<script type="text/javascript">
-_atrk_opts = { atrk_acct:"AYqyo1IWx810VR", domain:"medicalbillersandcoders.com",dynamic: true};
-(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
-</script>
-<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=AYqyo1IWx810VR" style="display:none" height="1" width="1" alt="" /></noscript>
 
-  <!-- Facebook Pixel Code -->
-<script>
-    !function(f, b, e, v, n, t, s) {
-        if (f.fbq) return; n = f.fbq = function() {
-            n.callMethod ?
-n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-        }; if (!f._fbq) f._fbq = n;
-        n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
-        t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
-    } (window,
-document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1263221140423553'); // Insert your pixel ID here.
-    fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1263221140423553&ev=PageView&noscript=1"/></noscript>
 <!-- DO NOT MODIFY -->
 <!-- End Facebook Pixel Code --> 
   
@@ -138,76 +118,9 @@ document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
     </script>
    <%--zooin effect--%>
    
-   <script>
-
-
-        $(function () {
-            $('.zoomimg').mouseenter(function ()
-        {
-            $(this).css("cursor","pointer");
-            $(this).animate({width: "43%", height: "25%"}, 'slow');
-        });
-    
-            $('.zoomimg').mouseleave(function ()
-            {   
-                $(this).animate({ width: "43%" }, 'fast');
-                //alert("working");   
-            }
-
-            )} );
-    </script>
+  
 
 <!--end-->
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-19703482-3']);
-        _gaq.push(['_trackPageview']);
-        (function () {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-
-        function new_load() {
-            //setTimeout(function () {
-             //   $('#responsive_request_call_back').modal('show');
-           // }, 60000);
-
-        }
-        //working
-
-
-        //var timer;
-
-        //window.onload = function() {        
-   
-
-        //        timer = setTimeout(function() {
-        //            $('#responsive_request_call_back').modal('show');
-        //            new_load();
-        //        }, 15000);
-               
-            
-        //};
-        //working
-
-
-
-
-
-
-//        window.onload = function()
-//        {
-//            timer = setTimeout(function () {
-//             $('#responsive_request_call_back').modal('show');
-//                new_load();
-//            }, 15000);
-//           
-//        };
-        
-          
-      
-    </script>
   
   
  </head>
@@ -218,7 +131,7 @@ document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 <!--         <div:SlideTrigger ID="oSlideTrigger" runat="server" /> -->
         <!-- Slide trigger end here -->
         
-        <jsp:include page="/WEB-INF/views/common/ui/side-trigger.jsp"/>
+        <jsp:include page="/WEB-INF/views/UI/Common/ui/side-trigger.jsp"/>
 
       <!-- pop up content start-->
     <div id="responsive_request_call_back" class="modal fade" tabindex="-1" aria-hidden="true">

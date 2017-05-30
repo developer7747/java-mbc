@@ -177,6 +177,8 @@
                  { label: 'uploaddate', name: 'uploaddate', width: 150 }, 
                  { label: 'categoryid', name: 'categoryid', width: 150 }, 
                  { label: 'specialityid', name: 'specialityid', width: 150 }, 
+                
+             
                  { label: 'isActive', name: 'isActive', width: 150 }, 
                  
                  { label: 'Action', name: 'Action', width: 82, formatter: displayButtons },

@@ -11,8 +11,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-@Entity
+
 @Table(name = "Category")
+@Entity
 public class Category {
 
 	@Id
@@ -41,6 +42,12 @@ public class Category {
 
 	@Column(name = "catDesc", nullable = true, columnDefinition = "text")
 	private String catDesc;
+	
+	
+
+	@Column(name = "catbanner", nullable = true, columnDefinition = "text")
+	private String catbanner;
+
 
 	//
 
@@ -135,6 +142,14 @@ public class Category {
 
 	public void setBannerContent(String bannerContent) {
 		this.bannerContent = bannerContent;
+	}
+
+	public String getCatbanner() {
+		return catbanner;
+	}
+
+	public void setCatbanner(String catbanner) {
+		this.catbanner = catbanner;
 	}
 
 }

@@ -15,4 +15,7 @@ public interface StateDAO {
 	public State getStateById(int id);
 
 	public void removeState(int id);
+
+	public List<State> listStatebyName(String ste);
+	
 }

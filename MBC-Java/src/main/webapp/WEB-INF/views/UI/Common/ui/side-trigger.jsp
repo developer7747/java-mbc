@@ -35,9 +35,9 @@
 <div class="side-trigger">
     <ul>
         <li><a href="#side-content-1" class="side-trigger-link"><i class="fa">
-            <img src=""images/a-contact.png" alt="contact us"></i></a></li>
+            <img src="${pageContext.request.contextPath}/resources/ui/images/a-contact.png" alt="contact us"></i></a></li>
         <li><a href="#side-content-2" class="side-trigger-link"><i class="fa">
-            <img src=""images/share.png" alt="share"></i></a></li>
+            <img src="${pageContext.request.contextPath}/resources/ui/images/share.png" alt="share"></i></a></li>
 
  
 <li><a href="#side-content-3"  target="_blank" class="side-trigger-link"><i class="glyphicon glyphicon-search"></i></a></li><%--working--%>
@@ -57,17 +57,17 @@
     <a href="javascript:void(0)"  class="closeme" style="top: -4px; position: relative; background: white; color: black; right: 0px; border:1px solid;">X</a>
     <ul class="inline">
         <li><a href="https://plus.google.com/u/0/+Medicalbillersandcoders1" target="_blank" title="Google Plus Profile for Jacob Thomas">
-            <img src=""images/social_google_plus.jpg" alt="MBC-Google+" title="MBC-Google+"
+            <img src="${pageContext.request.contextPath}/resources/ui/images/social_google_plus.jpg" alt="MBC-Google+" title="MBC-Google+"
                 width="21" height="20" /></a></li>
         <li><a href="https://www.facebook.com/MBC.BillersandCoders" target="_blank" title="Become a fan">
-            <img src=""images/social_facebook.jpg" alt="MBC-Facebook" title="MBC-Facebook"
+            <img src="${pageContext.request.contextPath}/resources/ui/images/social_facebook.jpg" alt="MBC-Facebook" title="MBC-Facebook"
                 width="21" height="20" /></a></li>
         <li><a href="https://twitter.com/mbc_services" target="_blank" title="Follow my tweets">
-            <img src=""images/social_tweeter.jpg" alt="MBC-Twitter" title="MBC-Twitter"
+            <img src="${pageContext.request.contextPath}/resources/ui/images/social_tweeter.jpg" alt="MBC-Twitter" title="MBC-Twitter"
                 width="21" height="20" /></a></li>
         <li><a href="https://www.linkedin.com/company/medicalbillersandcoders-com" target="_blank"
             title="Connect">
-            <img src=""images/linkedin_logo.jpg" alt="MBC-Linkedin" title="MBC-Linkedin"
+            <img src="${pageContext.request.contextPath}/resources/ui/images/linkedin_logo.jpg" alt="MBC-Linkedin" title="MBC-Linkedin"
                 width="21" height="20" /></a>
             </li>
     </ul>

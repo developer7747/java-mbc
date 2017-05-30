@@ -2,6 +2,7 @@ package com.mdcp.mbc.dao;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
@@ -9,6 +10,7 @@ import org.slf4j.LoggerFactory;
 
 import com.mdcp.mbc.dao.ArticleDAO;
 import com.mdcp.mbc.model.Article;
+import com.mdcp.mbc.model.Speciality;
 
 public class ArticleDaoImpl implements ArticleDAO {
 
@@ -47,6 +49,41 @@ public class ArticleDaoImpl implements ArticleDAO {
 		}
 		return ArticlesList;
 	}
+	
+	
+//	
+//	public List getByIsActive(boolean isActive) {
+//        return  getSession().createQuery(
+//                "from User where isActive = :isActive").setParameter("isActive", isActive)
+//        .list();
+//    }
+//	
+//	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Article> listArticlesbyName(String art)
+	{
+		
+		Session session = this.sessionFactory.getCurrentSession();
+		
+		
+		Query query = session.createQuery("from Article where metaKeyword = :art").setParameter("art", art);
+//		query.setFirstResult(0);
+//		query.setMaxResults(1); 
+		
+		List<Article> ArticleList = query.setMaxResults(3).list();
+		//List<Speciality> SpecialitysList = session.createQuery("from Speciality where name ='"+spe+"").list();
+				
+		for (Article p : ArticleList) {
+			logger.info("Article List::" + p);
+		}
+		return ArticleList;
+	}
+	
+	
+
+	
+	
 
 	@Override
 	public Article getArticleById(int id) {

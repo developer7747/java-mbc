@@ -36,6 +36,21 @@ public class ArticleServiceImpl implements ArticleService {
 		// TODO Auto-generated method stub
 		return this.ArticleDAOobj.listArticles();
 	}
+	
+	@Override
+	@Transactional
+	public List<Article> listArticlesbyName(String art){
+		return this.ArticleDAOobj.listArticlesbyName(art);
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 
 	@Override
 	@Transactional

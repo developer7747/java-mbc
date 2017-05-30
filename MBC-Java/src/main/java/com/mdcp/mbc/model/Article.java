@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Articles")
+@Table(name = "Article")
 public class Article {
 	@Id
 	@Column(name = "id")
@@ -20,6 +20,7 @@ public class Article {
 	private int id;
 
 	private String imagepath;
+	private String customtitle;
 	private String name;
 
 	@Column(name = "metaDescription", nullable = true, columnDefinition = "varchar(150)")
@@ -204,6 +205,14 @@ public class Article {
 
 	public void setCategoryid(String categoryid) {
 		this.categoryid = categoryid;
+	}
+
+	public String getCustomtitle() {
+		return customtitle;
+	}
+
+	public void setCustomtitle(String customtitle) {
+		this.customtitle = customtitle;
 	}
 
 }

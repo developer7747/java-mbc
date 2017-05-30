@@ -3,7 +3,7 @@
 <div class="logo-cont">
                 <div class="logo">
                     <a href="/">
-                        <img src="././resources/ui/images/logo.png" alt="Logo" height="" width=""></a>
+                        <img src="${pageContext.request.contextPath}/resources/ui/images/logo.png" alt="Logo" height="" width=""></a>
                 </div>
                 <div class="tollfree-call">
                     Toll Free 888-357-3226
@@ -75,13 +75,11 @@
 												</div>
 												<div class="col-xs-6 col-sm-3">
 													<ul class="services">
-														<li><a href=""0-0-ambulancetransportation-medical-billing.html">Ambulance
+														<li><a href="Admin/states">Ambulance
 																Transportation</a></li>
-														<li><a href=""0-0-durablemedicalequipment-medical-billing.html">
+														<li><a href=""citys">
 																Durable Medical Equipment </a></li>
-														<%--<li><a href=""0-0-otolaryngology-medical-billing.html">
-Otolaryngology
-</a></li>--%>
+
 
 														<li><a href=""0-0-pathology-medical-billing.html">
 																Pathology </a></li>
@@ -102,7 +100,7 @@ Wound Care
 												</div>
 												<div class="col-xs-6 col-sm-3">
 													<div class="more">
-														<a href=""SpecialtyIndex"><i
+														<a href="${pageContext.request.contextPath}/medical-billing-service"><i
 															class="fa fa-caret-right fa-lg"></i>More Specialties</a>
 													</div>
 												</div>
@@ -141,7 +139,7 @@ Wound Care
 												</div>
 												<div class="col-xs-6 col-sm-3">
 													<div class="more">
-														<a href=""StateIndex"><i
+														<a href="${pageContext.request.contextPath}/medical-billing"><i
 															class="fa fa-caret-right fa-lg"></i> We also Serve in</a>
 													</div>
 												</div>
@@ -227,19 +225,19 @@ Wound Care
 											<div class="row">
 												<h3>Why Us</h3>
 												<div class="col-xs-6 col-sm-2 mob-img-no">
-													<img src="././resources/ui/images/about-mbc.png" alt="about us"
+													<img src="${pageContext.request.contextPath}/resources/ui/images/about-mbc.png" alt="about us"
 														style="padding-top: 10px">
 												</div>
 												<div class="col-xs-6 col-sm-3">
 													<ul class="services">
-														<li><a href=""about-us">About MBC</a></li>
-														<li><a href=""HIPAA">HIPAA</a></li>
-														<li><a href=""medical-billing-companies/privacy-policy">Privacy
+														<li><a href="${pageContext.request.contextPath}/about-us">About MBC</a></li>
+														<li><a href="${pageContext.request.contextPath}/hippa">HIPAA</a></li>
+														<li><a href="${pageContext.request.contextPath}/privacy-policy">Privacy
 																Policy</a></li>
-														<li><a href=""testimonial">Testimonials</a></li>
-														<li><a href=""FAQ">FAQ</a></li>
-														<li><a href=""blog">Blog</a></li>
-														<li><a href=""ContactUs">Contact Us</a></li>
+														<li><a href="${pageContext.request.contextPath}/testimonial">Testimonials</a></li>
+														<li><a href="${pageContext.request.contextPath}/faq">FAQ</a></li>
+														<li><a href="blog">Blog</a></li>
+														<li><a href="${pageContext.request.contextPath}/ContactUs">Contact Us</a></li>
 													</ul>
 												</div>
 											</div>
@@ -250,22 +248,22 @@ Wound Care
 											<div class="row">
 												<h3 style="padding-bottom: 5px">Our Special Offers</h3>
 												<div class="col-xs-6 col-sm-2 mob-img-no">
-													<div class="menu-circle round-bg-blue">
-														<a href=""medical-billing-companies/ICD10-EBOOK-DOWNLOAD">
-															<h4 class="padding-top-15">ICD-10</h4> <%--<h5>of the</h5>--%>
-															<h4 style="padding-top: 10px">E-book</h4>
-														</a>
-													</div>
+<!-- 													<div class="menu-circle round-bg-blue"> -->
+<!-- 														<a href=""medical-billing-companies/ICD10-EBOOK-DOWNLOAD"> -->
+<%-- 															<h4 class="padding-top-15">ICD-10</h4> <h5>of the</h5> --%>
+<!-- 															<h4 style="padding-top: 10px">E-book</h4> -->
+<!-- 														</a> -->
+<!-- 													</div> -->
 												</div>
-												<div class="col-xs-6 col-sm-4">
-													<p class="padding-top-20">Know the effects of ICD-10
-														and how to mitigate revenue loss.</p>
-												</div>
+<!-- 												<div class="col-xs-6 col-sm-4"> -->
+<!-- 													<p class="padding-top-20">Know the effects of ICD-10 -->
+<!-- 														and how to mitigate revenue loss.</p> -->
+<!-- 												</div> -->
 												<div class="col-xs-6 col-sm-2 mob-img-no">
 													<div class="menu-circle round-bg-green">
-														<a href=""medical-billing-bytes">
+														<a href="medical-billing-bytes">
 															<h4 class="padding-top-20" style="padding-top: 30px">Infograph</h4>
-															<%--<h4>Offers</h4>--%>
+															
 														</a>
 													</div>
 												</div>
@@ -273,8 +271,7 @@ Wound Care
 													<p class="padding-top-15">
 														A pictorial way to understand various Billing and
 														Healthcare concept
-														<%-- <hr>--%>
-														<%--CPT Changes in 2015--%>
+														
 													</p>
 												</div>
 											</div>
@@ -317,7 +314,7 @@ Wound Care
 										</i> Medical Billing Services</a>
 									</h4>
 									<ul class="services-listing">
-										<li><a href=""revenue-management-services"><i
+										<li><a href="${pageContext.request.contextPath}/revenue-management-services"><i
 												class="fa icon-RCM"></i> RCM</a>
 											<ul>
 												<li><a href=""
@@ -336,17 +333,17 @@ Wound Care
 													revenue-management-services?DivId=physician-credentialing">Physician
 														Credentialing</a></li>
 											</ul></li>
-										<li><a href=""Medical_Transcription"><i
+										<li><a href="${pageContext.request.contextPath}/medical-transcription"><i
 												class="fa  icon-transcription"></i> Transcription</a></li>
-										<li><a href=""Consultancy_Services"><i
+										<li><a href="${pageContext.request.contextPath}/medical-billing-consultancy"><i
 												class="fa  icon-consultancy"></i> Consultancy</a></li>
-										<li><a href=""hospital-billing"><i
+										<li><a href="${pageContext.request.contextPath}/hospital-billing"><i
 												class="fa icon-hospitalbilling"></i> Hospital Billing</a></li>
-										<li><a href=""OutsourcedServices"><i
+										<li><a href="${pageContext.request.contextPath}/medical-billing-outsourcing"><i
 												class="fa icon-outsourceservices"></i> Outsourced Services</a></li>
-										<li><a href=""physician-group"><i
+										<li><a href="${pageContext.request.contextPath}/physician-group"><i
 												class="fa icon-physiciangroup"></i> Physician Group</a></li>
-										<li><a href=""Medical_Coding"><i
+										<li><a href="${pageContext.request.contextPath}/medical-coding"><i
 												class="fa icon-medicalcoding"></i> Medical Coding</a></li>
 										<%--               <li><a href=""ICD-10"><i class="fa icon-ICD-10"></i> ICD-10</a></li>--%>
 									</ul>
@@ -362,7 +359,7 @@ Wound Care
 												class="fa icon-hireabiller"></i> Hire a Biller
 												<ul></a></li>
 
-										<li><a href=""SpecialtyIndex1">
+										<li><a href="specialite">
 												Billers-Specialitywise </a></li>
 										<li><a href=""StateIndex1">Billers-Statewise </a>
 									</ul></li>
@@ -385,9 +382,9 @@ Wound Care
 
 	</ul>
 	<%-- <a href=""ExpertPanel")%>"><h3>Expert Panel</h3></a>--%>
-	<a href=""EMR-Softwares")%>">
+	<a href="EMR-Softwares")%>
 		<h3>EMR/EHR Software</h3>
-	</a> <a href=""healthcare-analytics-solutions")%>">
+	</a> <a href="${pageContext.request.contextPath}/healthcare-analytics-solutions")%>
 		<h3>Healthcare Analytics Solutions</h3>
 	</a>
 
@@ -435,14 +432,14 @@ Wound Care
 								<div id=icd-css class="col-xs-6">
 									<ul class="icd-listing is-hidden">
 										<li><a href=""ICD-10"><i class="fa"><img
-													src="././resources/ui/images/icons/icd-services.png"></i> ICD-10 Services
+													src="${pageContext.request.contextPath}/resources/ui/images/icons/icd-services.png"></i> ICD-10 Services
 										</a></li>
 										<li><a href=""icd9to10"><i class="fa"><img
-													src="././resources/ui/images/icons/icd-9-10.png"></i> ICD-9 to ICD-10</a></li>
+													src="${pageContext.request.contextPath}/resources/ui/images/icons/icd-9-10.png"></i> ICD-9 to ICD-10</a></li>
 										<li><a href=""icd-10-training"><i class="fa"><img
-													src="././resources/ui/images/icons/icd-mapping.png"></i> ICD-10 Training</a></li>
+													src="${pageContext.request.contextPath}/resources/ui/images/icons/icd-mapping.png"></i> ICD-10 Training</a></li>
 										<li><a href=""ICD-10-E-book"><i class="fa"><img
-													src="././resources/ui/images/icons/icd-consultancy.png"></i>ICD-10-E-book
+													src="${pageContext.request.contextPath}/resources/ui/images/icons/icd-consultancy.png"></i>ICD-10-E-book
 										</a></li>
 									</ul>
 								</div>
@@ -542,7 +539,7 @@ Wound Care
 													class="fa menu-circle-small icon-glossary"></i> Glossary</a></li>
 											<li><a href=""case_study"><i
 													class="fa menu-circle-small"><img alt="Case-Study"
-														src="././resources/ui/images/case_study.png"></i>Case Study</a></li>
+														src="${pageContext.request.contextPath}/resources/ui/images/case_study.png"></i>Case Study</a></li>
 											
 										</ul>
 									</div>

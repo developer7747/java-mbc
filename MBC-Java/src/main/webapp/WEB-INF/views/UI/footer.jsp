@@ -285,53 +285,7 @@
 
 
 <script>
-	function getCookie(NameOfCookie) {
-		if (document.cookie.length > 0) {
-			begin = document.cookie.indexOf(NameOfCookie + "=");
-			if (begin != -1) {
-				begin += NameOfCookie.length + 1;
-				end = document.cookie.indexOf(";", begin);
-				if (end == -1)
-					end = document.cookie.length;
-				return unescape(document.cookie.substring(begin, end));
-			}
-		}
-		return null;
-	}
-
-	function setCookie(NameOfCookie, value, expiredays) {
-		var ExpireDate = new Date();
-		ExpireDate.setTime(ExpireDate.getTime()
-				+ (expiredays * 24 * 3600 * 1000));//zero instead of 1000
-
-		document.cookie = NameOfCookie + "=" + escape(value)
-				+ ((expiredays == null) ? "" : "; expires=" + "0");
-	}
-
-	window.onload = function DoTheCookieStuff() {
-		username = getCookie('username');
-		// username ="sonu"
-		if (username != null) {
-
-			//alert('Hi there ' + username + ' - Good to see you again!')
-
-		}
-
-		else {
-			username = window.location.pathname;
-			setCookie('username', username, 0)
-
-			timer = setTimeout(function() {
-				$('#responsive_request_call_back').modal('show');
-				new_load();
-			}, 15000);
-
-		}
-	}
-
-	window.onunload = function del_cookie(name) {
-		document.cookie = name + '=; expires=Thu, 01-Jan-70 00:00:01 GMT;';
-	}
+	
 </script>
 
 
@@ -342,24 +296,7 @@
 
 
 <!--Start of Zopim Live Chat Script-->
-<script type="text/javascript">
-	window.$zopim || (function(d, s) {
-		var z = $zopim = function(c) {
-			z._.push(c)
-		}, $ = z.s = d.createElement(s), e = d.getElementsByTagName(s)[0];
-		z.set = function(o) {
-			z.set._.push(o)
-		};
-		z._ = [];
-		z.set._ = [];
-		$.async = !0;
-		$.setAttribute("charset", "utf-8");
-		$.src = "//v2.zopim.com/?3qFqpD4Rh9ztGfdFxqzF2EQTBQ0UYYnx";
-		z.t = +new Date;
-		$.type = "text/javascript";
-		e.parentNode.insertBefore($, e)
-	})(document, "script");
-</script>
+
 <!--End of Zopim Live Chat Script-->
 
 </body>

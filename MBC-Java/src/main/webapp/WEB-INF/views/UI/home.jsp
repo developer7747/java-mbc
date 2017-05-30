@@ -1,6 +1,11 @@
-<jsp:include page="/WEB-INF/views/UI/header.jsp" />
 
-<%-- <jsp:include page="/WEB-INF/views/common/leftside.jsp"/> --%>
+<jsp:include page="/WEB-INF/views/UI/header.jsp" />
+   <div class="content-wrapper">
+	<!-- Content Header (Page header) -->
+
+		<div class="container">
+
+   </div></div>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -9,7 +14,7 @@
 
 	<div class="banner-section">
 		<div class="container">
-			<jsp:include page="/WEB-INF/views/common/ui/navigation.jsp" />
+			<jsp:include page="/WEB-INF/views/UI/Common/ui/navigation.jsp" />
 			<!--             <div:Navigation ID="oNavigation" runat="server" /> -->
 			<div class="banner-meta">
 				<div class="">
@@ -21,7 +26,7 @@
 								<a href="medical-billing-services.aspx">
 									<div class="icon-cont">
 										<img
-											src="././resources/ui/images/Medical-Billing-Services.png"
+											src="${pageContext.request.contextPath}/resources/ui/images/Medical-Billing-Services.png"
 											alt="Medical Billing Services" />
 									</div>
 									<div title="Medical Billing Services" class="text-cont">Medical
@@ -33,7 +38,7 @@
 									<%--data-toggle="modal"--%> href="revenue-management-services.aspx">
 
 									<div class="icon-cont">
-										<img src="././resources/ui/images/RCM-Services.png"
+										<img src="${pageContext.request.contextPath}/resources/ui/images/RCM-Services.png"
 											alt="RCM Services">
 									</div>
 									<div title="RCM Services" class="text-cont">RCM Services</div>
@@ -44,7 +49,7 @@
 							<div class="col-xs-6 col-sm-6 col-md-3 patch-3">
 								<a href="Medical_Coding.aspx">
 									<div class="icon-cont">
-										<img src="././resources/ui/images/Medical-Coding-Services.png"
+										<img src="${pageContext.request.contextPath}/resources/ui/images/Medical-Coding-Services.png"
 											alt="Medical Coding Services">
 									</div>
 									<div title="Medical Coding Services" class="text-cont">Medical
@@ -55,7 +60,7 @@
 								<a href="0-0-ambulatorysurgicalcenters-medical-billing.html">
 									<div class="icon-cont">
 										<img
-											src="././resources/ui/images/Ambulatory-Surgical-Centers.png"
+											src="${pageContext.request.contextPath}/resources/ui/images/Ambulatory-Surgical-Centers.png"
 											alt="Ambulatory Surgical Centers">
 									</div>
 									<div title="Ambulatory Surgical Centers" class="text-cont">Ambulatory
@@ -101,7 +106,7 @@
 
 					<a target="_blank" href="/case_study.aspx"> <img
 						alt="Case-Study"
-						src="././resources/ui/images/case-study-image.jpg"></a>
+						src="${pageContext.request.contextPath}/resources/ui/images/case-study-image.jpg"></a>
 
 
 				</div>
@@ -168,7 +173,7 @@
 					<div class="box">
 						<div class="icon-cont">
 							<a href="#"><img class="zoomimg"
-								src="././resources/ui/images/RCM.png" alt="RCM">
+								src="${pageContext.request.contextPath}/resources/ui/images/RCM.png" alt="RCM">
 							<h2>Revenue Management Services</h2></a>
 						</div>
 
@@ -183,7 +188,7 @@
 					<div class="box">
 						<div class="icon-cont">
 							<a href="#"><img class="zoomimg"
-								src="././resources/ui/images/Medical-Billing.png"
+								src="${pageContext.request.contextPath}/resources/ui/images/Medical-Billing.png"
 								alt="Medical Billing">
 							<h2>Medical Billing Services</h2></a>
 						</div>
@@ -199,7 +204,7 @@
 					<div class="box">
 						<div class="icon-cont">
 							<a href="#"><img class="zoomimg"
-								src="././resources/ui/images/ICD-10.png" alt="ICD-10">
+								src="${pageContext.request.contextPath}/resources/ui/images/ICD-10.png" alt="ICD-10">
 							<h2>ICD-10</h2></a>
 						</div>
 
@@ -216,7 +221,7 @@
 					<div class="box">
 						<div class="icon-cont">
 							<a href="#"><img class="zoomimg"
-								src="././resources/ui/images/Consultancy.png" alt="Consultancy">
+								src="${pageContext.request.contextPath}/resources/ui/images/Consultancy.png" alt="Consultancy">
 							<h2>Medical Billing Consultancy</h2></a>
 						</div>
 
@@ -230,7 +235,7 @@
 					<div class="box">
 						<div class="icon-cont">
 							<a href="#"><img class="zoomimg"
-								src="././resources/ui/images/EMR-EHR.png" alt="EMR/EHR">
+								src="${pageContext.request.contextPath}/resources/ui/images/EMR-EHR.png" alt="EMR/EHR">
 							<h2>EMR/EHR</h2></a>
 						</div>
 
@@ -244,7 +249,7 @@
 					<div class="box">
 						<div class="icon-cont">
 							<a href="#"><img class="zoomimg"
-								src="././resources/ui/images/Medical-Coding.png"
+								src="${pageContext.request.contextPath}/resources/ui/images/Medical-Coding.png"
 								alt="Medical Coding">
 							<h2>Medical Coding</h2></a>
 						</div>
@@ -267,7 +272,7 @@
 			<div class="col-md-4">
 				<div class="box box-co-1">
 					<div class="icon-cont">
-						<img src="././resources/ui/images/Specialties.png"
+						<img src="${pageContext.request.contextPath}/resources/ui/images/Specialties.png"
 							alt="Specialties We Cater">
 					</div>
 					<%--<h2>Specialty We Excel</h2>--%>
@@ -299,7 +304,7 @@
 			<div class="col-md-4">
 				<div class="box box-co-2">
 					<div class="icon-cont">
-						<img src="././resources/ui/images/States.png"
+						<img src="${pageContext.request.contextPath}/resources/ui/images/States.png"
 							alt="States We Dominate">
 					</div>
 					<h2>
@@ -320,7 +325,7 @@
 			<div class="col-md-4">
 				<div class="box box-co-3">
 					<div class="icon-cont">
-						<img src="././resources/ui/images/Things-of-Interest.png"
+						<img src="${pageContext.request.contextPath}/resources/ui/images/Things-of-Interest.png"
 							alt="Things of Interest at MBC">
 					</div>
 					<h2>Things of Interest at MBC</h2>

@@ -2,6 +2,7 @@ package com.mdcp.mbc.service;
 
 import java.util.List;
 
+import com.mdcp.mbc.model.Category;
 import com.mdcp.mbc.model.Speciality;
 
 public interface SpecialityService {
@@ -14,4 +15,11 @@ public interface SpecialityService {
 	public Speciality getSpecialityById(int id);
 
 	public void removeSpeciality(int id);
+	
+	public List<Speciality> listSpecialitybyName(String spe);
+	
+	public List<Speciality> listSpecialityby();
+	
+	
+	public List<String> listSpecialitybyString();
 }

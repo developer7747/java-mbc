@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.mdcp.mbc.dao.SpecialityDAO;
+import com.mdcp.mbc.model.Category;
 import com.mdcp.mbc.model.Speciality;
 
 public class SpecailityServiceImpl implements SpecialityService {
@@ -22,7 +23,25 @@ public class SpecailityServiceImpl implements SpecialityService {
 		// TODO Auto-generated method stub
 		this.SpecialityDAOobj.addSpeciality(p);
 	}
-
+	
+	@Override
+	@Transactional
+	public List<Speciality> listSpecialityby()
+	{
+		return this.SpecialityDAOobj.listSpecialityby();
+	}
+	
+	
+	@Override
+	@Transactional
+	public List<String> listSpecialitybyString()
+	
+	{
+		return this.SpecialityDAOobj.listSpecialitybyString();
+	}
+	
+	
+	
 	@Override
 	@Transactional
 	public void updateSpeciality(Speciality p) {
@@ -35,6 +54,17 @@ public class SpecailityServiceImpl implements SpecialityService {
 	public List<Speciality> listSpecialitys() {
 		// TODO Auto-generated method stub
 		return this.SpecialityDAOobj.listSpecialitys();
+	}
+	
+	
+	@Override
+	@Transactional
+	public List<Speciality> listSpecialitybyName(String spe)
+	{
+		
+		return this.SpecialityDAOobj.listSpecialitybyName(spe);
+		
+		
 	}
 
 	@Override

@@ -17,6 +17,7 @@
 		up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
 	<resources mapping="/resources/**" location="/resources/admin/" /> 
+
 	
 <!-- 	<resources mapping="/resources/**" location="/WEB-INF/assets/resources/admin/"/> -->
 <!-- <resources mapping="/js/**" location="/WEB-INF/assets/js/"/> -->
@@ -33,13 +34,18 @@
 </beans:bean>
 <context:component-scan base-package="com.mdcp.mbc" />
 <context:component-scan base-package="user.mdcp.mbc" />
-
+<!-- <context:component-scan base-package="com.mdcp.mbc.controller" /> -->
+<context:component-scan base-package="com.mdcp.mbc.service" />
+<!-- <context:component-scan base-package="com.cinebot.service" /> -->
 
 	<beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
+<!-- 		<beans:property name="url" -->
+<!-- 			value="jdbc:mysql://192.168.2.62:3306/test" /> -->
 		<beans:property name="url"
-			value="jdbc:mysql://192.168.2.62:3306/test" />
+			value="jdbc:mysql://192.168.2.62:3306/medicalbillersandcodersmergedata" />
+
 		<beans:property name="username" value="root" />
 		<beans:property name="password" value="" />
 	</beans:bean>
@@ -60,6 +66,7 @@
 				<beans:value>com.mdcp.mbc.model.Profile</beans:value>
 				<beans:value>com.mdcp.mbc.model.PressRelease</beans:value>
 	<beans:value>com.mdcp.mbc.model.SpecialityGuideline</beans:value>
+		<beans:value>com.mdcp.mbc.model.infograph</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">
@@ -89,6 +96,16 @@
 	</beans:bean>
 	<beans:bean id="stateService" class="com.mdcp.mbc.service.StateServiceImpl">
 		<beans:property name="stateDAO" ref="stateDAO"></beans:property>
+	</beans:bean>
+	
+	
+	
+	
+	<beans:bean id="InfographDAO" class="com.mdcp.mbc.dao.InfographDAOImpl">
+		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+	<beans:bean id="InfographService" class="com.mdcp.mbc.service.InfographServiceImpl">
+		<beans:property name="infographDAO" ref="InfographDAO"></beans:property>
 	</beans:bean>
 	
 	

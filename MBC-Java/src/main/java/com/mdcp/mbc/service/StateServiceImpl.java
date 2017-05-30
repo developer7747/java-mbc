@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.mdcp.mbc.dao.StateDAO;
+import com.mdcp.mbc.model.Speciality;
 import com.mdcp.mbc.model.State;;
 
 @Service
@@ -47,4 +48,17 @@ public class StateServiceImpl implements StateService {
 		this.stateDAO.removeState(id);
 	}
 
+	
+	@Override
+	@Transactional
+	public List<State> listStatebyName(String ste)
+	{
+		
+		return this.stateDAO.listStatebyName(ste);
+			
+		
+		
+	}
+	
+	
 }

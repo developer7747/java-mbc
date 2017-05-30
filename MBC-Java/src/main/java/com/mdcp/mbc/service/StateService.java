@@ -2,6 +2,7 @@ package com.mdcp.mbc.service;
 
 import java.util.List;
 
+
 import com.mdcp.mbc.model.State;;
 
 public interface StateService {
@@ -15,5 +16,7 @@ public interface StateService {
 	public State getStateById(int id);
 
 	public void removeState(int id);
+	
+	public List<State> listStatebyName(String ste);
 
 }

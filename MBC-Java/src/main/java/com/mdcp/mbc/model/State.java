@@ -18,6 +18,9 @@ public class State {
 
 	private String name;
 	private String imagepath;
+	
+	
+	private String customname;
 	@Column(name = "intial", nullable = true, columnDefinition = "varchar(50)")
 	private String intial;
 
@@ -99,6 +102,22 @@ public class State {
 
 	public void setImagepath(String imagepath) {
 		this.imagepath = imagepath;
+	}
+
+	public String getCustomname() {
+		return customname;
+	}
+
+	public void setCustomname(String customname) {
+		this.customname = customname;
+	}
+
+	public String getActiveornot132() {
+		return activeornot132;
+	}
+
+	public void setActiveornot132(String activeornot132) {
+		this.activeornot132 = activeornot132;
 	}
 
 	// public String getUploadImage() {

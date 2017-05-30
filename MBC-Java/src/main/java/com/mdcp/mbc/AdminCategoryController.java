@@ -79,9 +79,15 @@ public class AdminCategoryController {
 
 	// many to many start
 
+	
+	
+
+	
 	@RequestMapping(value = "Admin/Category/getCategory1", method = RequestMethod.GET)
 	public @ResponseBody List<Category> getCategoryList() {
 		return this.CategoryService.listCategorys();
+	
+	
 	}
 
 	@RequestMapping(value = "Admin/Category", method = RequestMethod.GET)
@@ -90,6 +96,20 @@ public class AdminCategoryController {
 		model.addAttribute("listCategorys", this.CategoryService.listCategorys());
 		return "Category";
 	}
+	
+	
+	@RequestMapping(value = "Admin/Category2", method = RequestMethod.GET)
+	public String listCat(Model model) {
+		
+		model.addAttribute("listCategoryby", this.CategoryService.listCategoryby());
+		return "UI/Common/side-content/we-excel";
+	}
+	
+	
+	
+	
+	
+	
 	////////////////////////////////
 
 	@RequestMapping(value = "Admin/Category/getCategory", method = RequestMethod.GET)

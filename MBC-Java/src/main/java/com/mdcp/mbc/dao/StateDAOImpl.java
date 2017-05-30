@@ -2,12 +2,14 @@ package com.mdcp.mbc.dao;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
+import com.mdcp.mbc.model.Speciality;
 import com.mdcp.mbc.model.State;;
 
 @Repository
@@ -35,6 +37,39 @@ public class StateDAOImpl implements StateDAO {
 		logger.info("State updated successfully, State Details=" + p);
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<State> listStatebyName(String ste)
+	{
+		
+//		String a = ste;
+//		String k  = a.replaceAll("\\s+","");
+		
+		Session session = this.sessionFactory.getCurrentSession();
+		
+		Query query = session.createQuery("from  State where customname = :ste");
+		query.setParameter("ste", ste);
+		
+		List<State> statesList = query.list();;
+		
+		//List<Speciality> SpecialitysList = session.createQuery("from Speciality where name ='"+spe+"").list();
+				
+		for (State p : statesList) {
+			logger.info("State List::" + p);
+		}
+		return statesList;
+	}
+	
+	
+	
+	
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<State> listStates() {
@@ -54,6 +89,11 @@ public class StateDAOImpl implements StateDAO {
 		return p;
 	}
 
+	
+	
+	
+
+	
 	@Override
 	public void removeState(int id) {
 		Session session = this.sessionFactory.getCurrentSession();

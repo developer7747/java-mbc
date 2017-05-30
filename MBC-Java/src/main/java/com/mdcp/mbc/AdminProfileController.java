@@ -51,6 +51,8 @@ public class AdminProfileController {
 	public void setProfileService(ProfileService ps) {
 		this.ProfileService = ps;
 	}
+	
+	
 
 	//////////////////////////////
 	@RequestMapping(value = "Admin/Profile/upload", method = RequestMethod.POST)
