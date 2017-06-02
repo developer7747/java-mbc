@@ -40,7 +40,7 @@ public class InfographServiceImpl implements InfographService {
 	@Override
 	@Transactional
 	public List<infograph> listinfog(long page){
-		return this.InfographDAO.listinfographs();
+		return this.InfographDAO.listinfog(page);
 	}
 	
 	

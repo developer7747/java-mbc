@@ -101,8 +101,7 @@ var lastparttrim =lastPart.trim();
 			<div class="clearfix"></div>
 			<div id="ctl00_ContentPlaceHolder1_catListing_catListing"
 				class="we-serve-in" style="background-color: #d6d6d6;">
-				<b>We also Serve in state</b> <select id="selectBox"
-					onchange="changeFunc()">
+				<b>We also Serve in state</b> <select id="selectBox" onchange="changeFunc()">
 					<c:forEach items="${listStates}" var="Specialityies">
 						<option value="${Specialityies.customname}">${Specialityies.customname}</option>
 					</c:forEach>

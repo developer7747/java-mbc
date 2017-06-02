@@ -21,12 +21,12 @@
 <%-- 				<c:forEach items="${listArticlesbyName}" var="Article"> --%>
 <%-- 				${Article.metaKeyword} --%>
 <%-- 				</c:forEach> --%>
+<!-- <!-- 					<li><a style="color: white" target="_blank" --> 
+<%-- <%-- 						href="${Article.isActive}">${Article.name}</a></li> <br> --%> 
 <!-- <!-- 					<li><a style="color: white" target="_blank" --> -->
-<%-- <%-- 						href="${Article.isActive}">${Article.name}</a></li> <br> --%> --%>
+<%-- <%-- 						href="${Article.isActive}">fffffddddddd${Article.name}</a></li> <br> --%> 
 <!-- <!-- 					<li><a style="color: white" target="_blank" --> -->
-<%-- <%-- 						href="${Article.isActive}">fffffddddddd${Article.name}</a></li> <br> --%> --%>
-<!-- <!-- 					<li><a style="color: white" target="_blank" --> -->
-<%-- <%-- 						href="${Article.name}">ssssssssss${Article.name}</a></li> --%> --%>
+<%-- <%-- 						href="${Article.name}">ssssssssss${Article.name}</a></li> --%>
 <!-- 					<br> -->
 <!-- 				</div> -->
 

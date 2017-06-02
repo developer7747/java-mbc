@@ -17,14 +17,6 @@
 	 ${Specialityies.catDesc}
                      </c:forEach>
 	
-
-
-                       
-                        
-
-                     
-
-
     </c:forEach>
 
                 </ul>

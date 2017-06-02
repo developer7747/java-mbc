@@ -19,7 +19,9 @@ import com.mdcp.mbc.model.Speciality;
 import com.mdcp.mbc.model.State;
 import com.mdcp.mbc.model.infograph;
 import com.mdcp.mbc.service.ArticleService;
+import com.mdcp.mbc.service.PressReleaseService;
 import com.mdcp.mbc.service.InfographService;
+import com.mdcp.mbc.service.MbcGuidelineService;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -266,12 +268,24 @@ public class HomeController {
     @Qualifier(value = "InfographService")
    	private InfographService InfographService; 
     
+    @Autowired(required = true)   
+    @Qualifier(value = "PressReleaseService")
+   	private PressReleaseService PressReleaseService; 
+    
     
     
     
     @Autowired(required = true)
 	 @Qualifier(value = "stateService")
 		private StateService StateService;
+    
+    
+    
+    @Autowired(required = true)
+	 @Qualifier(value = "MbcGuidelineService")
+		private MbcGuidelineService mbcGuidelineService;
+    
+    
     
     
 //    
@@ -306,35 +320,52 @@ public class HomeController {
   
     
     
-    @RequestMapping(value = "/medical-billing-bytes", method=RequestMethod.GET)
+    @RequestMapping(value = "/medical-billing-byte", method=RequestMethod.GET)
    	public String catespec(Model model)  {
    	
    		
     	model.addAttribute("listinfographs", this.InfographService.listinfographs());
 
+    	model.addAttribute("listArticles", this.ArticleService.listArticles());
+    	
+    	model.addAttribute("listmbcGuidelines", this.mbcGuidelineService.listmbcGuidelines());
+    	
+    	model.addAttribute("listPressReleases", this.PressReleaseService.listPressReleases());
+    	
+    	
    		
-   		return "UI/Static-Pages/medical-billing-byte";
+   		return "UI/resource-main";
    	}
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
-//    @RequestMapping(value = "/medical-billing-bytes", method=RequestMethod.GET)
-//   	public String catespec(@RequestParam(value = "page", required = false) Long page,Model model)  {
-//   		//model.addAttribute("listStatebyName", this.StateService.listStatebyName(param1));
-//   		//model.addAttribute("listSpecialitybyName", this.SpecialityService.listSpecialitybyName(param2));
-//   	//	model.addAttribute("listCategorybyName", this.CategoryService.listCategorybyName(param2));
-//   		
-//
-//    	int startpage = (int) (page - 5 > 0?page - 5:1);
-//        int endpage = startpage + 5;
-//    	model.addAttribute("listinfo", this.InfographService.listinfog(page));
-//
-//        model.addAttribute("startpage",startpage);
-//        model.addAttribute("endpage",endpage);
-//   		
-//   		return "UI/Static-Pages/medical-billing-byte";
-//   	}
-//  
+    @RequestMapping(value = "/medical-billing-bytes", method=RequestMethod.GET)
+   	public String catespedc(@RequestParam(value = "page", required = false) Long page,Model model)  {
+   		//model.addAttribute("listStatebyName", this.StateService.listStatebyName(param1));
+   		//model.addAttribute("listSpecialitybyName", this.SpecialityService.listSpecialitybyName(param2));
+   	//	model.addAttribute("listCategorybyName", this.CategoryService.listCategorybyName(param2));
+   		
+
+    	int startpage = (int) (page - 5 > 0?page - 5:1);
+        int endpage = startpage + 2;
+    	model.addAttribute("listinfog", this.InfographService.listinfog(page));
+
+        model.addAttribute("startpage",startpage);
+        model.addAttribute("endpage",endpage);
+   		
+   		return "UI/Static-Pages/medical-billing-byte";
+   	}
+  
 //    RequestMapping(value = "/list", method = RequestMethod.GET)
 //    public String getEmployees(@RequestParam(value = "page", required = false) Long page, ModelMap model) {
 //        //now page is available.

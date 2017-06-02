@@ -39,18 +39,17 @@
         <li><a href="#side-content-2" class="side-trigger-link"><i class="fa">
             <img src="${pageContext.request.contextPath}/resources/ui/images/share.png" alt="share"></i></a></li>
 
- 
-<li><a href="#side-content-3"  target="_blank" class="side-trigger-link"><i class="glyphicon glyphicon-search"></i></a></li><%--working--%>
-<%--<li><a href=""blog" class="side-trigger-link"><i class="glyphicon icon-blog"></i></a></li>--%>
+<!--  search -->
+<%-- <li><a href="#side-content-3"  target="_blank" class="side-trigger-link"><i class="glyphicon glyphicon-search"></i></a></li>working --%>
+
  
  <li><a href="#side-content-4"  class="side-trigger-link"><i class="glyphicon icon-blog"></i></a></li>
  
-  <%--   uncomment search <li><a href="#side-content-3" class="side-trigger-link"><i class="glyphicon glyphicon-search"></i></a></li>--%>
+
     </ul>
 </div>
 <div class="side-content side-content2" id="side-content-1">
-    <a href="javascript:void(0)" class="closeme side-content-close">X</a>
-<!--     <UC:SetRequirements ID="oSetRequirements" runat="server" /> -->
+
     
 </div>
 <div class="side-content side-content2" id="side-content-2" style="height: 70px; width: 300px; top: 278px; right: 0px;  padding: 16px;">

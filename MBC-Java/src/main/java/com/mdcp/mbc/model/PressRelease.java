@@ -22,6 +22,23 @@ public class PressRelease {
 	private String imagepath;
 	private String name;
 
+
+	
+	private String PressTitle;
+	private String searchkeywords;
+
+	
+	
+	private String customtitle;
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	@Column(name = "metaDescription", nullable = true, columnDefinition = "varchar(150)")
 	private String metaDescription;
 	@Column(name = "metaKeyword", nullable = true, columnDefinition = "varchar(150)")
@@ -204,6 +221,30 @@ public class PressRelease {
 
 	public void setCategoryid(String categoryid) {
 		this.categoryid = categoryid;
+	}
+
+	public String getPressTitle() {
+		return PressTitle;
+	}
+
+	public String getSearchkeywords() {
+		return searchkeywords;
+	}
+
+	public String getCustomtitle() {
+		return customtitle;
+	}
+
+	public void setPressTitle(String pressTitle) {
+		PressTitle = pressTitle;
+	}
+
+	public void setSearchkeywords(String searchkeywords) {
+		this.searchkeywords = searchkeywords;
+	}
+
+	public void setCustomtitle(String customtitle) {
+		this.customtitle = customtitle;
 	}
 
 }

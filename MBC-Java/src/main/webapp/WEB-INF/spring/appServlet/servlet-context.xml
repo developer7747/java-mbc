@@ -5,13 +5,24 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
-		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd"	
+		xmlns:spring="http://www.springframework.org/tags"
+xmlns:fmt="http://java.sun.com/jstl/fmt">
+	
+<!-- xmlns:spring="http://www.springframework.org/tags" -->
+<!-- i added for validation -->
+<!-- xmlns:fmt="http://java.sun.com/jstl/fmt" -->
+
+
+
+
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing 
 		infrastructure -->
 
 	<!-- Enables the Spring MVC @Controller programming model -->
-	<annotation-driven />
+<!-- 	<annotation-driven /> -->
+<annotation-driven validator="myBeansValidator"/>
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
 		up static resources in the ${webappRoot}/resources directory -->
@@ -24,18 +35,36 @@
 <!--  -->
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
 		in the /WEB-INF/views directory -->
+	
+	
+	
 	<beans:bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 		 <beans:bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver"> 
-    <beans:property name="maxUploadSize" value="500000" /> 
+    <beans:property  name="maxUploadSize" value="500000" /> 
 </beans:bean>
+
+ <beans:bean id="messageSource"  class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+ 
+       <beans:property name="basename" value="/WEB-INF/messages"  />
+
+   </beans:bean>
+
+
+
+
+
+
+
 <context:component-scan base-package="com.mdcp.mbc" />
 <context:component-scan base-package="user.mdcp.mbc" />
 <!-- <context:component-scan base-package="com.mdcp.mbc.controller" /> -->
 <context:component-scan base-package="com.mdcp.mbc.service" />
+
+
 <!-- <context:component-scan base-package="com.cinebot.service" /> -->
 
 	<beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
@@ -67,6 +96,10 @@
 				<beans:value>com.mdcp.mbc.model.PressRelease</beans:value>
 	<beans:value>com.mdcp.mbc.model.SpecialityGuideline</beans:value>
 		<beans:value>com.mdcp.mbc.model.infograph</beans:value>
+			<beans:value>com.mdcp.mbc.model.mbcGuideline</beans:value>
+					<beans:value>com.mdcp.mbc.model.crm_lead_master</beans:value>
+		
+			
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">
@@ -97,6 +130,7 @@
 	<beans:bean id="stateService" class="com.mdcp.mbc.service.StateServiceImpl">
 		<beans:property name="stateDAO" ref="stateDAO"></beans:property>
 	</beans:bean>
+	
 	
 	
 	
@@ -161,6 +195,22 @@
 		<beans:property name="emrSoftwareDAO" ref="EmrSoftwareDAO"></beans:property>
 	</beans:bean>
 	
+		<beans:bean id="MbcGuidelineDAO" class="com.mdcp.mbc.dao.MbcGuidelineDaoImpl">
+		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+	<beans:bean id="MbcGuidelineService" class="com.mdcp.mbc.service.MbcGuidelineServiceImpl">
+		<beans:property name="mbcGuidelineDAO" ref="MbcGuidelineDAO"></beans:property>
+	</beans:bean>
+	
+	
+	
+		
+		<beans:bean id="LeadMasterDAO" class="com.mdcp.mbc.dao.LeadMasterDaoImpl">
+		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+	<beans:bean id="LeadMasterService" class="com.mdcp.mbc.service.LeadMasterServiceImpl">
+		<beans:property name="leadMasterDAO" ref="LeadMasterDAO"></beans:property>
+	</beans:bean>
 	
 	
 	<beans:bean id="SpecialityGuidelineDAO" class="com.mdcp.mbc.dao.SpecialityGuidelineDaoImpl">
@@ -169,9 +219,10 @@
 	<beans:bean id="SpecialityGuidelineService" class="com.mdcp.mbc.service.SpecialityGuidelineServiceImpl">
 		<beans:property name="specialityGuidelineDAO" ref="SpecialityGuidelineDAO"></beans:property>
 	</beans:bean>
+		
+
 	
-	
-	
+	<beans:bean id="myBeansValidator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
 		
 <!-- 	<beans:bean id="SpecialityGuidelineDAO" class="com.mdcp.mbc.dao.SpecialityGuidelineDaoImpl"> -->
 <!-- 		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" /> -->

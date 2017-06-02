@@ -76,9 +76,7 @@ public class InfographDAOImpl implements InfographDAO {
 		Session session = this.sessionFactory.getCurrentSession();
 		List<infograph> inforgraphsList = session.createQuery("from infograph  ORDER BY Order DESC ").list();
 		
-		((Query) session).setFirstResult((int) 2);
-		((Query) session).setMaxResults(6);
-		
+	
 		for (infograph p : inforgraphsList) {
 			logger.info("infograph List::" + p);
 		}
@@ -90,15 +88,13 @@ public class InfographDAOImpl implements InfographDAO {
 	@Override
 	public List<infograph> listinfog(long page) {
 		
-		long  s = 2; 
+		long  s = 6*page; 
 		Session session = this.sessionFactory.getCurrentSession();
-		List<infograph> inforgraphsList = session.createQuery("from infograph  ORDER BY Order DESC ").list();
-//		((Query) session).setFirstResult((int) s);
-		
-		
-		((Query) session).setFirstResult((int) 2);
-		((Query) session).setMaxResults(6);
-		
+		Query q = session.createQuery("from infograph  ORDER BY Order desc ");
+		q.setFirstResult((int) s);
+		q.setMaxResults(6);
+		List<infograph> inforgraphsList = q.list();
+
 		for (infograph p : inforgraphsList) {
 			logger.info("infograph List::" + p);
 		}
