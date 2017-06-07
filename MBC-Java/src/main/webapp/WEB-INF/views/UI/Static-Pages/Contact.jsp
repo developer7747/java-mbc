@@ -1,6 +1,6 @@
 
 <jsp:include page="/WEB-INF/views/UI/Static-Pages/main-static.jsp" />
-<script src="https://www.google.com/recaptcha/api.js"></script>
+
 <div class="banner-inner baner-bg-dgray">
           	
             <style>
