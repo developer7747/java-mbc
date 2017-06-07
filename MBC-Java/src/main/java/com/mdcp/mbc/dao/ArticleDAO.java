@@ -16,7 +16,7 @@ public interface ArticleDAO {
 
 	public void removeArticle(int id);
 	
-	
+	public List<Article> listArticlesbyNameThree(String art);
 	public List<Article> listArticlesbyName(String art);
 	
 	

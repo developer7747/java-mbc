@@ -48,14 +48,14 @@ public class InfographDAOImpl implements InfographDAO {
 	@Override
 	public List<infograph> listinfographbyName(String ste)
 	{
-		
+		String s = ste+".pdf";
 //		String a = ste;
 //		String k  = a.replaceAll("\\s+","");
 		
 		Session session = this.sessionFactory.getCurrentSession();
 		
-		Query query = session.createQuery("from  infograph where Name = :ste");
-		query.setParameter("ste", ste);
+		Query query = session.createQuery("from  infograph where Pdffile = :s");
+		query.setParameter("s", s);
 		
 		List<infograph> inforgraphsList = query.list();;
 		

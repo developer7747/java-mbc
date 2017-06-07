@@ -2,6 +2,7 @@ package com.mdcp.mbc.dao;
 
 import java.util.List;
 
+
 import com.mdcp.mbc.model.mbcGuideline;
 
 public interface MbcGuidelineDAO {
@@ -14,4 +15,7 @@ public interface MbcGuidelineDAO {
 	public mbcGuideline getmbcGuidelineById(int id);
 
 	public void removembcGuideline(int id);
+	
+	
+	public List<mbcGuideline> listmbcGuidelinebyName(String art);
 }

@@ -38,6 +38,13 @@ xmlns:fmt="http://java.sun.com/jstl/fmt">
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
 	<beans:bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />

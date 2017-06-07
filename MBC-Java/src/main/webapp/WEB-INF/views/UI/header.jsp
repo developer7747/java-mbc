@@ -42,6 +42,7 @@
 
 <link href="<c:url value="/resources/ui/css/custom.css"/>" rel="stylesheet" >
 
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <!-- <meta name="p:domain_verify" content="e99f97d685f0ba7be10516c8c57ed96a"/> -->
 
 

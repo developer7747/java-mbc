@@ -35,11 +35,12 @@ public class HomeController {
 //	private SpecialityService SpecialityService;
 	
     @RequestMapping("/")
-    public String visitHome() {
+    public String visitHome(Model model) {
  
         // do something before returning view name
- 
-        return "/UI/home";
+    	model.addAttribute("listSpecialitys", this.SpecialityService.listSpecialitys());
+    	model.addAttribute("listStates", this.StateService.listStates());
+    	return "/UI/home";
     }
     
     @RequestMapping("/ContactUs")
@@ -110,6 +111,15 @@ public class HomeController {
         // do something before returning view name
  
         return "/UI/Static-Pages/hospital-billing";
+    }
+   
+    
+    @RequestMapping("/medical-billing-practices")
+    public String visitmbp() {
+ 
+        // do something before returning view name
+ 
+        return "/UI/Static-Pages/medical-billing-practices";
     }
    
     @RequestMapping("/medical-billing-outsourcing")
@@ -195,6 +205,98 @@ public class HomeController {
  
         return "/UI/Static-Pages/hippa";
     }
+    
+    
+    @RequestMapping("/revenue-management-services/charge-entry")
+    public String visitchargeentry() {
+ 
+        // do something before returning view name
+ 
+        return "/UI/Static-Pages/rcm/charge-entry";
+    }
+    @RequestMapping("/revenue-management-services/physician-credentialing")
+    public String physiciancredentialing() {
+ 
+        // do something before returning view name
+ 
+        return "/UI/Static-Pages/rcm/physician-credentialing";
+    }
+    
+    
+    
+    @RequestMapping("/revenue-management-services/denial-management-appeals")
+    public String dm() {
+ 
+        // do something before returning view name
+ 
+        return "/UI/Static-Pages/rcm/denial-management-appeals";
+    }
+    
+    
+    @RequestMapping("/revenue-management-services/payment-posting")
+    public String paymentposting() {
+ 
+        // do something before returning view name
+ 
+        return "/UI/Static-Pages/rcm/payment-posting";
+    }
+    
+    
+    
+    @RequestMapping("/revenue-management-services/account-receivable")
+    public String accountreceivable() {
+ 
+        // do something before returning view name
+ 
+        return "/UI/Static-Pages/rcm/account-receivable";
+    }
+    
+    
+    @RequestMapping("/medical-transcript/orthopedics-billing")
+    public String orthopedicsb() {
+ 
+        // do something before returning view name
+ 
+        return "/UI/Static-Pages/transcription/orthopedics-billing";
+    }
+    
+    @RequestMapping("/medical-transcript/radiology-billing")
+    public String radiologybilling() {
+ 
+        // do something before returning view name
+ 
+        return "/UI/Static-Pages/transcription/radiology-billing";
+    }
+    
+    
+    
+    @RequestMapping("/medical-transcript/cardiology-billing")
+    public String cardiologybilling() {
+ 
+        // do something before returning view name
+ 
+        return "/UI/Static-Pages/transcription/cardiology-billing";
+    }
+    
+    
+    @RequestMapping("/medical-transcript/podiatry-billing")
+    public String podiatrybilling() {
+ 
+        // do something before returning view name
+ 
+        return "/UI/Static-Pages/transcription/podiatry-billing";
+    }
+    @RequestMapping("/icd-10-training")
+    public String icd10() {
+ 
+        // do something before returning view name
+ 
+        return "/UI/Static-Pages/icd-10-training";
+    }
+    
+    
+    
+    
     
     
     
@@ -293,13 +395,15 @@ public class HomeController {
    	public String listPersonssss(Model model,@PathVariable("param1") String param1,@PathVariable("param2") String param2)  {
    	//	model.addAttribute("Speciality", new Speciality());.
      	
-   		//model.addAttribute("listStates", this.StateService.listStates());
+   		model.addAttribute("listStates", this.StateService.listStates());
  		
    		model.addAttribute("listStatebyName", this.StateService.listStatebyName(param1));
    		model.addAttribute("listSpecialitybyName", this.SpecialityService.listSpecialitybyName(param2));
    		model.addAttribute("listSpecialitys", this.SpecialityService.listSpecialitys());
-   		model.addAttribute("listArticlesbyName", this.ArticleService.listArticlesbyName(param2));
-  
+   		model.addAttribute("listArticlesbyNameThree", this.ArticleService.listArticlesbyNameThree(param2));
+
+   		
+   		
    		//	model.addAttribute("listArticlesbyName", this.ArticleService.listArticlesbyName(param1));
    		//model.addAttribute("message",param1);
    		return "UI/State-SpecialityDynamicpage";
@@ -312,15 +416,12 @@ public class HomeController {
    		//model.addAttribute("listSpecialitybyName", this.SpecialityService.listSpecialitybyName(param2));
    		model.addAttribute("listCategorybyName", this.CategoryService.listCategorybyName(param2));
    		
-   		
-   		
-   		
    		return "UI/State-SpecialityDynamicpage";
    	}
   
     
     
-    @RequestMapping(value = "/medical-billing-byte", method=RequestMethod.GET)
+    @RequestMapping(value = "/resources", method=RequestMethod.GET)
    	public String catespec(Model model)  {
    	
    		
@@ -336,15 +437,6 @@ public class HomeController {
    		
    		return "UI/resource-main";
    	}
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     

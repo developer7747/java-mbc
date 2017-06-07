@@ -146,46 +146,7 @@ Wound Care
 											</div>
 										</div>
 									</div>
-									<div class="row">
-										<div class="col-md-12">
-											<div class="row">
-												<h3>Our Reach</h3>
-												<div class="col-xs-6 col-sm-3 mob-img-no">
-													
-													<i class="fa menu-circle"><span
-														class="icomoon-medi icon-topcity"></span></i>
-												</div>
-												<div class="col-xs-6 col-sm-3">
-													<ul class="services">
-														<li><a href=""city/atlanta-georgia-medical-billing-services.html">
-																Atlanta </a></li>
-														<li><a href=""city/houston-texas-medical-billing-services.html">
-																Houston</a></li>
-														<li><a href=""city/buffalo-newyork-medical-billing-services.html">
-																New York </a></li>
-													</ul>
-												</div>
-												<div class="col-xs-6 col-md-3">
-													<ul class="services">
-														<li><a href=""city/chicago-illinois-medical-billing-services.html">
-																Chicago </a></li>
-														<li><a href=""city/jacksonville-florida-medical-billing-services.html">
-
-																Jacksonville </a></li>
-														<li><a href=""city/philadelphia-pennsylvania-medical-billing-services.html">
-
-																Philadelphia</a></li>
-													</ul>
-												</div>
-												<div class="col-xs-6 col-md-3">
-													<div class="more">
-														<a href=""CityIndex"><i
-															class="fa fa-caret-right fa-lg"></i> We also Serve in</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+					
 								</div>
 							</div>
 						</div>

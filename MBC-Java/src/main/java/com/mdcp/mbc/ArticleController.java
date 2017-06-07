@@ -45,7 +45,7 @@ public class ArticleController {
     	
   		//model.addAttribute("listSpecialitys", this.SpecialityService.listSpecialitys());
   		//model.addAttribute("listSpecialitybyName", this.SpecialityService.listSpecialitybyName(param1));
-    	model.addAttribute("listArticlesbyName", this.ArticleService.listArticlesbyName(param1));
+    	model.addAttribute("listArticlesbyNameThree", this.ArticleService.listArticlesbyNameThree(param1));
   		return "UI/Common/combination/Article";
   	}
     //working

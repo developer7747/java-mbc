@@ -14,4 +14,7 @@ public interface MbcGuidelineService {
 	public mbcGuideline getmbcGuidelineById(int id);
 
 	public void removembcGuideline(int id);
+	
+	public List<mbcGuideline> listmbcGuidelinebyName(String art);
+	
 }

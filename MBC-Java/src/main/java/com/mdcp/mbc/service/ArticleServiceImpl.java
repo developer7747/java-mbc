@@ -46,6 +46,14 @@ public class ArticleServiceImpl implements ArticleService {
 	}
 	
 	
+	@Override
+	@Transactional
+	public List<Article> listArticlesbyNameThree(String art){
+		return this.ArticleDAOobj.listArticlesbyNameThree(art);
+		
+		
+	}
+	
 	
 	
 	

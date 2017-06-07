@@ -2,12 +2,14 @@ package com.mdcp.mbc.dao;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.mdcp.mbc.dao.MbcGuidelineDAO;
+
 import com.mdcp.mbc.model.mbcGuideline;
 
 public class MbcGuidelineDaoImpl implements MbcGuidelineDAO {
@@ -57,6 +59,30 @@ public class MbcGuidelineDaoImpl implements MbcGuidelineDAO {
 		return p;
 	}
 
+	
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<mbcGuideline> listmbcGuidelinebyName(String art)
+	{
+		
+		Session session = this.sessionFactory.getCurrentSession();
+		Query query= session.createQuery("from mbcGuideline  where guidlelinetitle = :art").setParameter("art", art);
+		
+		
+		List<mbcGuideline> mbcGuidelinesList =query.setMaxResults(3).list();
+		for (mbcGuideline p : mbcGuidelinesList) {
+			logger.info("mbcGuideline List::" + p);
+		}
+		return mbcGuidelinesList;
+		
+
+	}
+	
+	
+	
+	
+	
 	@Override
 	public void removembcGuideline(int id) {
 		Session session = this.sessionFactory.getCurrentSession();

@@ -39,9 +39,10 @@ public class crm_lead_master {
     private int   isActive;
     private Date  CreateDate;
     private Date    ModifiedDate;
+    private String LeadCategory;
+    private String SourceURL;
     
-    @NotEmpty
-    @Email
+   
     private String    Email_ID;
     private String   CityName;
 	public int getLead_ID() {
@@ -145,6 +146,18 @@ public class crm_lead_master {
 	}
 	public void setCityName(String cityName) {
 		CityName = cityName;
+	}
+	public String getLeadCategory() {
+		return LeadCategory;
+	}
+	public String getSourceURL() {
+		return SourceURL;
+	}
+	public void setLeadCategory(String leadCategory) {
+		LeadCategory = leadCategory;
+	}
+	public void setSourceURL(String sourceURL) {
+		SourceURL = sourceURL;
 	}
 	
 	

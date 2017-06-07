@@ -67,11 +67,22 @@ public class ArticleDaoImpl implements ArticleDAO {
 		Session session = this.sessionFactory.getCurrentSession();
 		
 		
-		Query query = session.createQuery("from Article where metaKeyword = :art").setParameter("art", art);
-//		query.setFirstResult(0);
+		Query query = session.createQuery("from Article where linkurl = :art").setParameter("art", art);
+				//+ ".setParameter("art", "%"+art+"%");
+
+
+				
+				
+				
+				//		query.setFirstResult(0);
 //		query.setMaxResults(1); 
 		
-		List<Article> ArticleList = query.setMaxResults(3).list();
+		//List<Article> ArticleList = query.setMaxResults(3).list();
+		
+		
+		List<Article> ArticleList = query.list();
+		
+		
 		//List<Speciality> SpecialitysList = session.createQuery("from Speciality where name ='"+spe+"").list();
 				
 		for (Article p : ArticleList) {
@@ -79,6 +90,39 @@ public class ArticleDaoImpl implements ArticleDAO {
 		}
 		return ArticleList;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Article> listArticlesbyNameThree(String art)
+	{
+		
+		Session session = this.sessionFactory.getCurrentSession();
+		
+		
+		Query query = session.createQuery("from Article where metaKeyword = :art").setParameter("art", art);
+
+		List<Article> ArticleList = query.setMaxResults(3).list();
+		
+				
+		for (Article p : ArticleList) {
+			logger.info("Article List::" + p);
+		}
+		return ArticleList;
+	}
+
+	
+	
+	
+	
+	
+	
 	
 	
 

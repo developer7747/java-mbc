@@ -21,7 +21,7 @@
                             <p class="prcm"><b><strong>Charge Entry</strong></b></p>
 
                             <p class="text-left">The Medical billing process begins with filing claims for services provided to patients, entering charges/ creating bills which is done electronically to shorten the revenue cycle days...</p>
-                            <p><a href="revenue-management-services.aspx?DivId=charge-entry" class="btn btn-default text-green">Read More</a></p>
+                            <p><a  target="blank" href="${pageContext.request.contextPath}/revenue-management-services/charge-entry" class="btn btn-default text-green">Read More</a></p>
                         </div>
                     </div>
 
@@ -29,7 +29,7 @@
                         <div class="services-boxes">
                             <p class="prcm"><b><strong>Payment Posting</strong> </b></p>
                             <p class="text-left">Payment posting is a crucial step in billing process. Looking at the sensitivity of this process, accurate and efficient payment posting process is indispensable for Physicians office. ...</p>
-                            <p><a href="revenue-management-services.aspx?DivId=payment-posting" class="btn btn-default text-green">Read More</a></p>
+                            <p><a target="blank" href="${pageContext.request.contextPath}/revenue-management-services/payment-posting" class="btn btn-default text-green">Read More</a></p>
                         </div>
                     </div>
 
@@ -41,7 +41,7 @@
 
 Our billers believe that accuracy of the claim and the time spent on retrieving the payment are key points in optimized revenue collections. ...
                             </p>
-                            <p><a href="revenue-management-services.aspx?DivId=account-receivable" class="btn btn-default text-green">Read More</a></p>
+                            <p><a target="blank" href="${pageContext.request.contextPath}/revenue-management-services/account-receivable" class="btn btn-default text-green">Read More</a></p>
                         </div>
                     </div>
 
@@ -49,7 +49,7 @@ Our billers believe that accuracy of the claim and the time spent on retrieving 
                         <div class="services-boxes">
                             <p class="prcm"><b><strong>Denial Management and Appeals</strong></b></p>
                             <p class="text-left">Denials are an epidemic to the financial health of most practices, and they have a need to be treated well in order to get you financial success....</p>
-                            <p><a href="revenue-management-services.aspx?DivId=denial-management-appeals" class="btn btn-default text-green">Read More</a></p>
+                            <p><a target="blank" href="${pageContext.request.contextPath}/revenue-management-services/denial-management-appeals" class="btn btn-default text-green">Read More</a></p>
                         </div>
                     </div>
 
@@ -57,7 +57,7 @@ Our billers believe that accuracy of the claim and the time spent on retrieving 
                         <div class="services-boxes">
                             <p class="prcm"><b><strong>Physician Credentialing</strong></b></p>
                             <p class="text-left">Starting a new practice? Then you definitely need Medical Billers who are experts in setting up practices or getting Physicians credentialed with various payers....</p>
-                            <p><a href="revenue-management-services.aspx?DivId=physician-credentialing" class="btn btn-default text-green">Read More</a></p>
+                            <p><a target="blank" href="${pageContext.request.contextPath}/revenue-management-services/physician-credentialing" class="btn btn-default text-green">Read More</a></p>
                         </div>
                     </div>
 

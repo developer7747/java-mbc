@@ -16,4 +16,5 @@ public interface ArticleService {
 	public void removeArticle(int id);
 	
 	public List<Article> listArticlesbyName(String art);
+	public List<Article> listArticlesbyNameThree(String art);
 }

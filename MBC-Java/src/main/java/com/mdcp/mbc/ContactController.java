@@ -35,13 +35,17 @@ import com.mdcp.mbc.service.LeadMasterService;
 import com.mdcp.mbc.service.MbcGuidelineService;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -128,34 +132,37 @@ public class ContactController {
 		private MbcGuidelineService mbcGuidelineService;
     
     @RequestMapping(value = "/contact-us",method = RequestMethod.GET)
-    public String viewRegistration(Map<String, Object> model1,Model model) {
+    public String viewRegistration(Map<String, Object> model1,Model model, @ModelAttribute("userForm") crm_lead_master user) {
     	
     	model.addAttribute("listSpecialitys", this.SpecialityService.listSpecialitys());
     	model.addAttribute("listStates", this.StateService.listStates());
     	crm_lead_master userForm = new crm_lead_master();    
         model1.put("userForm", userForm);
-        return "common/main-contact-form";
+        return "common/main-contact-form2";
     }
     
     
     
     
   
+    @RequestMapping(value = "contacttest",method = RequestMethod.POST)
+    public void processRegistration() {
+    	System.out.println("HHHHH");
+    }
+    
+    
     
     
     @RequestMapping(value = "contact-us",method = RequestMethod.POST)
-    public String processRegistration( @ModelAttribute("userForm")  crm_lead_master user , BindingResult result,  Map<String, Object> model, @RequestParam("g-recaptcha-response") String gRecaptchaResponse) {
+    public String processRegistration( @ModelAttribute("userForm")  crm_lead_master user,HttpServletResponse httpServletResponse ,Model model, BindingResult result,  Map<String, Object> model1, @RequestParam("g-recaptcha-response") String gRecaptchaResponse, HttpServletRequest request) {
          
     	
-    	
-        // implement your own registration logic here...
-       
-        // for testing purpose:
-    	
-    	// get reCAPTCHA request param
-    			//String gRecaptchaResponse = Request.getParameter("");
-    	
-    	
+    	DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+    	Date date = new Date();
+    String s=	dateFormat.format(date);
+    model.addAttribute("listSpecialitys", this.SpecialityService.listSpecialitys());
+	model.addAttribute("listStates", this.StateService.listStates());
+	   
     			System.out.println(gRecaptchaResponse);
     			boolean verify;
 				try {
@@ -164,20 +171,41 @@ public class ContactController {
 					
 					if (verify) {
 						
-						System.out.println(verify);
+//						System.out.println(verify);
+//						System.out.println(s + user.getCreateDate());						
+//
+//				    	System.out.println("Contact_Name:" + user.getContact_Name());
+//				        System.out.println("Email_ID:" + user.getEmail_ID());
+//
+//				        System.out.println("Specia.id:" + user.getStateId());
+//				        
+//				        System.out.println("Specialityies.id:" + user.getCateId());
+//				        
+//				        System.out.println(s + user.getSourceURL());
+//				        
+//				        System.out.println("Contact_No: " + user.getContact_No());
+//				       
+//				        System.out.println("Requirement: " + user.getRequirement());
+//				        
+//				        System.out.println("LeadCategory: " + user.getLeadCategory());
+//				        if (chkPreference.SelectedValue.Equals("Billing services"))
+//		                    email_obj.stremailtypeBrian = "brian";
+//			use this when want to email 	        
 						
-						
-
-				    	System.out.println("Contact_Name:" + user.getContact_Name());
-				        System.out.println("Email_ID:" + user.getEmail_ID());
-
-				        System.out.println("Contact_No: " + user.getContact_No());
-
 				        this.LeadMasterService.addcrm_lead_master(user);
 				    	if (result.hasErrors()) {
 				    	    
-				    		return "common/contact-form";
-				        }
+				    		//return "common/contact-form";
+				       
+
+				        	model.addAttribute("listSpecialitys", this.SpecialityService.listSpecialitys());
+				        	model.addAttribute("listStates", this.StateService.listStates());
+				        	crm_lead_master userForm = new crm_lead_master();    
+				            model1.put("userForm", userForm);
+				    		
+				    		
+				    		return"common/main-contact-form";
+				    	}
 					
 
 				    	else
@@ -189,46 +217,32 @@ public class ContactController {
 						
 	    				//	out.println("<font color=red>Either user name or password is wrong.</font>");
 	    				} else {
-	    					return "common/contact-form";
+	    					//return "common/contact-form";
+	    					//httpServletResponse.setHeader("Location", projectUrl);
+	    					
+	    					//httpServletResponse.sendRedirect("/contact-us");
+	    					return"resources/articles/contactar";
 	    				}
 					
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-//    			System.out.println(verify);
-//    	
-//    				if (verify) {
-//    				//	out.println("<font color=red>Either user name or password is wrong.</font>");
-//    				} else {
-//    					//out.println("<font color=red>You missed the Captcha.</font>");
-//    				}
-    				
-    			    			
-    			
-    			
-    			
-    	
 
-		    
-
+ 
 		    		return "speciality";
-		 
-		    	
-        
-    
-    	
+
     	
     }
     
     
-    public ReloadableResourceBundleMessageSource messageSource() {
-      ReloadableResourceBundleMessageSource messageBundle = new ReloadableResourceBundleMessageSource();
-      messageBundle.setBasename("classpath:messages/messages");
-      messageBundle.setDefaultEncoding("UTF-8");
-      return messageBundle;
-    }
-    
+//    public ReloadableResourceBundleMessageSource messageSource() {
+//      ReloadableResourceBundleMessageSource messageBundle = new ReloadableResourceBundleMessageSource();
+//      messageBundle.setBasename("classpath:messages/messages");
+//      messageBundle.setDefaultEncoding("UTF-8");
+//      return messageBundle;
+//    }
+//    
     
     
 //    

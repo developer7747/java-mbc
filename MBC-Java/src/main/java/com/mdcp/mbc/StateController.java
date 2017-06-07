@@ -73,7 +73,7 @@ public class StateController {
   	public String listPersonssss(Model model,@PathVariable("param1") String param1) {
 
   		model.addAttribute("listStatebyName", this.StateService.listStatebyName(param1));
-
+  		model.addAttribute("listArticlesbyNameThree", this.ArticleService.listArticlesbyNameThree(param1));
 //  		model.addAttribute("Speciality", new Speciality());
 //		model.addAttribute("listSpecialitys", this.SpecialityService.listSpecialitys()); 
 //  	for speciality	

@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.mdcp.mbc.dao.MbcGuidelineDAO;
 import com.mdcp.mbc.dao.SpecialityGuidelineDAO;
+import com.mdcp.mbc.model.crm_lead_master;
 import com.mdcp.mbc.model.mbcGuideline;
 
 public class MbcGuidelineServiceImpl implements MbcGuidelineService {
@@ -53,6 +54,19 @@ public class MbcGuidelineServiceImpl implements MbcGuidelineService {
 		return this.mbcGuidelineDAOobj.listmbcGuidelines();
 	}
 
+	@Override
+	@Transactional
+	public List<mbcGuideline> listmbcGuidelinebyName(String art)
+	
+	{
+		
+		return this.mbcGuidelineDAOobj.listmbcGuidelinebyName(art);	
+		
+	}
+	
+
+
+	
 	@Override
 	@Transactional
 	public mbcGuideline getmbcGuidelineById(int id) {

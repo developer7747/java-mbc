@@ -24,115 +24,111 @@
         
 <div class="two-colomn-temp ">
             <div class="container padding-top-20">
-               
                  <div class="col-sm-8">
                 <div class="row">                   
                         <!-- Left section start -->
-                   
+                       <div class="accordion-blue">
+                    <h1 class="text-blue" style="margin: 9px 130px;">Healthcare Analytics Solutions</h1>
                     
-
-
-                
-
-
-                                            
-    <!-- breadcrumb ends-->
-    <!-- Top banner -->
-    <div id="consultancy_banner">
-        <div class="img_blank_small">
-        </div>
+<div class="panel-group accordion" id="accordion3">
+								<div>
+									<div class="panel-heading">
+										<h5 class="panel-title">
 
 
 
-    <div id="article_banner">
-        <h1>
-            Medical Billing Solutions for Physician Groups</h1>
+
+                                            <div id="Div1" style="text-align:justify;font-size:14px ">
+        
+        <p>
+         Healthcare organizations across the globe are experiencing an “information revolution”. They are making use of healthcare analytics to improve clinical quality and to streamline operations. Analytics is basically the application of statistical tools and techniques to healthcare-related data that helps improve the efficiency and quality of clinical and business processes.  
+        </p>
+        <p>
+           We at MBC offer end-to-end health analytics solutions, enabling healthcare organizations improve their outcomes, set future goals and create actionable insights through access to unprecedented amounts of data. We make use of process improvement, analytics and optimization to transform your healthcare data into informative knowledge that can be used for optimized decision making, when required. 
+        </p>
+                                                <p>Rely on us for turning your business intelligence vision into a reality. By combining emerging technologies with business intelligence tools, we can help you harness “big data” to enhance quality of care, patient safety, wellness and disease management. This data can also help you reduce medical errors, costs and inefficiencies in the workflow. </p>
+                                                <p>Our <b>health analytics solutions</b> include information integration and data management designed for improving the quality and speed of your decision making process. We can tailor the solutions to help you with financial management and regulatory compliance at all levels within the organization. We apply our global knowledge and expertise to ensure that “big data” helps you achieve vital organizational goals that can increase ROI and revenue. </p>
+        <p>Our objectives for your Healthcare Data – </p>
+                                                <ul id="points2">
+            <li>Streamline Business Processes</li>
+            <li>Avoid Waste &amp; Abuse </li>
+            <li>Provide actionable insights for process improvement</li>
+            <li>Improve Provider Productivity</li>
+            <li>Infuse Growth through effective methods of Healthcare Delivery</li>
+            
+        </ul>
+
+                                                <p>Our suite of analytics solutions can help you build sustainable systems and increase healthcare access and outcomes. We can assist you in making the best use of analytics, without spending time and money on haphazard implementations. Our sustainable solutions can enable your organization to leverage the capabilities of analytics and achieve goals that matter you the most. </p>
+        
+                      <p>With the sheer amount of data contained in EHRs and the shift towards new payment models, analytics have become a necessity. Our experts are readily available to learn your business requirements and help you in identifying solutions that can change the way you have been using your data. </p>         
+                                                <p>They can work with you to understand your business intelligence goals and deliver customized solutions. From data mining, reporting and analytics to data integration, clinical decision support and performance management, our suite of healthcare analytics solutions can offer you various benefits. </p>                 
+       
     </div>
     <!-- TOP BANNER ENDS-->
-    <!-- content para-->
-    <div id="content_para1" style="text-align:justify">
-        Physician groups are increasingly opting for centralized medical billing services.
-        Centralised billing solutions help in cost sharing and utilization of resources
-        effectively. This leads to saving time, enhanced patient care, and is a lucrative
-        method of running the practice.
-        <p class="subheading">
-                Common problems that face physician groups with an in-house billing system are:</p>
-        <ul>
-            <li>Shortage of experienced staff and medical billing resources in the market</li>
-            <li>Management and retention of billing staff </li>
-            <li>Spending a high percentage of capital on the rental space for medical billing related
-                activities and storage</li>
-            <li>Incurring administration and processing services costs and managing various vendors</li>
-            <li>Time constraint and focus constraint as the same resource needs to run day to day
-                activities and recover maximum revenue</li>
-            <li>Dedicated Supervision and a team to monitor, stay updated with the latest changes</li>
-            <li>Process claims, Collect accounts receivable (A/R), and worry about cash flow</li>
-        </ul>
-        <p>
-            <strong class="bluecolor">
-                <br>
-                Medical Billers and Coders (MBC)</strong> provides proactive, end-to-end medical
-            billing outsourcing services and helps in mitigating the above problems that are
-            commonly faced by physician groups. We take care of your entire revenue cycle right
-            from the first patient encounter to reimbursement of claims. We focus on accuracy
-            and follow all the latest guidelines to file your medical insurance claims without
-            any errors. We help in achieving <span class="bluecolor">timely revenue flow</span>
-            by processing claims through our experienced and dedicated team using the billing
-            software relevant to your practise and by proper follow-up of the submitted claims.</p>
-            <br>
-        <p class="subheading">Why do physician groups outsource medical billing services?</p>
-        <ul>
-            <li>Health Insurance Portability and Accountability Act (HIPAA) Compliance is taken
-                care of by a specialized team </li>
-            <li>Increase revenue by reducing office expenses such as administrative and operations
-                costs</li>
-            <li>Increase your patient base: More time to give quality care to your patients and
-                to build your practise</li>
-            <li>Greater staff experience, powerful systems, and aggregate resources</li>
-            <li>Due to heavy workload and to clear the workload backlogs</li>
-            <li>To encourage the implementation of new platform changes such as ICD 10</li>
-            <li>Lower the costs associated with additional employees and office infrastructure in
-                your growth period </li>
-            <li>Eliminate downtime due to staff illness and vacation</li>
-            <li>Freedom to focus on the core function and Achieve greater control over your business</li>
-            <li>Decreased A/R and financial delays</li>
-            <li>Reduce Rejected Claims</li>
-        </ul>
-        <p>
-            <br>
-            Apart from the above listed reasons, the most crucial factor that makes outsourcing
-            a great option for physician groups is the fact that it improves revenue collection
-            immensely. Physicians have seen a <span class="bluecolor"><strong>40% increase</strong></span>
-            in their net revenue by outsourcing to a reliable partner like MBC. Outsourcing
-            medical billing and collections could actually increase the bottom-line by approximately
-            $254,000 or 20% for physician groups.
-        </p>
-        <p>
-        <br>
-            </p><h2 class="h1tagdivicdtraining">
-            <strong>Here is graphical representation of loss of income and increase in the revenue
-                for physicians after outsourcing their medical billing services in the US.</strong></h2><p></p>
-        <br>
-        <br>
-        <div style="width: 100%; text-align: center">
+    </h5></div>
+
+  
+            <div class="two-colomn-temp ">
+            <div class="container padding-top-20">
+                 <div class="col-sm-8">
+                <div class="row">                   
+                        <!-- Left section start -->
+                         
+                        <!-- Left section end -->
+                    </div>
+                </div>
+                <div class="col-sm-4 Medical digest-sidebar">
+                    <!-- Right section start -->
             
-            <img src="images123/graph3.jpg" alt="">
+                    <!-- Right section end -->
+                </div>
+            </div>
         </div>
-        <p>
-            <br>
-            <span class="bluecolor"><strong>In conclusion</strong></span>, <strong>Medicalbillersandcoders.com</strong>
-            offers a cost effective plan wherein the physician pays for the services offered
-            to him based on the amount he makes from his practise in contrast to the in-house
-            billing system where overhead fixed cost is added all the time. Our dedicated staff
-            stays focused on getting your claims paid without the distractions usually observed
-            with an in-house billing system.
-        </p>
-    </div></div></div></div></div></div>
+
+    <!-- TOP BANNER ENDS-->
+    </div>
+    </div>
+    </div>
+                        <!-- Left section end -->
+                    </div>
+                </div>
+                <div class="col-sm-4 Medical digest-sidebar">
+                    <!-- Right section start -->
+              
+                     <div>
+  
+  
+                    <div class="outsource" style="display:none">
+
+
+               
+                    </div>
+
+
+<ul class="right-faq-list">
+
+
+                     <div class="right-blue-panel" style="display:none">
+               	    	<h4></h4>
+                    </div>
+    
+
+                    </ul>
+
+                    <!-- Right section end -->
+                </div>
+            </div>
+        </div>
+
+           
+            
             <!-- Header Area -->
            
              <!--End Header Area -->
                
 
+
+        </div>
 	<jsp:include page="/WEB-INF/views/UI/footer.jsp" />
 	</body>
 	</html>

@@ -116,7 +116,7 @@
         <br>
         <div style="width: 100%; text-align: center">
             
-            <img src="${pageContext.request.contextPath}/resources/ui/images/images123/graph3.jpg" alt="">
+            <img src="${pageContext.request.contextPath}/resources/images123/graph3.jpg" alt="">
         </div>
         <p>
             <br>

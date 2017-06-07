@@ -31,7 +31,7 @@
                     <div class="services-boxes">
                         <h3>Orthopedics Transcription</h3>
                         <p class="text-left">Documentation remains the skeleton of all healthcare practices. Amongst the most required services under Medical Transcription...</p>
-                        <p><a href="medical-transcript/orthopedics-billing.html" class="btn btn-default text-green">Read More</a></p>
+                        <p><a href="${pageContext.request.contextPath}/medical-transcript/orthopedics-billing" class="btn btn-default text-green">Read More</a></p>
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@
                     <div class="services-boxes">
                         <h3>Podiatry Transcription</h3>
                         <p class="text-left">Podiatrists and podiatry surgeons across all states have depended on medical transcriptionists to have their medical records in place...</p>
-                        <p><a href="medical-transcript/podiatry-billing.html" class="btn btn-default text-green">Read More</a></p>
+                        <p><a href="${pageContext.request.contextPath}/medical-transcript/podiatry-billing" class="btn btn-default text-green">Read More</a></p>
                     </div>
                 </div>
 
@@ -47,7 +47,7 @@
                     <div class="services-boxes">
                         <h3>Radiology Transcription</h3>
                         <p class="text-left">Radiologists across the US depend on trained medical transcripts to return their reports to the concerned physicians or departments...</p>
-                        <p><a href="medical-transcript/radiology-billing.html" class="btn btn-default text-green">Read More</a></p>
+                        <p><a href="${pageContext.request.contextPath}/medical-transcript/radiology-billing" class="btn btn-default text-green">Read More</a></p>
                     </div>
                 </div>
 
@@ -55,7 +55,7 @@
                     <div class="services-boxes">
                         <h3>Cardiology Transcription</h3>
                         <p class="text-left">The quality of patient care is directly proportionate to the efforts invested in documenting patient visits and the validity of this...</p>
-                        <p><a href="medical-transcript/cardiology-billing.html" class="btn btn-default text-green">Read More</a></p>
+                        <p><a href="${pageContext.request.contextPath}/medical-transcript/cardiology-billing" class="btn btn-default text-green">Read More</a></p>
                     </div>
                 </div>
 
@@ -63,7 +63,7 @@
                     <div class="services-boxes">
                         <h3>Pathology Transcription</h3>
                         <p class="text-left">Pathology transcription services are a specialized branch in medical transcription and have a crucial requirement for properly formatted...</p>
-                        <p><a href="medical-transcript/pathalogy-billing.html" class="btn btn-default text-green">Read More</a></p>
+                        <p><a href="${pageContext.request.contextPath}/medical-transcript/pathalogy-billing" class="btn btn-default text-green">Read More</a></p>
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@
                     <div class="services-boxes">
                         <h3>Oncology Transcription</h3>
                         <p class="text-left">Pressing documentation needs and specialized knowledge requirement in the field of oncology has made oncologists nationally to look for...</p>
-                        <p><a href="medical-transcript/oncology-billing.html" class="btn btn-default text-green">Read More</a></p>
+                        <p><a href="${pageContext.request.contextPath}/medical-transcript/oncology-billing" class="btn btn-default text-green">Read More</a></p>
                     </div>
                 </div>
 

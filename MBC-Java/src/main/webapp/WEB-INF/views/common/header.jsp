@@ -19,7 +19,7 @@
   <link  href="<c:url value="/resources/admin/dist/css/AdminLTE.min.css"/>" rel="stylesheet">
   
   <link  href="<c:url value="/resources/admin/common-cs/common.css"/>" rel="stylesheet">
-  
+
 
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
@@ -31,7 +31,7 @@
    <script src="http://cdn.ckeditor.com/4.6.2/standard-all/ckeditor.js"></script>
    <link href="<c:url value="/resources/admin/adminscript/date-picker/bootstrap-datepicker3.min.css"/>" type="text/css" rel="stylesheet"> 
     <script src="<c:url value="/resources/admin/adminscript/date-picker/bootstrap-datepicker.min.js" />" type="text/javascript"></script>        
-   
+     
    <script type="text/javascript">
    var hosting_url="http://localhost:8080/MBC-Java/"; 
        $(function () {
